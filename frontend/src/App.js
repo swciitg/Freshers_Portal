@@ -1,18 +1,17 @@
-import logo from './logo.svg';
 import './App.css';
-import HomePage from './components/Homepage';
-import Homepage2 from './components/Homepage2';
-import AchievementsGrid from './components/Card';
-import Footer from './components/Footer';
-import Saathi from './components/Saathi';
+import Homepage from './pages/Homepage';
+import { BrowserRouter , Route , Routes } from 'react-router-dom';
+import ListHostelPage from './pages/ListHostelPage';
 
 function App() {
   return (
     <div>
-    <HomePage/>
-    <Homepage2/>
-    <Saathi/>
-    <Footer/>
+      <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Homepage/>}/>
+        <Route path="/hostel-list" element={<ListHostelPage/>}/>
+      </Routes>
+      </BrowserRouter>
     </div>
   );
 }
