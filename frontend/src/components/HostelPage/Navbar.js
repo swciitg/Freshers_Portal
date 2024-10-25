@@ -16,15 +16,16 @@ const Navbar = () => {
       <nav className="bg-white shadow-md rounded-full px-8 py-3">
         <div className="max-w-7xl mx-auto flex items-center justify-between">
           {/* Left Section - Logo and Text */}
-          <div className="flex items-center space-x-4">
+          <a href="/"><div className="flex items-center space-x-4">
             <img className="h-12 w-12" src="/iitglogo.png" alt="IIT Guwahati" />
             <div className="leading-snug">
               <span className="text-lg font-semibold text-gray-800 block">
-                Students' Affairs
+                Freshers Portal
               </span>
               <span className="text-sm text-gray-500 block">IIT Guwahati</span>
             </div>
           </div>
+          </a>
 
           {/* Divider */}
           <div className="border-l-2 h-12 mx-8"></div>
@@ -54,7 +55,7 @@ const Navbar = () => {
 
           {/* Desktop Links */}
           <div className="hidden md:flex space-x-8">
-            <a href="#" className="text-gray-700 hover:text-gray-900 font-medium">
+            <a href="/info" className="text-gray-700 hover:text-gray-900 font-medium">
               Important Information
             </a>
 
@@ -72,16 +73,22 @@ const Navbar = () => {
                 }`}
               >
                 <a
-                  href="#"
+                  href="/department"
                   className="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-100"
                 >
-                  Curriculum
+                  Department
                 </a>
                 <a
-                  href="#"
+                  href="/branch-change"
                   className="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-100"
                 >
-                  Calendar
+                  Branch Change
+                </a>
+                <a
+                  href="/minor"
+                  className="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-100"
+                >
+                  Minor Discipline
                 </a>
               </div>
             </div>
@@ -127,13 +134,19 @@ const Navbar = () => {
                 }`}
               >
                 <a
-                  href="#"
+                  href="/hostel-list"
+                  className="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-100"
+                >
+                  All Hostels
+                </a>
+                <a
+                  href="/hostel-fac"
                   className="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-100"
                 >
                   Hostel Facilities
                 </a>
                 <a
-                  href="#"
+                  href="/hostel-events"
                   className="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-100"
                 >
                   Inter-Hostel Events
