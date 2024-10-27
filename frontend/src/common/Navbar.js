@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-
+import { Link, useLocation } from 'react-router-dom';
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false); // State to manage mobile menu
   const [activeDropdown, setActiveDropdown] = useState(null); // State to manage dropdowns
-
+  const location = useLocation();
   const toggleMenu = () => setIsOpen(!isOpen); // Toggle mobile menu
 
   const handleDropdown = (dropdown) => {
@@ -11,6 +11,7 @@ const Navbar = () => {
     setActiveDropdown(activeDropdown === dropdown ? null : dropdown);
   };
 
+  const isActive = (path) => location.pathname.startsWith(path);
   return (
     <div className="h-24 p-8">
       <nav className="bg-white shadow-md rounded-full px-8 py-3">
@@ -55,142 +56,143 @@ const Navbar = () => {
 
           {/* Desktop Links */}
           <div className="hidden md:flex space-x-8">
-            <a href="/info" className="text-gray-700 hover:text-gray-900 font-medium">
+            <Link to="/info" className={`font-medium ${isActive('/info') ? 'text-orange-500' : 'text-gray-700 hover:text-gray-900'}`}>
               Important Information
-            </a>
+            </Link>
 
             {/* Academics Dropdown */}
             <div className="relative group">
               <button
-                className="text-gray-700 hover:text-gray-900 font-medium"
+                className={`font-medium ${isActive('/department') || isActive('/branch-change') || isActive('/minor') ? 'text-orange-500' : 'text-gray-700 hover:text-gray-900'}`}
                 onClick={() => handleDropdown('academics')}
+                
               >
                 Academics
               </button>
               <div
-                className={`absolute hidden group-hover:flex flex-col bg-white shadow-lg rounded-md mt-1 z-50 ${
+                className={`absolute hidden transition-all duration-5000 ease-out group-hover:flex flex-col bg-white shadow-lg rounded-md mt-1 z-50 ${
                   activeDropdown === 'academics' ? 'flex' : 'hidden'
                 }`}
               >
-                <a
-                  href="/department"
+                <Link
+                  to="/department"
                   className="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-100"
                 >
                   Department
-                </a>
-                <a
-                  href="/branch-change"
+                </Link>
+                <Link
+                  to="/branch-change"
                   className="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-100"
                 >
                   Branch Change
-                </a>
-                <a
-                  href="/minor"
+                </Link>
+                <Link
+                  to="/minor"
                   className="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-100"
                 >
                   Minor Discipline
-                </a>
+                </Link>
               </div>
             </div>
 
             {/* Life on Campus Dropdown */}
             <div className="relative group">
               <button
-                className="text-gray-700 hover:text-gray-900 font-medium"
+                className={`font-medium ${isActive('/sgc') || isActive('/swb') || isActive('/cult') || isActive('/tech') || isActive('/sports')|| isActive('/hab')|| isActive('/fests')? 'text-orange-500' : 'text-gray-700 hover:text-gray-900'}`}
                 onClick={() => handleDropdown('campus')}
               >
                 Life on Campus
               </button>
               <div
-                className={`absolute hidden group-hover:flex flex-col bg-white shadow-lg rounded-md mt-1 z-50 ${
+                className={`absolute hidden group-hover:flex transition-all duration-1000 ease-in-out flex-col bg-white shadow-lg rounded-md mt-1 z-50 ${
                   activeDropdown === 'campus' ? 'flex' : 'hidden'
                 }`}
               >
-                <a
-                  href="/sgc"
+                <Link
+                  to="/sgc"
                   className="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-100"
                 >
                  Students Gymkhana Council
-                </a>
-                <a
-                  href="/swb"
+                </Link>
+                <Link
+                  to="/swb"
                   className="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-100"
                 >
                   Students Welfare Board
-                </a>
-                <a
-                  href="/cult"
+                </Link>
+                <Link
+                  to="/cult"
                   className="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-100"
                 >
                   Cultural Board
-                </a>
-                <a
-                  href="/tech"
+                </Link>
+                <Link
+                  to="/tech"
                   className="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-100"
                 >Technical Board
-                </a>
-                <a
-                  href="/sports"
+                </Link>
+                <Link
+                  to="/sports"
                   className="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-100"
                 >
                   Sports Board
-                </a>
-                <a
-                  href="/hab"
+                </Link>
+                <Link
+                  to="/hab"
                   className="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-100"
                 >
                   Hostel Affairs Board
-                </a>
-                <a
-                  href="/fests"
+                </Link>
+                <Link
+                  to="/fests"
                   className="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-100"
                 >
                   Annual Festivals
-                </a>
+                </Link>
               </div>
             </div>
             {/* Life on Campus Dropdown */}
             <div className="relative group">
               <button
-                className=" hover:text-orange-900 text-orange-500 font-medium"
+                className={`font-medium ${isActive('/hostel-list') || isActive('/hostel-fac') || isActive('/hostel-events') ? 'text-orange-500' : 'text-gray-700 hover:text-gray-900'}`}
                 onClick={() => handleDropdown('hostel')}
               >
                 Hostel
               </button>
               <div
-                className={`absolute hidden group-hover:flex flex-col bg-white shadow-lg rounded-md mt-1 z-50 ${
+                className={`absolute hidden group-hover:flex flex-col transition-all duration-1000 ease-in-out  bg-white shadow-lg rounded-md mt-1 z-50 ${
                   activeDropdown === 'campus' ? 'flex' : 'hidden'
                 }`}
               >
-                <a
-                  href="/hostel-list"
+                <Link
+                  to="/hostel-list"
                   className="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-100"
                 >
                   All Hostels
-                </a>
-                <a
-                  href="/hostel-fac"
+                </Link>
+                <Link
+                  to="/hostel-fac"
                   className="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-100"
                 >
                   Hostel Facilities
-                </a>
-                <a
-                  href="/hostel-events"
+                </Link>
+                <Link
+                  to="/hostel-events"
                   className="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-100"
                 >
                   Inter-Hostel Events
-                </a>
+                </Link>
               </div>
             </div>
-            <a href="/facilities" className="text-gray-700 hover:text-gray-900 font-medium">
+            <Link to="/facilities" className={`font-medium ${isActive('/facilities') ? 'text-orange-500' : 'text-gray-700 hover:text-gray-900'}`}>
               Facilities
-            </a>
-            <a href="/faqs" className="text-gray-700 hover:text-gray-900 font-medium">
+            </Link>
+            <Link to="/faqs" className={`font-medium ${isActive('/faqs') ? 'text-orange-500' : 'text-gray-700 hover:text-gray-900'}`}>
               FAQs
-            </a>
-            <a href="/contact" className="text-gray-700 hover:text-gray-900 font-medium">
+            </Link>
+            <Link to="/contact" className={`font-medium ${isActive('/contact') ? 'text-orange-500' : 'text-gray-700 hover:text-gray-900'}`}>
               Contact Us
-            </a>
+            </Link>
           </div>
         </div>
 
@@ -200,38 +202,38 @@ const Navbar = () => {
             isOpen ? 'block' : 'hidden'
           } md:hidden mt-4 space-y-2 text-center`}
         >
-          <a href="/info" className="block text-gray-700 hover:text-gray-900 font-medium">
+          <Link to="/info" className={`font-medium ${isActive('/info') ? 'text-orange-500' : 'text-gray-700 hover:text-gray-900'}`}>
             Important Information
-          </a>
+          </Link>
 
           {/* Academics Dropdown (Mobile) */}
           <div>
             <button
-              className="text-gray-700 hover:text-gray-900 font-medium"
+              className={`font-medium ${isActive('/department') || isActive('/branch-change') || isActive('/minor') ? 'text-orange-500' : 'text-gray-700 hover:text-gray-900'}`}
               onClick={() => handleDropdown('academics')}
             >
               Academics
             </button>
             {activeDropdown === 'academics' && (
               <div className="flex flex-col bg-white shadow-lg rounded-md mt-1">
-                <a
-                  href="department"
+                <Link
+                  to="/department"
                   className="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-100"
                 >
                   Departments
-                </a>
-                <a
-                  href="/branch-change"
+                </Link>
+                <Link
+                  to="/branch-change"
                   className="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-100"
                 >
                   Branch Change
-                </a>
-                <a
-                  href="/minor"
+                </Link>
+                <Link
+                  to="/minor"
                   className="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-100"
                 >
                   Minor Discipline
-                </a>
+                </Link>
               </div>
             )}
           </div>
@@ -239,97 +241,97 @@ const Navbar = () => {
           {/* Life on Campus Dropdown (Mobile) */}
           <div>
             <button
-              className="text-gray-700 hover:text-gray-900 font-medium"
+              className={`font-medium ${isActive('/sgc') || isActive('/swb') || isActive('/cult') || isActive('/tech') || isActive('/sports')|| isActive('/hab')|| isActive('/fests')? 'text-orange-500' : 'text-gray-700 hover:text-gray-900'}`}
               onClick={() => handleDropdown('campus')}
             >
               Life on Campus
             </button>
             {activeDropdown === 'campus' && (
               <div className="flex flex-col bg-white shadow-lg rounded-md mt-1">
-                <a
-                  href="/sgc"
+                <Link
+                  to="/sgc"
                   className="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-100"
                 >
                  Students Gymkhana Council
-                </a>
-                <a
-                  href="/swb"
+                </Link>
+                <Link
+                  to="/swb"
                   className="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-100"
                 >
                   Students Welfare Board
-                </a>
-                <a
-                  href="/cult"
+                </Link>
+                <Link
+                  to="/cult"
                   className="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-100"
                 >
                   Cultural Board
-                </a>
-                <a
-                  href="/tech"
+                </Link>
+                <Link
+                  to="/tech"
                   className="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-100"
                 >Technical Board
-                </a>
-                <a
-                  href="/sports"
+                </Link>
+                <Link
+                  to="/sports"
                   className="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-100"
                 >
                   Sports Board
-                </a>
-                <a
-                  href="/hab"
+                </Link>
+                <Link
+                  to="/hab"
                   className="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-100"
                 >
                   Hostel Affairs Board
-                </a>
-                <a
-                  href="/fests"
+                </Link>
+                <Link
+                  to="/fests"
                   className="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-100"
                 >
                   Annual Festivals
-                </a>
+                </Link>
               </div>
             )}
           </div>
           {/* Hostel Dropdown (Mobile) */}
           <div>
             <button
-              className="text-orange-700 hover:text-orange-900 font-medium"
+              className={`font-medium ${isActive('/hostel-list') || isActive('/hostel-fac') || isActive('/hostel-events') ? 'text-orange-500' : 'text-gray-700 hover:text-gray-900'}`}
               onClick={() => handleDropdown('hostel')}
             >
                 Hostels
             </button>
             {activeDropdown === 'hostel' && (
               <div className="flex flex-col bg-white shadow-lg rounded-md mt-1">
-                <a
-                  href="/hostel-list"
+                <Link
+                  to="/hostel-list"
                   className="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-100"
                 >
                   All Hostels
-                </a>
-                <a
-                  href="/hostel-fac"
+                </Link>
+                <Link
+                  to="/hostel-fac"
                   className="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-100"
                 >
                   Hostel Facilites
-                </a>
-                <a
-                  href="/hostel-events"
+                </Link>
+                <Link
+                  to="/hostel-events"
                   className="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-100"
                 >
                   Inter-Hostel Events
-                </a>
+                </Link>
               </div>
             )}
           </div>
-          <a href="/facilities" className="block text-gray-700 hover:text-gray-900 font-medium">
+          <Link to="/facilities" className={`block font-medium ${isActive('/facilities') ? 'text-orange-500' : 'text-gray-700 hover:text-gray-900'}`}>
             Facilities
-          </a>
-          <a href="/faqs" className="block text-gray-700 hover:text-gray-900 font-medium">
+          </Link>
+          <Link to="/faqs" className={`block font-medium ${isActive('/faqs') ? 'text-orange-500' : 'text-gray-700 hover:text-gray-900'}`}>
             FAQs
-          </a>
-          <a href="/contact" className="block text-gray-700 hover:text-gray-900 font-medium">
+          </Link>
+          <Link to="/contact" className={`block font-medium ${isActive('/contact') ? 'text-orange-500' : 'text-gray-700 hover:text-gray-900'}`}>
             Contact Us
-          </a>
+          </Link>
         </div>
       </nav>
     </div>
