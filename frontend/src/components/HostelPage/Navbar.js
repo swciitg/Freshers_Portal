@@ -107,16 +107,45 @@ const Navbar = () => {
                 }`}
               >
                 <a
-                  href="#"
+                  href="/sgc"
                   className="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-100"
                 >
-                  Clubs
+                 Students Gymkhana Council
                 </a>
                 <a
-                  href="#"
+                  href="/swb"
                   className="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-100"
                 >
-                  Events
+                  Students Welfare Board
+                </a>
+                <a
+                  href="/cult"
+                  className="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-100"
+                >
+                  Cultural Board
+                </a>
+                <a
+                  href="/tech"
+                  className="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-100"
+                >Technical Board
+                </a>
+                <a
+                  href="/sports"
+                  className="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-100"
+                >
+                  Sports Board
+                </a>
+                <a
+                  href="/hab"
+                  className="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-100"
+                >
+                  Hostel Affairs Board
+                </a>
+                <a
+                  href="/fests"
+                  className="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-100"
+                >
+                  Annual Festivals
                 </a>
               </div>
             </div>
@@ -153,13 +182,13 @@ const Navbar = () => {
                 </a>
               </div>
             </div>
-            <a href="#" className="text-gray-700 hover:text-gray-900 font-medium">
+            <a href="/facilities" className="text-gray-700 hover:text-gray-900 font-medium">
               Facilities
             </a>
-            <a href="#" className="text-gray-700 hover:text-gray-900 font-medium">
+            <a href="/faqs" className="text-gray-700 hover:text-gray-900 font-medium">
               FAQs
             </a>
-            <a href="#" className="text-gray-700 hover:text-gray-900 font-medium">
+            <a href="/contact" className="text-gray-700 hover:text-gray-900 font-medium">
               Contact Us
             </a>
           </div>
@@ -171,7 +200,7 @@ const Navbar = () => {
             isOpen ? 'block' : 'hidden'
           } md:hidden mt-4 space-y-2 text-center`}
         >
-          <a href="#" className="block text-gray-700 hover:text-gray-900 font-medium">
+          <a href="/info" className="block text-gray-700 hover:text-gray-900 font-medium">
             Important Information
           </a>
 
@@ -186,16 +215,22 @@ const Navbar = () => {
             {activeDropdown === 'academics' && (
               <div className="flex flex-col bg-white shadow-lg rounded-md mt-1">
                 <a
-                  href="#"
+                  href="department"
                   className="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-100"
                 >
-                  Curriculum
+                  Departments
                 </a>
                 <a
-                  href="#"
+                  href="/branch-change"
                   className="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-100"
                 >
-                  Calendar
+                  Branch Change
+                </a>
+                <a
+                  href="/minor"
+                  className="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-100"
+                >
+                  Minor Discipline
                 </a>
               </div>
             )}
@@ -212,16 +247,45 @@ const Navbar = () => {
             {activeDropdown === 'campus' && (
               <div className="flex flex-col bg-white shadow-lg rounded-md mt-1">
                 <a
-                  href="#"
+                  href="/sgc"
                   className="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-100"
                 >
-                  Clubs
+                 Students Gymkhana Council
                 </a>
                 <a
-                  href="#"
+                  href="/swb"
                   className="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-100"
                 >
-                  Events
+                  Students Welfare Board
+                </a>
+                <a
+                  href="/cult"
+                  className="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-100"
+                >
+                  Cultural Board
+                </a>
+                <a
+                  href="/tech"
+                  className="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-100"
+                >Technical Board
+                </a>
+                <a
+                  href="/sports"
+                  className="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-100"
+                >
+                  Sports Board
+                </a>
+                <a
+                  href="/hab"
+                  className="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-100"
+                >
+                  Hostel Affairs Board
+                </a>
+                <a
+                  href="/fests"
+                  className="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-100"
+                >
+                  Annual Festivals
                 </a>
               </div>
             )}
@@ -237,27 +301,33 @@ const Navbar = () => {
             {activeDropdown === 'hostel' && (
               <div className="flex flex-col bg-white shadow-lg rounded-md mt-1">
                 <a
-                  href="#"
+                  href="/hostel-list"
                   className="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-100"
                 >
-                  Clubs
+                  All Hostels
                 </a>
                 <a
-                  href="#"
+                  href="/hostel-fac"
                   className="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-100"
                 >
-                  Events
+                  Hostel Facilites
+                </a>
+                <a
+                  href="/hostel-events"
+                  className="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-100"
+                >
+                  Inter-Hostel Events
                 </a>
               </div>
             )}
           </div>
-          <a href="#" className="block text-gray-700 hover:text-gray-900 font-medium">
+          <a href="/facilities" className="block text-gray-700 hover:text-gray-900 font-medium">
             Facilities
           </a>
-          <a href="#" className="block text-gray-700 hover:text-gray-900 font-medium">
+          <a href="/faqs" className="block text-gray-700 hover:text-gray-900 font-medium">
             FAQs
           </a>
-          <a href="#" className="block text-gray-700 hover:text-gray-900 font-medium">
+          <a href="/contact" className="block text-gray-700 hover:text-gray-900 font-medium">
             Contact Us
           </a>
         </div>
