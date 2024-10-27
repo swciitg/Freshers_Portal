@@ -1,7 +1,7 @@
 import React from "react";
-import Navbar from "./Navbar";
+import Navbar from "../../common/Navbar";
 import Hostels from "./HostelPage";
-import Footer from "../InterHostelPage/Footer";
+import Footer from "../../common/Footer";
 
 const Main = () => {
   const Hosteldata = [
