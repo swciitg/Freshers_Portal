@@ -1,6 +1,6 @@
 import React from 'react'
-import Navbar from '../HostelPage/Navbar'
-import Footer from '../InterHostelPage/Footer'
+import Navbar from '../../common/Navbar'
+import Footer from '../../common/Footer'
 import FormPage from './FormPage'
 
 const Main = () => {

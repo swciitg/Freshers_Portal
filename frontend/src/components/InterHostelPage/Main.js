@@ -1,7 +1,7 @@
 import React from "react";
-import Navbar from "../HostelPage/Navbar";
+import Navbar from "../../common/Navbar";
 import Event from "./Event";
-import Footer from "./Footer";
+import Footer from "../../common/Footer";
 export const Main = () => {
     const Hosteldata = [
         {
