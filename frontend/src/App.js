@@ -7,6 +7,7 @@ import HostelFacilities from './pages/HostelFacilities';
 import InfoPage from './pages/InfoPage';
 import BranchChange from './pages/BranchChange';
 import MinorPage from './pages/MinorPage';
+import DeparmentPage from './pages/DeparmentPage';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Route path="/info" element={<InfoPage/>}/>
         <Route path="/branch-change" element={<BranchChange/>}/>
         <Route path="/minor" element={<MinorPage/>}/>
+        <Route path="/department" element={<DeparmentPage/>}/>
       </Routes>
       </BrowserRouter>
     </div>
