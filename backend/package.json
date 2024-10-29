@@ -1,0 +1,21 @@
+{
+    "name": "backend",
+    "version": "1.0.0",
+    "type": "module",
+    "description": "Backend for fresher portal",
+    "main": "index.js",
+    "scripts": {
+        "start": "npx nodemon index"
+    },
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "@adminjs/express": "^6.1.0",
+        "@adminjs/mongoose": "^4.1.0",
+        "adminjs": "^7.8.13",
+        "cors": "^2.8.5",
+        "dotenv": "^16.4.5",
+        "express": "^4.21.1",
+        "mongoose": "^8.7.3"
+    }
+}
