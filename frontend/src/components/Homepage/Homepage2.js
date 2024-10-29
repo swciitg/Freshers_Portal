@@ -1,60 +1,62 @@
-import React from 'react';
-import AchievementsGrid from './Card'; // Import the AchievementsGrid component
+// ImageSlider.jsx
+import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion'; // For animations
 
-export default function Homepage2() {
+const ImageSlider = () => {
+  const images = ['/iitglogo.png', '/img2.png', '/img3.png', '/img4.png']; // Image paths
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  // Automatically change images every 3 seconds
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
+    }, 3000);
+
+    return () => clearInterval(interval); // Cleanup on unmount
+  }, [images.length]);
+
+  const handleThumbnailClick = (index) => {
+    setCurrentIndex(index); // Set image to clicked thumbnail
+  };
+
   return (
-    <div className="px-4 sm:px-8 md:px-16 lg:px-32 py-12">
-      {/* Section with Text and Video */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-8 items-center">
-        {/* Text Section */}
-        <div>
-          <h2 className="text-3xl sm:text-4xl font-bold mb-4 sm:mb-6">
-            About IIT Guwahati
-          </h2>
-          <p className="text-base sm:text-lg md:text-xl text-gray-700 mb-4 sm:mb-6 leading-relaxed">
-            The campus of IIT Guwahati is on the northern banks of the Brahmaputra
-            and abuts the North Guwahati town of Amingaon. The campus spans 
-            700 acres (2.8 km²) around 20 km from the heart of the city, with 
-            the Brahmaputra on one side and hills and open spaces on the other.
-          </p>
-          <p className="text-base sm:text-lg md:text-xl text-gray-700 mb-4 sm:mb-6 leading-relaxed">
-            IIT Guwahati is a prestigious institute of higher learning, producing 
-            meritorious students with excellent career prospects and universal 
-            recognition. Students benefit from advanced courses, expert faculty, 
-            and facilities like well-equipped labs, libraries, and hostels.
-          </p>
-        </div>
-
-        {/* Video Section */}
-        <div className="flex flex-col items-center">
-          <h2 className="text-xl sm:text-2xl font-semibold mb-4 text-center">
-            Amazing Drone Video of IIT Guwahati
-          </h2>
-          <div className="w-full max-w-md md:max-w-full md:w-5/6 lg:w-3/4">
-            <iframe
-              width="100%"
-              height="315"
-              src="https://www.youtube.com/embed/92C1QU4jr30"
-              title="IIT Guwahati - Drone Video"
-              frameBorder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              referrerPolicy="strict-origin-when-cross-origin"
-              allowFullScreen
-              className="rounded-lg shadow-lg"
-            ></iframe>
+    <div className="w-full mx-auto p-4 sm:p-8 lg:p-16">
+      {/* Thumbnails Section */}
+      <div className="flex justify-center sm:justify-end space-x-2 sm:space-x-4 mb-4">
+        {images.map((img, index) => (
+          <div
+            key={index}
+            onClick={() => handleThumbnailClick(index)}
+            className={`cursor-pointer rounded-md overflow-hidden border-2 ${
+              currentIndex === index ? 'border-orange-500' : 'border-transparent'
+            }`}
+          >
+            <img
+              src={img}
+              alt={`Thumbnail ${index + 1}`}
+              className="w-16 h-16 sm:w-24 sm:h-24 object-cover"
+            />
           </div>
-        </div>
+        ))}
       </div>
 
-      {/* New Section Heading */}
-      <div className="mt-12">
-        <h2 className="text-3xl sm:text-4xl font-bold text-center mt-4">
-          Student Organizations
-        </h2>
-
-        {/* Achievements Grid Component */}
-        <AchievementsGrid />
+      {/* Main Image Section */}
+      <div className="overflow-hidden rounded-lg">
+        <AnimatePresence mode="wait"> {/* Use mode="wait" for smooth transitions */}
+          <motion.img
+            key={currentIndex}
+            src={images[currentIndex]}
+            alt={`Slide ${currentIndex + 1}`}
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={{ opacity: 1, scale: 1 }}
+            exit={{ opacity: 0, scale: 1.05 }}
+            transition={{ duration: 0.5 }}
+            className="w-full h-64 sm:h-96 lg:h-screen object-cover rounded-lg"
+          />
+        </AnimatePresence>
       </div>
     </div>
   );
-}
+};
+
+export default ImageSlider;

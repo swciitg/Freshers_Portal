@@ -1,79 +1,59 @@
-// src/components/AchievementsGrid.js
+// AboutInstitute.jsx
 import React from 'react';
 
-// Array of achievements data (8 cards total)
-const achievements = [
-  {
-    title: "Student's Web Committee",
-    description:
-      'Manages and maintains the online presence of student affairs through digital platforms.',
-    image: 'swc.png',
-  },
-  {
-    title: 'Sports Board',
-    description:
-      'Organizes and promotes sports events and competitions to foster physical fitness and teamwork.',
-    image: 'sports_board.jpg',
-  },
-  {
-    title: 'Cultural Board',
-    description:
-      'Promotes cultural events and festivals to encourage creativity and cultural diversity.',
-    image: 'cult_board.jpg',
-  },
-  {
-    title: 'Technical Board',
-    description:
-      'Facilitates technical events, workshops, and competitions to encourage scientific thinking.',
-    image: 'tech-board.png',
-  },
-  {
-    title: 'Hostel Affairs Board',
-    description: 'Coordinates and manages all hostel activities for a smooth living experience on campus.',
-    image: 'hab.png',
-  },
-  {
-    title: "Student Academic Board",
-    description: 'Acts as the bridge between students and administration to address academic concerns.',
-    image: 'sab_logo.png',
-  },
-  {
-    title: "Student's Welfare Board",
-    description: 'Ensures the overall well-being of students, addressing mental, emotional, and social needs.',
-    image: 'welfare_board.png',
-  },
-  {
-    title: "Student's Alumni Interaction Linkage",
-    description: 'Connects current students with alumni to build relationships and provide career guidance.',
-    image: 'small_sail.jpg',
-  },
-];
-
-export default function AchievementsGrid() {
+const AboutInstitute = () => {
   return (
-    <div className="max-w-7xl mx-auto px-6 py-12">
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-        {achievements.map((achievement, index) => (
-          <div
-            key={index}
-            className="object-contain bg-white rounded-lg shadow-md p-4 flex flex-col"
-          >
-            <img
-              src={achievement.image}
-              alt={achievement.title}
-              className="w-full h-40 object-contain"
-            />
-            <h2 className="text-xl font-semibold mb-2">{achievement.title}</h2>
-            <p className="text-gray-600 flex-grow">{achievement.description}</p>
-            <a
-              href="#"
-              className="mt-4 text-blue-600 font-medium flex items-center"
-            >
-              Read more <span className="ml-2">➔</span>
-            </a>
-          </div>
-        ))}
+    <div className="p-24 bg-gray-50">
+      {/* Wrapper for Two-Column Layout */}
+      <div className="flex flex-col md:flex-row items-start justify-between gap-8">
+        {/* Left Section: Title */}
+        <div className="md:w-1/2">
+          <h2 className="text-5xl  text-gray-800 mb-6">
+            About the <br /> <span className="text-orange-500">institute</span>
+          </h2>
+        </div>
+
+        {/* Right Section: Paragraph */}
+        <div className="md:w-1/2">
+          <p className="text-gray-600 text-lg leading-relaxed">
+            Students who do very well in their first year are allowed to change their department. 
+            A Branch Change is made strictly on the basis of Cumulative Performance Index 
+            (academic performance) at the end of the second semester. Branch changes will be made 
+            such that the number of students in the third semester does not exceed 110 percent 
+            of the sanctioned yearly intake for a branch.
+          </p>
+        </div>
       </div>
+
+      {/* List Section: Four Key Points */}
+      <ul className="mt-10 space-y-6">
+        <li className="flex items-center border-b border-gray-300 pb-2">
+          <span className="text-orange-500 font-semibold text-xl mr-4">01</span>
+          <span className="text-lg text-gray-700">
+            Brahmaputra riverfront location
+          </span>
+        </li>
+        <li className="flex items-center border-b border-gray-300 pb-2">
+          <span className="text-orange-500 font-semibold text-xl mr-4">02</span>
+          <span className="text-lg text-gray-700">
+            Scenic hills and open spaces
+          </span>
+        </li>
+        <li className="flex items-center border-b border-gray-300 pb-2">
+          <span className="text-orange-500 font-semibold text-xl mr-4">03</span>
+          <span className="text-lg text-gray-700">
+            State-of-the-art research facilities
+          </span>
+        </li>
+        <li className="flex items-center border-b border-gray-300 pb-2">
+          <span className="text-orange-500 font-semibold text-xl mr-4">04</span>
+          <span className="text-lg text-gray-700">
+            Emphasis on industry exposure
+          </span>
+        </li>
+      </ul>
     </div>
   );
-}
+};
+
+export default AboutInstitute;

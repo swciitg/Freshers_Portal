@@ -48,12 +48,10 @@ const MainPage = () => {
 
       {/* Main Content */}
       <div className="flex-1 pb-12 pt-4 md:pt-2 md:pl-36">
-        <h1 className="text-2xl md:text-4xl font-medium text-orange-400">
-          {sections[selectedSection].title}
-        </h1>
-        <p className="mt-2 text-sm md:text-base text-orange-500">
-          {sections[selectedSection].content}
-        </p>
+      <div className='mt-8 max-w-3xl mx-auto p-4'>
+        <h1 className="text-4xl font-medium text-orange-500 ">{sections[selectedSection].title}</h1>
+        <p className="mt-2 text-sm text-orange-500">{sections[selectedSection].content}</p>
+        </div>
 
         {/* Conditional Content for "B. Tech" Section */}
         {selectedSection === 0 && (
