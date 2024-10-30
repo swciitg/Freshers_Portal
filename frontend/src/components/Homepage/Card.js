@@ -1,4 +1,3 @@
-// AboutInstitute.jsx
 import React from 'react';
 
 const AboutInstitute = () => {

@@ -1,92 +1,111 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Navbar from '../../common/Navbar'
 import Footer from '../../common/Footer'
 import Facilities from './MainPage'
+import { MoonLoader } from 'react-spinners'
+import useFetchData from '../../hooks/FetchData'
 const Main = () => {
-    const Facdata=[
-        {
-          name: "Athletics Club",
-          description:"The track events are held on a 400 m grass track. Additionally two long jump pits, a pole vault arena, and a full-fledged area for throw events constitute the athletic framework.",
-          imageUrl: "/athletics.png",
-          iconUrl: "/swc.png",
-          wikiUrl:"#"
-      },
-        {
-          name: "Aquatics Club",
-          description:"Students can avail the facilities of the standard Olympic sized swimming pool that has produced many excellent swimmers over the years under the guidance of international coaches, available throughout the year.",
-          imageUrl: "/aquatics.png",
-          iconUrl: "/swc.png",
-          wikiUrl:"#"
-      },
-      {
-          name: "Basketball",
-          description:"'There are three basketball courts in the campus which have been renovated recently, two of them with floodlights. Enthusiasts sweating it out over a game after sunset is a common sight.",
-          imageUrl: "/basket.png",
-          iconUrl: "/iitglogo.png",
-          wikiUrl:"#"
-      },
-      {
-          name: "Badminton",
-          description:"IIT Guwahati campus has ten well-kept badminton courts, the highest among all the IITs. Five of which are synthetic, while five are wooden courts. The wooden court stadium was inaugurated by the magnificent Mary Kom.",
-          imageUrl: "/badmin.png",
-          iconUrl: "/swc.png",
-          wikiUrl:"#"
-      },
-      {
-          name: "Cricket  Club",
-          description:"Two tough pitched cricket grounds, with floodlights and a practice arena with five nets are part of the cricketing scenario of the campus. Needless to say, you have a great opportunity to witness the feeling of a professional.",
-          imageUrl: "/cricket.png",
-          iconUrl: "/iitglogo.png",
-          wikiUrl:"#"
-      }, 
-      {
-        name: "Football Club",
-        description:"The well maintained International standard football ground is witness to many spirited sessions of the beautiful game. The FIFA 2017 under-19 world cup games are scheduled to be held in IIT Guwahati football ground itself.",
-        imageUrl: "/foot.png",
-        iconUrl: "/swc.png",
-        wikiUrl:"#"
-    }, 
-    {
-        name: "Hockey Club",
-        description:"The national game of our country is loved and highly encouraged among the IITG junta. Two magnificent Hockey grounds are present in the campus, with a series of competitions and events held throughout the year to keep on maintaining the Hockey culture in the campus.",
-        imageUrl: "/hock.png",
-        iconUrl: "/iitglogo.png",
-        wikiUrl:"#"
-    }, 
-    {
-        name: "Lawn Tennis Club",
-        description:"The campus houses four hard courts, which are complemented with a huge practice wall.",
-        imageUrl: "/lawn.png",
-        iconUrl: "/swc.png",
-        wikiUrl:"#"
-    }, 
-    {
-        name: "Squash Club",
-        description:"Here awaits an interesting world of Quizzing for all enthusiasts. Science and Quiz Club,IIT Guwahati invites you all to to simulate your grey cells and show off your knowledge of science and learn something new!",
-        imageUrl: "/civil.png",
-        iconUrl: "/iitglogo.png",
-        wikiUrl:"#"
-    },
-    {
-        name: "Table Tennis Club",
-        description:"Every Year Many passionate students work on their dream projects. They all have one aim-To create something new and innovative! The Technical Board presents – TechEvince, the annual research exhibition! This segment is one of those rare avenues where you can see and experience a wide spectrum of modern technology with a very unique collection of exhibits from the students of IITG! The cardinal aim of this event is to bring to light the technological advancements our institute has witnessed till date, to acknowledge the projects which have been successfully completed by the budding tech-savvy student fraternity and to give recognition to the people who have contributed to it.",
-        imageUrl: "/civil.png",
-        iconUrl: "/iitglogo.png",
-        wikiUrl:"#"
-    },   {
-        name: "Weightlifting Club",
-        description:"Have you ever looked at a car and marveled at its intricacies and complexity? Does hearing the roar of a V12 engine make your heart beat faster? If your answer was yes to the above questions, then this club is the perfect place for you. The Green Automobile Club (GAC) has taken part in several national level competitions such as the SAENIS Efficycle and stood a remarkable 13th place throughout India. The club has most recently designed and built an F1 car for the SUPRA SAE competition. So don’t miss out on the opportunity to get down and dirty with one of man’s greatest creations – the automobile.",
-        imageUrl: "/civil.png",
-        iconUrl: "/iitglogo.png",
-        wikiUrl:"#"
-    },   {
-        name: "Volleyball Club",
-        description:"At EDC, we understand and believe that this fast changing and evolving era is the perfect time to live in and step-up to shape our future by looking at the world as our playground! So, aiming to promote the spirit of entrepreneurship amongst the IITG community as well as the youth of the North-East India, we host various workshops, lectures, innovative games, brainstorming sessions, competitions which provide a complete learning experience to the attendees and fill them with the zeal to change their monotonous lives!",
-        imageUrl: "/civil.png",
-        iconUrl: "/iitglogo.png",
-        wikiUrl:"#"
-    },  
-      ];
+  const { data, loading, error } = useFetchData(
+    process.env.REACT_APP_BACKEND_BASE_URL + "/sports",
+    "GET"
+);
+const [Facdata, setFacdata] = useState([]);
+
+useEffect(() => {
+    if (data) setFacdata(data);
+    if (data) console.log(data);
+}, [loading]);
+
+if (loading)
+    return (
+        <div className="w-screen h-screen flex items-center justify-center">
+            <MoonLoader />
+        </div>
+    );
+    // const Facdata=[
+    //     {
+    //       name: "Athletics Club",
+    //       description:"The track events are held on a 400 m grass track. Additionally two long jump pits, a pole vault arena, and a full-fledged area for throw events constitute the athletic framework.",
+    //       imageUrl: "/athletics.png",
+    //       iconUrl: "/swc.png",
+    //       wikiUrl:"#"
+    //   },
+    //     {
+    //       name: "Aquatics Club",
+    //       description:"Students can avail the facilities of the standard Olympic sized swimming pool that has produced many excellent swimmers over the years under the guidance of international coaches, available throughout the year.",
+    //       imageUrl: "/aquatics.png",
+    //       iconUrl: "/swc.png",
+    //       wikiUrl:"#"
+    //   },
+    //   {
+    //       name: "Basketball",
+    //       description:"'There are three basketball courts in the campus which have been renovated recently, two of them with floodlights. Enthusiasts sweating it out over a game after sunset is a common sight.",
+    //       imageUrl: "/basket.png",
+    //       iconUrl: "/iitglogo.png",
+    //       wikiUrl:"#"
+    //   },
+    //   {
+    //       name: "Badminton",
+    //       description:"IIT Guwahati campus has ten well-kept badminton courts, the highest among all the IITs. Five of which are synthetic, while five are wooden courts. The wooden court stadium was inaugurated by the magnificent Mary Kom.",
+    //       imageUrl: "/badmin.png",
+    //       iconUrl: "/swc.png",
+    //       wikiUrl:"#"
+    //   },
+    //   {
+    //       name: "Cricket  Club",
+    //       description:"Two tough pitched cricket grounds, with floodlights and a practice arena with five nets are part of the cricketing scenario of the campus. Needless to say, you have a great opportunity to witness the feeling of a professional.",
+    //       imageUrl: "/cricket.png",
+    //       iconUrl: "/iitglogo.png",
+    //       wikiUrl:"#"
+    //   }, 
+    //   {
+    //     name: "Football Club",
+    //     description:"The well maintained International standard football ground is witness to many spirited sessions of the beautiful game. The FIFA 2017 under-19 world cup games are scheduled to be held in IIT Guwahati football ground itself.",
+    //     imageUrl: "/foot.png",
+    //     iconUrl: "/swc.png",
+    //     wikiUrl:"#"
+    // }, 
+    // {
+    //     name: "Hockey Club",
+    //     description:"The national game of our country is loved and highly encouraged among the IITG junta. Two magnificent Hockey grounds are present in the campus, with a series of competitions and events held throughout the year to keep on maintaining the Hockey culture in the campus.",
+    //     imageUrl: "/hock.png",
+    //     iconUrl: "/iitglogo.png",
+    //     wikiUrl:"#"
+    // }, 
+    // {
+    //     name: "Lawn Tennis Club",
+    //     description:"The campus houses four hard courts, which are complemented with a huge practice wall.",
+    //     imageUrl: "/lawn.png",
+    //     iconUrl: "/swc.png",
+    //     wikiUrl:"#"
+    // }, 
+    // {
+    //     name: "Squash Club",
+    //     description:"Here awaits an interesting world of Quizzing for all enthusiasts. Science and Quiz Club,IIT Guwahati invites you all to to simulate your grey cells and show off your knowledge of science and learn something new!",
+    //     imageUrl: "/civil.png",
+    //     iconUrl: "/iitglogo.png",
+    //     wikiUrl:"#"
+    // },
+    // {
+    //     name: "Table Tennis Club",
+    //     description:"Every Year Many passionate students work on their dream projects. They all have one aim-To create something new and innovative! The Technical Board presents – TechEvince, the annual research exhibition! This segment is one of those rare avenues where you can see and experience a wide spectrum of modern technology with a very unique collection of exhibits from the students of IITG! The cardinal aim of this event is to bring to light the technological advancements our institute has witnessed till date, to acknowledge the projects which have been successfully completed by the budding tech-savvy student fraternity and to give recognition to the people who have contributed to it.",
+    //     imageUrl: "/civil.png",
+    //     iconUrl: "/iitglogo.png",
+    //     wikiUrl:"#"
+    // },   {
+    //     name: "Weightlifting Club",
+    //     description:"Have you ever looked at a car and marveled at its intricacies and complexity? Does hearing the roar of a V12 engine make your heart beat faster? If your answer was yes to the above questions, then this club is the perfect place for you. The Green Automobile Club (GAC) has taken part in several national level competitions such as the SAENIS Efficycle and stood a remarkable 13th place throughout India. The club has most recently designed and built an F1 car for the SUPRA SAE competition. So don’t miss out on the opportunity to get down and dirty with one of man’s greatest creations – the automobile.",
+    //     imageUrl: "/civil.png",
+    //     iconUrl: "/iitglogo.png",
+    //     wikiUrl:"#"
+    // },   {
+    //     name: "Volleyball Club",
+    //     description:"At EDC, we understand and believe that this fast changing and evolving era is the perfect time to live in and step-up to shape our future by looking at the world as our playground! So, aiming to promote the spirit of entrepreneurship amongst the IITG community as well as the youth of the North-East India, we host various workshops, lectures, innovative games, brainstorming sessions, competitions which provide a complete learning experience to the attendees and fill them with the zeal to change their monotonous lives!",
+    //     imageUrl: "/civil.png",
+    //     iconUrl: "/iitglogo.png",
+    //     wikiUrl:"#"
+    // },  
+    //   ];
   return (
     <div>
         <Navbar />

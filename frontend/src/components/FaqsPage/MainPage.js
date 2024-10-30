@@ -9,74 +9,79 @@ const sections = [
   },
   {
     id: 2,
+    title: "How to reach the Institute from Kamakhaya Railway Station?",
+    content: "",
+  },
+  {
+    id: 3,
     title: "How to reach the Institute from Guwahati Airport?",
     content: "",
   },
-  { id: 3, title: "What all should we get or not get from home?", content: "" },
+  { id: 4, title: "What all should we get or not get from home?", content: "" },
   {
-    id: 4,
+    id: 5,
     title:
       "Should we bring our JEE preparation books, in case they are useful in the basic Physics and Chemistry courses?",
     content: "",
   },
   {
-    id: 5,
-    title: "Which banks have their branches in IIT Guwahati?",
-    content: "",
-  },
-  {
     id: 6,
-    title:
-      "Where do we stay once we arrive IIT Guwahati? Where can my parents stay?",
+    title: "Which banks have their branches in IIT Guwahati?",
     content: "",
   },
   {
     id: 7,
     title:
-      "How are the hostels allotted to freshmen? Does my hostel change every year?",
+      "Where do we stay once we arrive IIT Guwahati? Where can my parents stay?",
     content: "",
   },
   {
     id: 8,
     title:
-      "Is there any ragging at IIT Guwahati? What are the steps that IIT Guwahati is taking?",
+      "How are the hostels allotted to freshmen? Does my hostel change every year?",
     content: "",
   },
   {
     id: 9,
+    title:
+      "Is there any ragging at IIT Guwahati? What are the steps that IIT Guwahati is taking?",
+    content: "",
+  },
+  {
+    id: 10,
     title: "Are girls allowed to enter boys hostels and vice-versa?",
     content: "",
   },
-  { id: 10, title: "What are the timings of library?", content: "" },
+  { id: 11, title: "What are the timings of library?", content: "" },
   {
-    id: 11,
+    id: 12,
     title:
       "What are the scholarships/financial assistance available for studying at IIT Guwahati?",
     content: "",
   },
-  { id: 12, title: "Can I change my department post-admission?", content: "" },
+  { id: 13, title: "Can I change my department post-admission?", content: "" },
   {
-    id: 13,
+    id: 14,
     title: "What are minor courses? And what are their advantages?",
     content: "",
   },
   {
-    id: 14,
+    id: 15,
     title: "How can I take a minor course? And Can I drop minor course?",
     content: "",
   },
   {
-    id: 15,
+    id: 16,
     title: "What is the internet policy at IIT Guwahati?",
     content: "",
   },
   {
-    id: 16,
+    id: 17,
     title: "Are there any options nearby for food other than the hostel mess?",
     content: "",
   },
   {
-    id: 17,
+    id: 18,
     title: "What are the medical facilities provided in IIT Guwahati?",
     content: "",
   },
@@ -132,10 +137,12 @@ const MainPage = () => {
 
       {/* Main Content */}
       <div className="flex-1 pb-12 pt-4 md:pt-2 md:pl-36">
-      <div className='mt-8 max-w-3xl mx-auto p-4'>
-        <h1 className="text-4xl font-medium text-orange-500 ">{sections[selectedSection].title}</h1>
-        <p className="mt-2 text-sm text-orange-500">{sections[selectedSection].content}</p>
-        </div>
+        <h1 className="text-2xl md:text-4xl font-medium text-orange-400">
+          {sections[selectedSection].title}
+        </h1>
+        <p className="mt-2 text-sm md:text-base text-orange-500">
+          {sections[selectedSection].content}
+        </p>
 
         {/* Conditional Content for "B. Tech" Section */}
         {selectedSection === 0 && (
@@ -655,7 +662,7 @@ const MainPage = () => {
           </div>
         )}
 
-        {selectedSection === 2 && (
+        {selectedSection === 3 && (
           <div className="mt-8 max-w-3xl mx-auto p-4">
             <p className="text-gray-600 text-base sm:text-lg leading-relaxed mb-6">
               The institute is located at a distance of 18 kilometres from the
@@ -735,7 +742,7 @@ const MainPage = () => {
           </div>
         )}
 
-        {selectedSection === 3 && (
+        {selectedSection === 4 && (
           <div className="mt-8 max-w-3xl mx-auto p-4">
             <p className="text-gray-600 text-base sm:text-lg leading-relaxed mb-6">
               You will need essentials like a lock, a bucket, a mug, a mattress
@@ -758,7 +765,7 @@ const MainPage = () => {
           </div>
         )}
 
-        {selectedSection === 4 && (
+        {selectedSection === 5 && (
           <div className="mt-8 max-w-3xl mx-auto p-4">
             <p className="text-gray-600 text-base sm:text-lg leading-relaxed mb-6">
               There would be some courses in the first year requiring basic
@@ -773,7 +780,7 @@ const MainPage = () => {
             </p>
           </div>
         )}
-        {selectedSection === 5 && (
+        {selectedSection === 6 && (
           <div className="mt-8 max-w-3xl mx-auto p-4">
             <p className="text-gray-600 text-base sm:text-lg leading-relaxed mb-6">
               There are 3 major banks in the campus: Canara Bank (IFSC:
@@ -787,7 +794,7 @@ const MainPage = () => {
           </div>
         )}
 
-        {selectedSection === 6 && (
+        {selectedSection === 7 && (
           <div className="mt-8 max-w-3xl mx-auto p-4">
             <p className="text-gray-600 text-base sm:text-lg leading-relaxed mb-6">
               A limited number of rooms (60 rooms) are available at IIT Guwahati
@@ -1092,14 +1099,14 @@ const MainPage = () => {
         )}
 
 
-{selectedSection === 7 && (
+{selectedSection === 8 && (
           <div className="mt-8 max-w-3xl mx-auto p-4">
             <p className="text-gray-600 text-base sm:text-lg leading-relaxed mb-6">
             The hostel room is made available to the students on their arrival. Hostels are allotted randomly by the administration. Once you have been allotted a hostel, you stay there for your entire IIT life unless some special and extreme circumstances arise.
             </p>
           </div>
         )}
-        {selectedSection === 8 && (
+        {selectedSection === 9 && (
           <div className="mt-8 max-w-3xl mx-auto p-4">
             <p className="text-gray-600 text-base sm:text-lg leading-relaxed mb-6">
             IIT Guwahati has a zero tolerance policy. We do not accept ragging in any form. If you ever find yourself in a situation where you feel uncomfortable, contact anti ragging hotline number: 08011089898.For details on ragging and steps taken by Instiitue, follow the pdf given below:
@@ -1113,7 +1120,7 @@ const MainPage = () => {
           </div>
         )}
 
-{selectedSection === 9 && (
+{selectedSection === 10 && (
           <div className="mt-8 max-w-3xl mx-auto p-4">
             <p className="text-gray-600 text-base sm:text-lg leading-relaxed mb-6">
             Residents of the opposite sex are prohibited from entering the flats/units of the hostel residents at all times. You may use the common area such as the Mess, Hostel Office or Reading room/Library for any discussion and/or group study."
@@ -1121,7 +1128,7 @@ const MainPage = () => {
             
           </div>
         )}
-        {selectedSection === 10 && (
+        {selectedSection === 11 && (
           <div className="mt-8 max-w-3xl mx-auto p-4">
             <p className="text-gray-600 text-base sm:text-lg leading-relaxed mb-6">
             Library is open from 9:00 AM to 2:00 AM, although books can be issued from 9:00 AM to 5:00 PM only (working days). Library is open 24hrs. during mid semester and end semester examinations.
@@ -1131,7 +1138,7 @@ const MainPage = () => {
         )}
 
 
-{selectedSection === 11 && (
+{selectedSection === 12 && (
           <div className="mt-8 max-w-3xl mx-auto p-4">
             <p className="text-gray-600 text-base sm:text-lg leading-relaxed mb-6">
             Scholarships are offered to most students by the Institute, government agencies, alumni and corporations. This assistance is offered on the basis of Merit-cum-Means, performance, special capabilities etc. Click below for more details.</p>
@@ -1144,7 +1151,7 @@ const MainPage = () => {
           </div>
         )}
 
-{selectedSection === 12 && (
+{selectedSection === 13 && (
           <div className="mt-8 max-w-3xl mx-auto p-4">
             <p className="text-gray-600 text-base sm:text-lg leading-relaxed mb-6">
             Students who do very well in their first year are allowed to change their department. A Branch Change is made strictly on basis of Cumulative Performance Index (academic performance) at end of second semester. Branch changes will be made such that number of students in third semester does not exceed 110 percent of the sanctioned yearly intake for a branch. </p>
@@ -1152,7 +1159,7 @@ const MainPage = () => {
           </div>
         )}
 
-{selectedSection === 13 && (
+{selectedSection === 14 && (
           <div className="mt-8 max-w-3xl mx-auto p-4">
             <p className="text-gray-600 text-base sm:text-lg leading-relaxed mb-6">
             Minor Courses are efficiently designed course structures which provides you an insight and fundamental concepts of the branch you choose as your minor. You can choose minor on following topics and branches: Computer Science and Engineering, Electronics & Electrical Engineering, Mechanical Engineering, Civil Engineering, Biotechnology, Chemical Engineering, Engineering Physics, Chemical Science & Technology, Mathematics, South and Southeast Asian Studies, Language and Literature, but you will have to bear an extra course throughout your semesters.
@@ -1161,7 +1168,7 @@ You will learn some concepts of a different branch and also your Degree will rea
           </div>
         )}
 
-{selectedSection === 14 && (
+{selectedSection === 15 && (
           <div className="mt-8 max-w-3xl mx-auto p-4">
             <p className="text-gray-600 text-base sm:text-lg leading-relaxed mb-6">
             Yes, there is a criteria for getting a minor course, you must have CGPA of 6.5 or above in first two semesters. The number of seats in each minor discipline will be as per decision of the Senate of IIT Guwahati. However, a minor discipline will not be available if the number of applicants in that discipline is less than five. Selection to minor disciplines shall be made strictly in order of merit of the applicants. Extra load of minor courses can become a heavy burden at times, so yes, you can drop minor course in any semester before a particular last date, which is 2 weeks after mid-semester exams, but then there won’t be any mention of specialization in minor field or courses in the degree. </p>
@@ -1169,7 +1176,7 @@ You will learn some concepts of a different branch and also your Degree will rea
           </div>
         )}
 
-{selectedSection === 15 && (
+{selectedSection === 16 && (
           <div className="mt-8 max-w-3xl mx-auto p-4">
             <p className="text-gray-600 text-base sm:text-lg leading-relaxed mb-6">
             IIT Guwahati has LAN cables installed in every hostel room and WIFI routers in the Academic Area, Student Activity Centre (SAC) and your respective hostels. IIT Guwahati believes in providing high speed internet to all its students. Furthermore, the LAN is dysfunctional between 2 AM to 5 AM and 8 AM to 5 PM(class hours). </p>
@@ -1177,7 +1184,7 @@ You will learn some concepts of a different branch and also your Degree will rea
           </div>
         )}
 
-{selectedSection === 16 && (
+{selectedSection === 17 && (
           <div className="mt-8 max-w-3xl mx-auto p-4">
             <p className="text-gray-600 text-base sm:text-lg leading-relaxed mb-6">
             Institute offers delectable food services so that the brains at work can perform their best. Although home cooked food cannot be replaced by anything, the campus does have alternatives if you want to skip the mess food. The campus houses various renowned restaurant franchises like Baskin and Robbins and Subway in Food Court adjoining the New SAC building. Local food chains like Florentine Restaurant,Manikanta and Ambrosia Bakery have their outlets in the Food court as well. The institute also houses prominent restaurant and food chains in the New SAC building. The campus hosts a Cafe Coffee Day outlet, situated outside the institute library where every item is subsidized to half its original price. There are two restaurants in the Market Complex as well, namely Silverdine and Soiree. Along with these food joints, campus houses IRCTC canteen and there is a small market set up on faculty gate having various local shops for an occasional change of taste. </p>
@@ -1185,7 +1192,7 @@ You will learn some concepts of a different branch and also your Degree will rea
           </div>
         )}
 
-{selectedSection === 17 && (
+{selectedSection === 18 && (
           <div className="mt-8 max-w-3xl mx-auto p-4">
             <p className="text-gray-600 text-base sm:text-lg leading-relaxed mb-6">
             We have an in-campus hospital at IIT Guwahati, which is open 24×7. In case of emergency the IIT Guwahati ambulance drives you to the hospital. You call them directly or approach the nearest security desk to summon them. In case it is a serious matter which cannot be handled by the staff at the IIT Guwahati hospital at that time, the students are referred to GNRC or NH Narayana Hospital which are located very close to the campus. The IIT Guwahati ambulance will drop you there in case of an emergency free of charge. Also, during the orientation week, you will all be given a Health Record Card will guarantee you free of charge treatment and medication at the Institute Hospital. </p>
