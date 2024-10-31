@@ -1,4 +1,3 @@
-// HomePage.js
 import React, { useRef, useState } from 'react';
 import Navbar from '../../common/Navbar'; // Import Navbar
 import { ReactComponent as PlayIcon } from '../../assets/play.svg'; // Play Icon SVG
@@ -87,4 +86,3 @@ const HomePage = () => {
 };
 
 export default HomePage;
-

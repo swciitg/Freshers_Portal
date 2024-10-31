@@ -2,13 +2,13 @@ import mongoose from 'mongoose';
 const Schema = mongoose.Schema;
 const HostelFacSchema = new Schema({
     name: {
-        type: Schema.Types.ObjectId,
-        ref: 'Hostel',
+        type: String,
         required: true
     },
     description: {
-        type: Schema.Types.ObjectId,
-        ref: 'Facility',
+        type: String,
+    },
+
         required: true
     },
     imageUrl: {

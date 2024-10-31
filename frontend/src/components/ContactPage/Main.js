@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Navbar from "../../common/Navbar";
 import Footer from "../../common/Footer";
+
 import Facilities from "./MainPage";
 import useFetchData from "../../hooks/FetchData";
 import { MoonLoader } from "react-spinners";
@@ -32,7 +33,7 @@ const Main = () => {
     //         imageUrl: "/cadence.png",
     //         iconUrl: "/swc.png",
     //     },
-    //     {
+      //     {
     //         name: "Anchoring Club",
     //         description:
     //             "Do you think you own the stage or does the mere mention of stage gives you sleepless nights and frights.? Whatever be the case, you will find your chance to hone your skills and overcome your fears! The Anchorenza club is here for you! The place which will we provide you all sorts of stage to learn, improve and finally emerge as an 'anchor'.",

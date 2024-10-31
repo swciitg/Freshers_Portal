@@ -15,7 +15,6 @@ const Mainpage = () => {
           About The  <br /><span  className="text-black"> Council</span>
           </h1>
         </div>
-
         {/* Right Section: Description */}
         <div>
           <p className="text-gray-600 text-base sm:text-lg md:text-xl leading-relaxed">

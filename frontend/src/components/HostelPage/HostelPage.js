@@ -31,26 +31,26 @@ const Hostels = (props) => {
             <p className="text-xl sm:text-2xl font-medium mt-2">{props.capacity}</p>
           </div>
           <div>
-            <a
-              href={props.wikiUrl}
-              className="text-base sm:text-lg font-semibold text-gray-500 inline-flex items-center"
+          <a
+            href={props.wikiUrl}
+            className="text-base sm:text-lg font-semibold text-gray-500 inline-flex items-center border px-4 py-2 rounded-md shadow-sm hover:bg-gray-50"
+          >
+            Campus Wiki
+            <svg
+              className="ml-2 h-5 w-5"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
             >
-              Campus Wiki
-              <svg
-                className="ml-2 h-5 w-5"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M14 5l7 7m0 0l-7 7m7-7H3"
-                />
-              </svg>
-            </a>
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M14 5l7 7m0 0l-7 7m7-7H3"
+              />
+            </svg>
+          </a>
           </div>
         </div>
       </div>
