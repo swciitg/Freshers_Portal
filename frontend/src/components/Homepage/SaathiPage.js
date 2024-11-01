@@ -11,7 +11,7 @@ const SaathiPage = () => {
           <h1 className="text-5xl sm:text-7xl lg:text-8xl font-thin text-gray-900">
             SAATHI
           </h1>
-          <button className="mt-4 px-4 py-2 border rounded-full text-gray-700 flex items-center">
+          <a href="/saathi"><button className="mt-4 px-4 py-2 border rounded-full text-gray-700 flex items-center">
             About us
             <span className="ml-2">
               <svg
@@ -30,7 +30,7 @@ const SaathiPage = () => {
                 />
               </svg>
             </span>
-          </button>
+          </button> </a>
         </div>
 
         <p className="text-sm sm:text-base lg:text-lg lg:w-2/5 text-gray-600">
@@ -44,7 +44,7 @@ const SaathiPage = () => {
       {/* Links Section */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 mt-10">
         {/* Counsellor's Timings */}
-        <div className="flex justify-between items-center border-b border-gray-300 pb-4">
+        <a href="/saathi"><div className="flex justify-between items-center border-b border-gray-300 pb-4">
           <div className="flex flex-col items-start space-y-4">
             <div className="w-16 h-16">
               <Oneicon className="w-full h-full" />
@@ -53,6 +53,7 @@ const SaathiPage = () => {
               Counsellor’s Timings
             </span>
           </div>
+          
           <svg
             width="24"
             height="24"
@@ -69,9 +70,9 @@ const SaathiPage = () => {
             />
           </svg>
         </div>
-
+        </a>
         {/* Student Mentorship */}
-        <div className="flex justify-between items-center border-b border-gray-300 pb-4">
+        <a href="/saathi"><div className="flex justify-between items-center border-b border-gray-300 pb-4">
           <div className="flex flex-col items-start space-y-4">
             <div className="w-16 h-16">
               <Secicon className="w-full h-full" />
@@ -80,6 +81,7 @@ const SaathiPage = () => {
               Student Mentorship
             </span>
           </div>
+          
           <svg
             width="24"
             height="24"
@@ -96,15 +98,16 @@ const SaathiPage = () => {
             />
           </svg>
         </div>
-
+        </a>
         {/* Team */}
-        <div className="flex justify-between items-center border-b border-gray-300 pb-4">
+        <a href="/saathi"><div className="flex justify-between items-center border-b border-gray-300 pb-4">
           <div className="flex flex-col items-start space-y-4">
             <div className="w-16 h-16">
               <Thiicon className="w-full h-full" />
             </div>
             <span className="text-lg lg:text-2xl text-gray-800">Team</span>
           </div>
+          
           <svg
             width="24"
             height="24"
@@ -121,9 +124,9 @@ const SaathiPage = () => {
             />
           </svg>
         </div>
-
+        </a>
         {/* Anonymous Emotional Support System */}
-        <div className="flex justify-between items-center border-b border-gray-300 pb-4">
+        <a href="/saathi"><div className="flex justify-between items-center border-b border-gray-300 pb-4">
           <div className="flex flex-col items-start space-y-4">
             <div className="w-16 h-16">
             <Fouicon/>
@@ -132,6 +135,7 @@ const SaathiPage = () => {
               Anonymous Emotional Support System
             </span>
           </div>
+          <a href="/saathi">
           <svg
             width="24"
             height="24"
@@ -146,8 +150,8 @@ const SaathiPage = () => {
               strokeLinecap="round"
               strokeLinejoin="round"
             />
-          </svg>
-        </div>
+          </svg></a>
+        </div> </a>
       </div>
     </div>
   );
