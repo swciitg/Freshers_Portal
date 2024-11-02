@@ -18,6 +18,7 @@ import FestPage from './pages/FestPage';
 import SGCPage from './pages/SGCPage';
 import FaqsPage  from './pages/FaqsPage';
 import ContactPage from './pages/ContactPage';
+import SaathiPage from './components/SaathiPage/Main';
 
 function App() {
   return (
@@ -42,6 +43,7 @@ function App() {
         <Route path="/sgc" element={<SGCPage/>}/>
         <Route path="/faqs" element={<FaqsPage/>}/>
         <Route path="/contact" element={<ContactPage/>}/>
+        <Route path="/saathi" element={<SaathiPage/>}/>
       </Routes>
       </BrowserRouter>
     </div>
