@@ -22,7 +22,7 @@ const storage = multer.diskStorage({
 
 const upload = multer({ storage });
 
-// Protected Routes
+
 router.get('/', authController.isAuthenticated, uploadController.getUploadPage);
 router.post('/', authController.isAuthenticated, upload.single('myFile'), uploadController.uploadFile);
 router.get('/delete/:filename', authController.isAuthenticated, uploadController.deleteFile);
