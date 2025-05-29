@@ -1,4 +1,3 @@
-// Initialize InterHostel model
 import mongoose from 'mongoose';
 const Schema = mongoose.Schema;
 const InterHostelSchema = new Schema({
