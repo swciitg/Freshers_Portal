@@ -39,7 +39,9 @@ app.get("/facilities", handleGetAllFacilities);
 // app.get("/hab", handleHab);
 // app.get("/info", handleInfo);
 app.get("/swb", WelfarePage);
-app.get("/", HomePage);
+app.get("/", (req,res)=> {
+    res.send("Welcome to the Freshers Portal Backend!");
+});
 app.get("/hostel-events", InterHostel);
 app.get("/hostel-fac", HostelFacilities);
 app.get("/hostel-list", ListHostelPage);

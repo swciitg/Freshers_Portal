@@ -23,7 +23,7 @@ import SaathiPage from './components/SaathiPage/Main';
 function App() {
   return (
     <div>
-      <BrowserRouter>
+      <BrowserRouter basename={"/freshers"}>
       <Routes>
         <Route path="/" element={<Homepage/>}/>
         <Route path="/hostel-list" element={<ListHostelPage/>}/>

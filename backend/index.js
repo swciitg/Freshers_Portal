@@ -12,7 +12,7 @@ mongoose
         console.error("Error connecting to MongoDB:", error);
     });
 
-app.use(admin.options.rootPath, adminRouter);
+app.use('/admin', adminRouter);
 // start the server
 app.listen(process.env.PORT || 5000, () => {
     console.log(
