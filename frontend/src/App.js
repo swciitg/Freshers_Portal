@@ -20,9 +20,12 @@ import FaqsPage  from './pages/FaqsPage';
 import ContactPage from './pages/ContactPage';
 import SaathiPage from './components/SaathiPage/Main';
 
+const BASEURL = process.env.REACT_APP_BASEURL|| '';
+
 function App() {
   return (
     <div>
+
       <BrowserRouter basename={"/freshers"}>
       <Routes>
         <Route path="/" element={<Homepage/>}/>

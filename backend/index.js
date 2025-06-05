@@ -1,8 +1,9 @@
 import app from "./src/app.js";
 import mongoose from "mongoose";
 import "dotenv/config";
-import { adminRouter, admin } from "../backend/admin_panel/admin-config.js";
-// connect db
+import { adminRouter, admin } from "./admin_panel/admin-config.js";
+import bodyParser from "body-parser";
+
 mongoose
     .connect(process.env.DB_URL)
     .then(() => {
@@ -11,6 +12,10 @@ mongoose
     .catch((error) => {
         console.error("Error connecting to MongoDB:", error);
     });
+
+
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use('/admin', adminRouter);
 // start the server

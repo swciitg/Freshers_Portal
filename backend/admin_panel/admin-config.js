@@ -51,8 +51,8 @@ const admin = new AdminJS(adminOptions);
 
 const adminRouter = AdminJSExpress.buildAuthenticatedRouter(admin, {
   authenticate,
-  cookieName: "adminjs",
-  cookiePassword: "sessionsecret",
+  cookieName: process.env.COOKIE_NAME,
+  cookiePassword: process.env.COOKIE_PASSWORD,
 }, null, {
   resave: false,
   saveUninitialized: true,

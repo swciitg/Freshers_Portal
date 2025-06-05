@@ -1,18 +1,18 @@
 import express from "express";
 import cors from "cors";
-// import controllers
+import session from "express-session";
+import { fileURLToPath } from 'url';
+import path from 'path';
+import uploadRoutes from "../routes/upload.route.js";
+import authRoutes from "../routes/auth.routes.js";
 import {
-    handleGetContactPeople,
-    handleContactForm,
+  handleGetContactPeople,
+  handleContactForm,
 } from "./controllers/ContactPage.controller.js";
 import { handleGetAllClubs } from "./controllers/CulturalPage.controller.js";
 import { handleGetAllFests } from "./controllers/FestPage.controller.js";
 import { handleGetAllDepts } from "./controllers/DepartmentPage.controller.js";
 import { handleGetAllFacilities } from "./controllers/FacilitiesPage.controller.js";
-// const handleBranchChange = require("./controllers/BranchChange.controller");
-// const handleFaqs = require("./controllers/FaqsPage.controller");
-// const handleHab = require("./controllers/HabPage.controller");
-// const handleInfo = require("./controllers/InfoPage.controller");
 import WelfarePage from "./controllers/WelfarePage.controller.js";
 import HomePage from "./controllers/Homepage.controller.js";
 import InterHostel from "./controllers/InterHostel.controller.js";
@@ -23,21 +23,29 @@ import SportsBoard from "./controllers/SportsBoard.controller.js";
 
 const app = express();
 
-// middlewares
-app.use(express.json());
 app.use(cors());
+app.get("/", (req, res) => {
+  res.json("Backend working Perfectly");
+});
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+app.set('view engine', 'ejs');
+app.set('views', path.join(__dirname, 'views'));
 
-// routes
+app.use(express.static('uploads'));
+app.use(session({
+  secret: 'supersecretkey',
+  resave: false,
+  saveUninitialized: false
+}));
+app.use('/image', authRoutes);
+app.use('/upload', uploadRoutes);
 app.get("/contact", handleGetContactPeople);
 app.post("/contact-form", handleContactForm);
 app.get("/cultural", handleGetAllClubs);
 app.get("/fest", handleGetAllFests);
 app.get("/department", handleGetAllDepts);
 app.get("/facilities", handleGetAllFacilities);
-// app.get("/branch-change", handleBranchChange);
-// app.get("/faqs", handleFaqs);
-// app.get("/hab", handleHab);
-// app.get("/info", handleInfo);
 app.get("/swb", WelfarePage);
 app.get("/", (req,res)=> {
     res.send("Welcome to the Freshers Portal Backend!");
@@ -45,7 +53,6 @@ app.get("/", (req,res)=> {
 app.get("/hostel-events", InterHostel);
 app.get("/hostel-fac", HostelFacilities);
 app.get("/hostel-list", ListHostelPage);
-
 app.get("/tech", TechBoard);
 app.get("/sports", SportsBoard);
 
