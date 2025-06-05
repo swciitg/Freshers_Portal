@@ -186,9 +186,9 @@
         <ul class="file-list">
             <% files.forEach(file => { %>
                 <li>
-                    <a href="/<%= file %>" target="_blank" class="file-link"><%= file %></a>
+                    <a href="/freshers/api/<%= file %>" target="_blank" class="file-link"><%= file %></a>
                     <div class="file-actions">
-                        <button class="copy-button" data-url="/<%= file %>">Copy URL</button>
+                        <button class="copy-button" data-url="https://swc.iitg.ac.in/freshers/api/<%= file %>">Copy URL</button>
                         <a href="/freshers/api/upload/delete/<%= file %>" class="delete-button">Delete</a>
                     </div>
                 </li>
