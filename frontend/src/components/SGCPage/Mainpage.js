@@ -42,7 +42,7 @@ It comprises of five Boards viz. Students’ Welfare Board, Cultural Board, Spor
 
     <h2 className="text-2xl font-semibold text-black">What is the structure of the Students' Senate?</h2>
     <p className="text-gray-600 text-base sm:text-lg md:text-xl leading-relaxed">
-      Students' Senate consists of 23 elected representatives divided into:
+      Students' Senate consists of 25 elected representatives divided into:
     </p>
 
     <h3 className="text-xl font-semibold text-gray-800">Executive Panel</h3>
@@ -53,12 +53,14 @@ It comprises of five Boards viz. Students’ Welfare Board, Cultural Board, Spor
       <li>General Secretary, Cultural Board</li>
       <li>General Secretary, Technical Board</li>
       <li>General Secretary, Hostel Affairs Board</li>
+      <li>General Secretary, Students’ Web Committee</li>
+      <li>General Secretary, Student Alumni Interaction Linkage</li>
     </ul>
 
     <h3 className="text-xl font-semibold text-gray-800">Legislative Panel</h3>
     <ul className="list-disc list-inside text-gray-600 space-y-2">
       <li>7 UG (Undergraduate) Senators</li>
-      <li>2 PPG (Postgraduate) Senators</li>
+      <li>7 PPG (Postgraduate) Senators</li>
       <li>3 Girl Senators</li>
     </ul>
 

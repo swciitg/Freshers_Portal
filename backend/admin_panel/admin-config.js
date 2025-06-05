@@ -10,8 +10,11 @@ import Sports from "../src/models/Sports.model.js";
 import Tech from "../src/models/Tech.Model.js";
 import Welfare from "../src/models/Welfare.model.js";
 import Facility from "../src/models/Facilities.model.js";
+import Cult from "../src/models/Cultural.js";
+import Department from "../src/models/Departments.model.js";
+import Fest from "../src/models/Fest.model.js";
 
-const ADMINPANELROOT = "/freshers/api/admin";
+const ADMINPANELROOT = "/admin";
 
 const DEFAULT_ADMIN = {
   email: process.env.ADMIN_EMAIL ,
@@ -40,6 +43,9 @@ const adminOptions = {
     Tech,
     Welfare,
     Facility,
+    Cult,
+    Department,
+    Fest
     
   ],
   rootPath: ADMINPANELROOT,

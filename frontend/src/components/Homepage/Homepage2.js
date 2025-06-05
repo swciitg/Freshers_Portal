@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion'; // For animations
 
 const ImageSlider = () => {
-  const images = ['/iitglogo.png', '/img2.png', '/img3.png', '/img4.png']; // Image paths
+  const images = ['/freshers/img5.png', '/freshers/img2.png', '/freshers/img3.png', '/freshers/img4.png']; // Image paths
   const [currentIndex, setCurrentIndex] = useState(0);
 
   // Automatically change images every 3 seconds

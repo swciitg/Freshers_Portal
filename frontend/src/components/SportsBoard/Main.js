@@ -109,15 +109,15 @@ if (loading)
   return (
     <div>
         <Navbar />
-<div className="h-[calc(75vh-96px)] flex flex-col items-center justify-center px-4 text-center">
+{/* <div className="h-[calc(75vh-96px)] flex flex-col items-center justify-center px-4 text-center"> */}
   {/* Title */}
-  <h1 className="text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-bold text-gray-300">
+  {/* <h1 className="text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-bold text-gray-300">
   Sports Board
   </h1>
   <p className="mt-16 text-lg md:text-xl text-gray-500 max-w-3xl">
   IITG offers excellent facilities for both indoor and outdoor sports to ensure your overall development. Outdoor activities include cricket, football, basketball, athletics, swimming, and more, while indoor options like table tennis, chess, and squash are available year-round. The Sports Board, with 11 clubs, organizes these activities, and recent additions include Kho-Kho, Kabaddi, Chess, and Carrom. The SAC grounds are open until 9 P.M., and equipment can be borrowed with your I-Card. Don’t worry if you’re new to sports—a dedicated team of coaches is here to help. Make time for fitness to stay sharp and balanced!
   </p>
-  </div>
+  </div> */}
   <div className="space-y-16 py-16 px-10">
         {Facdata.map((event, index) => (
           <Facilities

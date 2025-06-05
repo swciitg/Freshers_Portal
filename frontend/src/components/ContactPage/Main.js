@@ -1,14 +1,14 @@
 import React, { useState, useEffect } from "react";
 import Navbar from "../../common/Navbar";
 import Footer from "../../common/Footer";
-
-import Facilities from "./MainPage";
+import DeanHierarchy from "./DeanHierarchy";
 import useFetchData from "../../hooks/FetchData";
 import { MoonLoader } from "react-spinners";
+import BRDirectory from "./BRDirectory";
 
 const Main = () => {
     const { data, loading, error } = useFetchData(
-        process.env.REACT_APP_BACKEND_BASE_URL + "/cultural",
+        process.env.REACT_APP_BACKEND_BASE_URL + "/contact",
         "GET"
     );
     const [Facdata, setFacdata] = useState([]);
@@ -93,9 +93,9 @@ const Main = () => {
     return (
         <div>
             <Navbar />
-            <div className="h-[calc(95vh-96px)] flex flex-col items-center justify-center px-4 text-center">
+            {/* <div className="h-[calc(95vh-96px)] flex flex-col items-center justify-center px-4 text-center"> */}
                 {/* Title */}
-                <h1 className="text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-bold text-gray-300">
+                {/* <h1 className="text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-bold text-gray-300">
                     Cultural Board
                 </h1>
                 <p className="mt-16 text-lg md:text-xl text-gray-500 max-w-3xl">
@@ -110,18 +110,12 @@ const Main = () => {
                     regular cultural nights where students gather for live
                     performances and dances.
                 </p>
+            </div> */}
+            <div className="space-y-16 py-16 px-10">
+                <DeanHierarchy/>
             </div>
             <div className="space-y-16 py-16 px-10">
-                {Facdata.map((event, index) => (
-                    <Facilities
-                        key={index}
-                        name={event.name}
-                        description={event.description}
-                        imageUrl={event.imagePath}
-                        headName={event.headName}
-                        iconUrl={event.iconPath}
-                    />
-                ))}
+                <BRDirectory/>
             </div>
             <Footer />
         </div>

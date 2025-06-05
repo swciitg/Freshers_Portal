@@ -15,11 +15,10 @@ const AboutInstitute = () => {
         {/* Right Section: Paragraph */}
         <div className="md:w-1/2">
           <p className="text-gray-600 text-lg leading-relaxed">
-            Students who do very well in their first year are allowed to change their department. 
-            A Branch Change is made strictly on the basis of Cumulative Performance Index 
-            (academic performance) at the end of the second semester. Branch changes will be made 
-            such that the number of students in the third semester does not exceed 110 percent 
-            of the sanctioned yearly intake for a branch.
+            Nestled on the scenic northern banks of the majestic Brahmaputra River, IIT Guwahati stands as a beacon of academic excellence and innovation. Spread across 700 acres of serene landscape, the campus lies adjacent to North Guwahati’s Amingaon town, framed by lush hills and expansive greenery — offering a perfect blend of nature and cutting-edge infrastructure.
+As one of India’s premier institutes of higher education, IIT Guwahati is renowned for nurturing brilliant minds and shaping future leaders. The institute offers an intellectually stimulating environment enriched by world-class faculty, state-of-the-art laboratories, a comprehensive library, modern hostels, and unmatched resources that empower students to thrive in academics, research, and innovation.
+Driven by a spirit of discovery and excellence, the faculty and students at IIT Guwahati consistently contribute to groundbreaking research, prestigious publications, fellowships, and industry collaborations. With a vibrant campus life and a legacy of accomplishments, the institute continues to chart new heights — inspiring generations and making a mark on the global stage.
+
           </p>
         </div>
       </div>

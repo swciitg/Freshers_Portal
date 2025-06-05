@@ -57,15 +57,15 @@ if (loading)
   return (
     <div>
         <Navbar />
-<div className="h-[calc(95vh-96px)] flex flex-col items-center justify-center px-4 text-center">
+{/* <div className="h-[calc(95vh-96px)] flex flex-col items-center justify-center px-4 text-center"> */}
   {/* Title */}
-  <h1 className="text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-bold text-gray-300">
+  {/* <h1 className="text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-bold text-gray-300">
    Student's <br /> Welfare Board
   </h1>
   <p className="mt-16 text-lg md:text-xl text-gray-500 max-w-3xl">
   The Students' Welfare Board ensures the well-being of IITG students through various activities like faculty-student interactions, yoga camps, social service, and counseling. They aim to keep students' minds, bodies, and souls balanced. As you settle in, the Board will welcome you with events during Fresher's Week to help you adjust. Rest assured, there's no ragging here—just a friendly, supportive environment. Feel free to reach out for any help during your stay.
   </p>
-  </div>
+  </div> */}
   <div className="space-y-16 py-16 px-10">
         {Facdata.map((event, index) => (
           <Facilities

@@ -2,44 +2,44 @@ import React from 'react';
 
 const boardsData = [
   {
-    logo: '/swc.png',
+    logo: '/freshers/swc.png',
     title: "Students' Web Committee",
     description: 'A community at IITG of developers, designers, and managers dedicated to building impactful, value-driven products for campus life since 2016.',
   },
   {
-    logo: '/welfare_board.png',
-    title: 'Welfare Board',
-    description: 'It broadly addresses the overall well-being of the students of the institute.',
+    logo: '/freshers/welfare_board.png',
+    title: "Students' Welfare Board",
+    description: "The Students' Welfare Board at IIT Guwahati fosters holistic student development through initiatives in mental health, academic support, and social outreach. It operates seven student-led clubs that promote well-being, inclusivity, and empowerment.",
   },
   {
-    logo: '/hab.png',
+    logo: '/freshers/HAB_logo.jpg',
     title: 'Hostel Affairs Board',
-    description: 'It acts as the central coordinating authority for all hostels.',
+    description: "The Hostel Affairs Board is the backbone of campus residential life, ensuring smooth functioning across all hostels.From infrastructure upgrades to food served in hostels and improving daily amenities, we shape your second home at IIT Guwahati.",
   },
   {
-    logo: '/sports_board.jpg',
+    logo: '/freshers/sports_board.jpg',
     title: 'Sports Board',
-    description: 'It organizes and promotes all extra-curricular activities in the field of Sports.',
+    description: "Welcome to the IIT Guwahati Sports Board — where champions are shaped beyond the classroom. Here, you’ll find the perfect chance to reconnect with sports, compete with spirit, and grow as a team player.",
   },
   {
-    logo: '/cult_board.jpg',
+    logo: '/freshers/cult_board.jpg',
     title: 'Cultural Board',
-    description: 'It organizes and promotes all extra-curricular cultural activities on the campus.',
+    description: "Hop aboard IITG’s Cultural Board train—where drumbeats, doodles, and debates collide into a campus carnival! Groove, paint, perform monologues, cook feasts, and capture candid clicks while chasing applause, allies, and a nonstop thrill ride. Let loose!",
   },
   {
-    logo: '/tech-board.png',
+    logo: '/freshers/tech-board.png',
     title: 'Technical Board',
-    description: 'It organizes and promotes all extracurricular technical and scientific activities.',
+    description: "Where innovation meets ambition, the Technical board is the apex body overseeing the technical clubs cultivating engineering excellence and leadership through strategic research, collaboration, and mentorship—developing professionals who drive global technological advancement",
   },
   {
-    logo: '/sab_logo.png',
+    logo: '/freshers/sab_logo.png',
     title: 'Students’ Academic Board',
-    description: 'It addresses all the academic issues of the student community to the admin.',
+    description: "Students' Academic Board (SAB), IIT Guwahati, is a student body for all academic-related issues of IIT Guwahati students. The SAB is intended as a student forum that will strive to redress the academic problems and concerns of the entire student community of IIT Guwahati.",
   },
   {
-    logo: '/small_sail.jpg',
+    logo: '/freshers/small_sail.jpg',
     title: 'SAIL',
-    description: 'SAIL keeps you in touch with the IITG community even after you pass out.',
+    description: "We are the bridge between IITG’s present and its legacy.We empower students through alumni-driven mentorship, opportunities, and networks that extend far beyond the campus.",
   },
 ];
 
@@ -47,7 +47,7 @@ const boardsData = [
 const BoardItem = ({ logo, title, description }) => (
   <div className="flex flex-col md:flex-row items-center justify-between py-6 border-b border-gray-300">
     {/* Logo Section */}
-    <div className="w-20 h-20 sm:w-28 sm:h-28 md:w-36 md:h-36 flex-shrink-0">
+    <div className="w-24 h-24 sm:w-32 sm:h-32 md:w-40 md:h-40 lg:w-44 lg:h-44 flex-shrink-0">
       <img src={logo} alt={title} className="w-full h-full object-contain" />
     </div>
 
@@ -92,9 +92,7 @@ const AboutInstitute = () => {
         {/* Right Section: Paragraph */}
         <div className="w-full md:w-2/3">
           <p className="text-gray-600 text-base sm:text-lg leading-relaxed">
-            Apolitical student body that promotes the objectives of fostering
-            extra-curricular and co-curricular activities, welfare of students,
-            and their stay on the campus.
+            The Student Organisation is an apolitical body dedicated to enhancing campus life by promoting a vibrant culture of extra-curricular and co-curricular activities. It works actively to ensure student welfare and enrich their overall experience during their stay at the institute.
           </p>
         </div>
       </div>
