@@ -11,11 +11,11 @@ import Tech from "../src/models/Tech.Model.js";
 import Welfare from "../src/models/Welfare.model.js";
 import Facility from "../src/models/Facilities.model.js";
 
-const ADMINPANELROOT = "/backend/admin";
+const ADMINPANELROOT = "/freshers/api/admin";
 
 const DEFAULT_ADMIN = {
-  email: process.env.ADMIN_EMAIL,
-  password: process.env.ADMIN_PASSWORD,
+  email: process.env.ADMIN_EMAIL ,
+  password:process.env.ADMIN_PASSWORD ,
 };
 
 AdminJS.registerAdapter({

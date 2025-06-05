@@ -25,7 +25,8 @@ const BASEURL = process.env.REACT_APP_BASEURL|| '';
 function App() {
   return (
     <div>
-      <BrowserRouter basename={`/${BASEURL}`}>
+
+      <BrowserRouter basename={"/freshers"}>
       <Routes>
         <Route path="/" element={<Homepage/>}/>
         <Route path="/hostel-list" element={<ListHostelPage/>}/>

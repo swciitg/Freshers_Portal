@@ -1,0 +1,20 @@
+version: "3.3"
+
+services:
+  freshers_portal_frontend:
+    image: freshers_portal_frontend
+    container_name: freshers_portal_frontend
+    restart: always
+    build:
+        context: .
+    ports:
+      - "2369:3000"
+    env_file:
+    - .env
+    command: sh -c "cd /app && serve -s build"
+    networks:
+      - frontend_default
+
+networks:
+  frontend_default:
+    external: true

@@ -13,10 +13,12 @@ mongoose
         console.error("Error connecting to MongoDB:", error);
     });
 
-app.use(admin.options.rootPath, adminRouter);
+
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
+app.use('/admin', adminRouter);
+// start the server
 app.listen(process.env.PORT || 5000, () => {
     console.log(
         "Server started successfully at PORT:",
