@@ -25,7 +25,10 @@ import {adminRouter} from "../admin_panel/admin-config.js";
 const app = express();
 
 app.use(cors());
- app.use('/admin', adminRouter);
+app.use('/admin', adminRouter);
+import bodyParser from "body-parser";
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 app.set('view engine', 'ejs');
