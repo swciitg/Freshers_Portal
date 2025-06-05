@@ -46,11 +46,11 @@ if (loading)
   return (
     <div className="min-h-screen bg-white">
       <Navbar />
-      <div className="h-[calc(60vh-96px)] flex items-center justify-center px-4">
+      {/* <div className="h-[calc(60vh-96px)] flex items-center justify-center px-4">
         <h1 className="text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-bold text-gray-300 text-center">
           Inter-Hostel <br /> Events
         </h1>
-      </div>
+      </div> */}
           
         {/* Automated Hostel Rendering */}  
         <div className="space-y-16 py-16 px-10">

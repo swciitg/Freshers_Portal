@@ -6,12 +6,12 @@ const Main = () => {
   return (
     <div>
         <Navbar />
-<div className="h-[calc(65vh-96px)] flex flex-col items-center justify-center px-4 text-center">
+{/* <div className="h-[calc(65vh-96px)] flex flex-col items-center justify-center px-4 text-center"> */}
   {/* Title */}
-  <h1 className="text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-bold text-gray-300">
+  {/* <h1 className="text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-bold text-gray-300">
    Hostel Affairs
   </h1>
-  </div>
+  </div> */}
   <div className="space-y-16 py-16 px-10">
         
           <Facilities

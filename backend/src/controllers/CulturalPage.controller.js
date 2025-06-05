@@ -1,8 +1,9 @@
 import Club from "../models/Clubs.model.js";
+import Cult from "../models/Cultural.js";
 
 export const handleGetAllClubs = async (req, res) => {
     try {
-        const allClubs = await Club.find({});
+        const allClubs = await Cult.find({});
 
         if (allClubs.length === 0) {
             return res.status(404).json({ msg: "No clubs found" });

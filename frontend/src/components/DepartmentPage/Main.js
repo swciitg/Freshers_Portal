@@ -27,13 +27,13 @@ const Main = () => {
     return (
         <div className="min-h-screen bg-white">
             <Navbar />
-            <div className="h-[calc(85vh-96px)] flex flex-col items-center justify-center px-4 text-center">
-                {/* Title */}
+            {/* <div className="h-[calc(85vh-96px)] flex flex-col items-center justify-center px-4 text-center">
+
                 <h1 className="text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-bold text-gray-300">
                     Departments
                 </h1>
 
-                {/* Paragraph */}
+
                 <p className="mt-16 text-lg md:text-xl text-gray-500 max-w-3xl">
                     Studies at IIT go beyond memorizing lecture notes. They
                     emphasize understanding concepts, applying knowledge, and
@@ -46,7 +46,7 @@ const Main = () => {
                     graduates have made significant impacts across academia and
                     industry.
                 </p>
-            </div>
+            </div> */}
 
             {/* Automated Hostel Rendering */}
             <div className="space-y-16 py-16 px-10">

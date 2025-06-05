@@ -109,15 +109,15 @@ if (loading)
   return (
     <div>
         <Navbar />
-<div className="h-[calc(75vh-96px)] flex flex-col items-center justify-center px-4 text-center">
+{/* <div className="h-[calc(75vh-96px)] flex flex-col items-center justify-center px-4 text-center"> */}
   {/* Title */}
-  <h1 className="text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-bold text-gray-300">
+  {/* <h1 className="text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-bold text-gray-300">
   Technical Board
   </h1>
   <p className="mt-16 text-lg md:text-xl text-gray-500 max-w-3xl">
   The Technical Board has grown in both size and scope, fostering innovation and out-of-the-box thinking. It adapts to technological advancements to meet students' needs, providing them with motivation, tools, and a platform to showcase their skills. By nurturing curiosity and promoting a culture of innovation, the board directly contributes to the growth and development of the institute.
   </p>
-  </div>
+  </div> */}
   <div className="space-y-16 py-16 px-10">
         {Facdata.map((event, index) => (
           <Facilities

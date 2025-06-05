@@ -50,11 +50,14 @@ const HomePage = () => {
       </div>
 
       {/* Text Content Positioned in Bottom-Left */}
-      <div className="absolute bottom-10 left-10 text-white">
-        <h1 className="text-3xl font-thin mb-2">Welcome to</h1>
-        <h2 className="text-7xl w-4/6 ">Indian Institute of Technology Guwahati</h2>
-      </div>
-
+<div className="absolute bottom-4 left-4 right-4 text-white sm:bottom-10 sm:left-10 sm:right-auto">
+  <h1 className="text-lg sm:text-2xl md:text-3xl font-thin mb-1 sm:mb-2">
+    Welcome to
+  </h1>
+  <h2 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight sm:w-5/6 md:w-4/6">
+    Indian Institute of Technology Guwahati
+  </h2>
+</div>
       {/* Controls Positioned at Bottom-Right */}
       <div className="absolute bottom-8 right-8 flex space-x-4">
         {/* Play/Pause Button */}
