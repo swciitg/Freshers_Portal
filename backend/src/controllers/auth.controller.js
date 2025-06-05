@@ -1,13 +1,14 @@
 import bcrypt from 'bcrypt';
 
+const BASE_PATH = process.env.BASE_PATH;
 const user = {
-  username: 'admin',
-  passwordHash: bcrypt.hashSync('password123', 10)
+  username: process.env.ADMIN_EMAIL,
+  passwordHash: bcrypt.hashSync(process.env.ADMIN_PASSWORD, 10)
 };
 
 export const getLoginPage = (req, res) => {
   if(req.session.user) {
-    return res.redirect('/upload');
+    return res.redirect(BASE_PATH+'/upload');
   }
   res.render('login', { error: null });
 };
@@ -16,7 +17,7 @@ export const login = (req, res) => {
   const { username, password } = req.body;
   if (username === user.username && bcrypt.compareSync(password, user.passwordHash)) {
     req.session.user = username;
-    res.redirect('/upload');
+    res.redirect(BASE_PATH+'/upload');
   } else {
     res.render('login', { error: 'Invalid credentials' });
   }
@@ -24,7 +25,7 @@ export const login = (req, res) => {
 
 export const logout = (req, res) => {
   req.session.destroy(() => {
-    res.redirect('/image/login');
+    res.redirect(BASE_PATH+'/image/login');
   });
 };
 
@@ -32,7 +33,7 @@ export const isAuthenticated = (req, res, next) => {
   if (req.session.user) {
     next();
   } else {
-    res.redirect('/image/login');
+    res.redirect(BASE_PATH+'/image/login');
   }
 };
 export default {

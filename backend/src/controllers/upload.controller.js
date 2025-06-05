@@ -1,5 +1,6 @@
 import fs from 'fs';
 import path from 'path';
+const BASE_PATH = process.env.BASE_PATH;
 
 export const getUploadPage = (req, res) => {
   const uploadedFiles = fs.readdirSync('uploads');
@@ -10,7 +11,7 @@ export const uploadFile = (req, res) => {
   if (!req.file) {
     return res.status(400).send('No file uploaded.');
   }
-  res.redirect('/upload');
+  res.redirect(BASE_PATH+'/upload');
 };
 
 export const deleteFile = (req, res) => {
@@ -19,7 +20,7 @@ export const deleteFile = (req, res) => {
   if (fs.existsSync(filePath)) {
     fs.unlinkSync(filePath);
   }
-  res.redirect('/upload');
+  res.redirect(BASE_PATH+'/upload');
 };
 
 export default {

@@ -14,7 +14,7 @@ import Cult from "../src/models/Cultural.js";
 import Department from "../src/models/Departments.model.js";
 import Fest from "../src/models/Fest.model.js";
 
-const ADMINPANELROOT = "/admin";
+const ADMINPANELROOT = process.env.ADMINPANELROOTPATH || "/admin";
 
 const DEFAULT_ADMIN = {
   email: process.env.ADMIN_EMAIL ,

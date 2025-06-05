@@ -1,7 +1,6 @@
 import app from "./src/app.js";
 import mongoose from "mongoose";
 import "dotenv/config";
-import { adminRouter, admin } from "./admin_panel/admin-config.js";
 import bodyParser from "body-parser";
 
 mongoose
@@ -14,10 +13,10 @@ mongoose
     });
 
 
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: true }));
-
-app.use('/admin', adminRouter);
+    
+    app.use(bodyParser.json());
+    app.use(bodyParser.urlencoded({ extended: true }));
+   
 // start the server
 app.listen(process.env.PORT || 5000, () => {
     console.log(

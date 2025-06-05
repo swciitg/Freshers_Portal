@@ -20,10 +20,12 @@ import { HostelFacilities } from "./controllers/HostelFacilities.controller.js";
 import ListHostelPage from "./controllers/ListHostelPage.controller.js";
 import TechBoard from "./controllers/TechBoard.controller.js";
 import SportsBoard from "./controllers/SportsBoard.controller.js";
+import {adminRouter} from "../admin_panel/admin-config.js";
 
 const app = express();
 
 app.use(cors());
+ app.use('/admin', adminRouter);
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 app.set('view engine', 'ejs');
@@ -31,7 +33,7 @@ app.set('views', path.join(__dirname, 'views'));
 
 app.use(express.static('uploads'));
 app.use(session({
-  secret: 'supersecretkey',
+  secret: process.env.SESSION_SECRET  ,
   resave: false,
   saveUninitialized: false
 }));

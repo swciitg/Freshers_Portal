@@ -2,7 +2,7 @@ import React from 'react';
 
 const AboutInstitute = () => {
   return (
-    <div className="p-24 bg-gray-50">
+    <div className="lg:p-24 bg-gray-50 w-full mx-auto p-4 sm:p-8 ">
       {/* Wrapper for Two-Column Layout */}
       <div className="flex flex-col md:flex-row items-start justify-between gap-8">
         {/* Left Section: Title */}
