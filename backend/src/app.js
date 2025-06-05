@@ -24,9 +24,6 @@ import SportsBoard from "./controllers/SportsBoard.controller.js";
 const app = express();
 
 app.use(cors());
-app.get("/", (req, res) => {
-  res.json("Backend working Perfectly");
-});
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 app.set('view engine', 'ejs');
