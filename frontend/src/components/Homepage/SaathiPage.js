@@ -11,7 +11,7 @@ const SaathiPage = () => {
           <h1 className="text-5xl sm:text-7xl lg:text-8xl font-thin text-gray-900">
             SAATHI
           </h1>
-          <a href="/saathi">
+          <a href="/freshers/saathi">
             <button className="mt-4 px-4 py-2 border rounded-full text-gray-700 flex items-center">
               About us
               <span className="ml-2">
@@ -46,7 +46,7 @@ const SaathiPage = () => {
       {/* Links Section */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 mt-10">
         {/* Counsellor's Timings */}
-        <a href="/saathi">
+        <a href="/freshers/saathi">
           <div className="flex justify-between items-center border-b border-gray-300 pb-4">
             <div className="flex flex-col items-start space-y-4">
               <div className="w-16 h-16">
@@ -75,7 +75,7 @@ const SaathiPage = () => {
           </div>
         </a>
         {/* Student Mentorship */}
-        <a href="/saathi">
+        <a href="/freshers/saathi">
           <div className="flex justify-between items-center border-b border-gray-300 pb-4">
             <div className="flex flex-col items-start space-y-4">
               <div className="w-16 h-16">
@@ -104,7 +104,7 @@ const SaathiPage = () => {
           </div>
         </a>
         {/* Team */}
-        <a href="/saathi">
+        <a href="/freshers/saathi">
           <div className="flex justify-between items-center border-b border-gray-300 pb-4">
             <div className="flex flex-col items-start space-y-4">
               <div className="w-16 h-16">
@@ -131,7 +131,7 @@ const SaathiPage = () => {
           </div>
         </a>
         {/* Anonymous Emotional Support System */}
-        <a href="/saathi">
+        <a href="/freshers/saathi">
           <div className="flex justify-between items-center border-b border-gray-300 pb-4">
             <div className="flex flex-col items-start space-y-4">
               <div className="w-16 h-16">
@@ -141,7 +141,7 @@ const SaathiPage = () => {
                 Anonymous Emotional Support System
               </span>
             </div>
-            <a href="/saathi">
+            <a href="/freshers/saathi">
               <svg
                 width="24"
                 height="24"
