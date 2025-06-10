@@ -1,5 +1,6 @@
 import bcrypt from 'bcrypt';
-
+import dotenv from 'dotenv';
+dotenv.config();
 const BASE_PATH = process.env.BASE_PATH;
 const user = {
   username: process.env.ADMIN_EMAIL,
