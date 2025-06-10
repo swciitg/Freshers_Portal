@@ -173,10 +173,10 @@
 <body>
     <div class="container">
         <h1>Welcome, <%= user %>!</h1>
-        <a href="<%= BASE_PATH %>/api/image/logout" class="logout-link">Logout</a>
+        <a href="<%= BASE_PATH %>/image/logout" class="logout-link">Logout</a>
 
         <h2>Upload a File</h2>
-        <form action="<%= BASE_PATH %>/api/upload" method="post" enctype="multipart/form-data">
+        <form action="<%= BASE_PATH %>/upload" method="post" enctype="multipart/form-data">
             <input type="text" name="imageName" required placeholder="Enter image name" />
             <input type="file" name="myFile" required />
             <button type="submit">Upload</button>
@@ -186,10 +186,10 @@
         <ul class="file-list">
             <% files.forEach(file => { %>
                 <li>
-                    <a href="<%= BASE_PATH %>/api/<%= file %>" target="_blank" class="file-link"><%= file %></a>
+                    <a href="<%= BASE_PATH %>/<%= file %>" target="_blank" class="file-link"><%= file %></a>
                     <div class="file-actions">
-                        <button class="copy-button" data-url="<%= BASE_PATH %>/api/<%= file %>">Copy URL</button>
-                        <a href="<%= BASE_PATH %>/api/upload/delete/<%= file %>" class="delete-button">Delete</a>
+                        <button class="copy-button" data-url="<%= BASE_PATH %>/<%= file %>">Copy URL</button>
+                        <a href="<%= BASE_PATH %>/upload/delete/<%= file %>" class="delete-button">Delete</a>
                     </div>
                 </li>
             <% }); %>
