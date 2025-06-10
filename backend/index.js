@@ -16,7 +16,7 @@ mongoose
     
     app.use(bodyParser.json());
     app.use(bodyParser.urlencoded({ extended: true }));
-   
+    app.locals.BASE_PATH = process.env.BASE_PATH;
 // start the server
 app.listen(process.env.PORT || 5000, () => {
     console.log(
