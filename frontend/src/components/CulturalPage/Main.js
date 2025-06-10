@@ -14,7 +14,7 @@ const Main = () => {
 
     useEffect(() => {
         if (data) setFacdata(data);
-        if (data) console.log(data);
+        if (data) console.log("yoyo",data);
     }, [loading]);
 
     if (loading)
@@ -116,9 +116,9 @@ const Main = () => {
                         key={index}
                         name={event.name}
                         description={event.description}
-                        imageUrl={event.imagePath}
+                        imageUrl={event.imageUrl    }
                         headName={event.headName}
-                        iconUrl={event.iconPath}
+                        iconUrl={event.iconUrl}
                     />
                 ))}
             </div>

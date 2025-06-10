@@ -5,6 +5,7 @@ import HomePage3 from '../components/Homepage/Saathi'
 import AboutInstitute from '../components/Homepage/Card'
 import SaathiPage from '../components/Homepage/SaathiPage'
 import Footer from '../common/Footer'
+import OneStopHighlight from './OneStop'
 
 const Homepage = () => {
   return (
@@ -13,7 +14,7 @@ const Homepage = () => {
         <AboutInstitute/>
         <HomePage2/>
         <HomePage3/>
-        <SaathiPage/>
+        <OneStopHighlight/>
         <Footer/>
     </div>
   )

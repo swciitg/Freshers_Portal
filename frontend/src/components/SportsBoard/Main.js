@@ -13,7 +13,7 @@ const [Facdata, setFacdata] = useState([]);
 
 useEffect(() => {
     if (data) setFacdata(data);
-    if (data) console.log(data);
+    if (data) console.log("sports",data);
 }, [loading]);
 
 if (loading)

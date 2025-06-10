@@ -44,7 +44,7 @@ function App() {
         <Route path="/faqs" element={<FaqsPage/>}/>
         <Route path="/contact" element={<ContactPage/>}/>
         <Route path="/saathi" element={<SaathiPage/>}/>
-      </Routes>
+              </Routes>
       </BrowserRouter>
     </div>
   );
