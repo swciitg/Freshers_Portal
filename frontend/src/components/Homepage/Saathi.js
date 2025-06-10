@@ -12,7 +12,7 @@ const boardsData = [
     description: "The Students' Welfare Board at IIT Guwahati fosters holistic student development through initiatives in mental health, academic support, and social outreach. It operates seven student-led clubs that promote well-being, inclusivity, and empowerment.",
   },
   {
-    logo: '/freshers/HAB_logo.jpg',
+    logo: 'https://swc.iitg.ac.in/freshers/api/hab.png',
     title: 'Hostel Affairs Board',
     description: "The Hostel Affairs Board is the backbone of campus residential life, ensuring smooth functioning across all hostels.From infrastructure upgrades to food served in hostels and improving daily amenities, we shape your second home at IIT Guwahati.",
   },
