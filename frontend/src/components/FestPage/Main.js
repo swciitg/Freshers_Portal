@@ -77,6 +77,7 @@ const Main = () => {
                 </p>
             </div> */}
             <div className="space-y-16 py-16 px-10">
+                
                 {Facdata.map((event, index) => (
                     <Facilities
                         key={index}
