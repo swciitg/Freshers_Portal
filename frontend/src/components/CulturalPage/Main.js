@@ -11,6 +11,13 @@ const Main = () => {
         "GET"
     );
     const [Facdata, setFacdata] = useState([]);
+    const [board, setBoard] = useState({
+                'name':'Cultural Board',
+                'description':"Whether you were a hyperactive beast in school, effortlessly mastering every task, or a seemingly non-existent being, underestimated by the world, whether you're an expert your field or a humble beginner, this Land of opportunities welcomes you all. It's a place to showcase your greatness and embrace learning from others' greatness. At Cult Board, we're here to transform your interests into fulfilling hobbies. Come and join us on this exciting journey of exploration and growth, where your passions can flourish and your potential can be realized.",
+                'imageUrl':'https://swc.iitg.ac.in/welfare-board/api/cult_pic.jpg',
+                'headName':'',
+                'iconUrl':'https://swc.iitg.ac.in/welfare-board/api/about_cult.png',
+                'wikiUrl':'#'});
 
     useEffect(() => {
         if (data) setFacdata(data);
@@ -45,18 +52,41 @@ const Main = () => {
                     performances and dances.
                 </p>
             </div> */}
-            <div className="space-y-16 py-16 px-10">
-                {Facdata.map((event, index) => (
-                    <Facilities
-                        key={index}
-                        name={event.name}
-                        description={event.description}
-                        imageUrl={event.imageUrl    }
-                        headName={event.headName}
-                        iconUrl={event.iconUrl}
-                    />
-                ))}
-            </div>
+           <div className="space-y-16 py-16 px-10">
+  <Facilities
+    name={board.name}
+    description={board.description}
+    imageUrl={board.imageUrl}
+    headName={board.headName}
+    iconUrl={board.iconUrl}
+    wikiUrl={board.wikiUrl}
+  />
+</div>
+
+{/* Simple Clubs Heading */}
+<div className="py-16 px-6 sm:px-8 md:px-12 bg-gray-50">
+  <div className="max-w-4xl mx-auto text-center">
+    <h2 className="text-5xl sm:text-6xl md:text-7xl font-bold text-orange-500 mb-4">
+      Clubs
+    </h2>
+    <div className="w-24 h-1 bg-orange-500 mx-auto rounded-full"></div>
+  </div>
+</div>
+
+<div className="space-y-16 py-16 px-10">
+  {Facdata.map((event, index) => (
+    <Facilities
+      key={index}
+      name={event.name}
+      description={event.description}
+      imageUrl={event.imageUrl}
+      headName={event.headName}
+      iconUrl={event.iconUrl}
+      wikiUrl={event.wikiUrl}
+    />
+  ))}
+</div>
+
             <Footer />
         </div>
     );

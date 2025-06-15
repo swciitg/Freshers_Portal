@@ -1,8 +1,13 @@
 import React, { useEffect } from "react";
 
 const MainPage = (props) => {
+  useEffect(() => {
+    // This effect runs once when the component mounts
+    // You can add any initialization logic here if needed
+    console.log("MainPage component mounted with props:", props);
+  }, []);
   return (
-    <div className="bg-white min-h-screen px-6 sm:px-8 md:px-12 py-16">
+      <div className="bg-white min-h-screen px-6 sm:px-8 md:px-12 py-16">
   <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 items-end">
     {/* Left Section: Icon, Title, and Description */}
     <div className="space-y-8">
@@ -49,7 +54,6 @@ const MainPage = (props) => {
     </div>
   </div>
 </div>
-
   );
 };
 

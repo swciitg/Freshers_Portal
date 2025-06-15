@@ -10,6 +10,13 @@ const Main = () => {
     "GET"
 );
 const [Facdata, setFacdata] = useState([]);
+const [board, setBoard] = useState({
+            'name':'Technical Board',
+            'description':"With a steadfast commitment to fostering technology, nurturing creativity, and inspiring innovation, the Technical Board empowers the vibrant community of IIT Guwahati to embark on a transformative journey into the realms of technology. With a wide range of 15 clubs under its umbrella, the Tech Board caters to all tech related things on our campus. From enlightening seminars and captivating workshops to exhilarating college-wide and nationwide competitions, the Tech Board serves as the catalytic force propelling the institution towards technological excellence. As Albert Einstein once said, 'The true sign of intelligence is not knowledge but imagination,' the Tech Board, driven by this philosophy, strives to nurture a spirit of boundless curiosity and ingenuity among the IITG fraternity.",
+            'imageUrl':'https://swc.iitg.ac.in/welfare-board/api/tech_cover.jpg',
+            'headName':'',
+            'iconUrl':'https://swc.iitg.ac.in/welfare-board/api/tech_logo.jpg',
+            'wikiUrl':'#'});
 
 useEffect(() => {
     if (data) setFacdata(data);
@@ -119,19 +126,40 @@ if (loading)
   </p>
   </div> */}
   <div className="space-y-16 py-16 px-10">
-        {Facdata.map((event, index) => (
-          <Facilities
-            key={index}
-            name={event.name}
-            description={event.description}
-            imageUrl={event.imageUrl}
-            headName={event.headName}
-            iconUrl={event.iconUrl}
-            wikiUrl={event.wikiUrl}
-            
-          />
-        ))}
-      </div>
+  <Facilities
+    name={board.name}
+    description={board.description}
+    imageUrl={board.imageUrl}
+    headName={board.headName}
+    iconUrl={board.iconUrl}
+    wikiUrl={board.wikiUrl}
+  />
+</div>
+
+{/* Simple Clubs Heading */}
+<div className="py-16 px-6 sm:px-8 md:px-12 bg-gray-50">
+  <div className="max-w-4xl mx-auto text-center">
+    <h2 className="text-5xl sm:text-6xl md:text-7xl font-bold text-orange-500 mb-4">
+      Clubs
+    </h2>
+    <div className="w-24 h-1 bg-orange-500 mx-auto rounded-full"></div>
+  </div>
+</div>
+
+<div className="space-y-16 py-16 px-10">
+  {Facdata.map((event, index) => (
+    <Facilities
+      key={index}
+      name={event.name}
+      description={event.description}
+      imageUrl={event.imageUrl}
+      headName={event.headName}
+      iconUrl={event.iconUrl}
+      wikiUrl={event.wikiUrl}
+    />
+  ))}
+</div>
+
         <Footer/>
 
     </div>

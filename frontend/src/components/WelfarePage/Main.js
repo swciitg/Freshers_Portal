@@ -10,6 +10,13 @@ const Main = () => {
     "GET"
 );
 const [Facdata, setFacdata] = useState([]);
+const [board, setBoard] = useState({
+            'name':`Students' Welfare Board`,
+            'description':"Students' Welfare Board (SWB) is committed to the total development of the students of our Institute. The SWB's Service forms a part of campus well-being Services and is committed to providing free professional and confidential support to enhance the wellbeing of the campus community. Based on the founding principles of the Institute, SWB implements programs and activities designed to nurture and develop the mind, body, and spirit. Their vision is to provide opportunities for students to develop the skills necessary to successfully transition into the Institute and campus life, their sport or program, and the community. Through educational programming and a host of other additional resources. SWB will empower every student to make positive decisions in order to reach their full potential as students and citizens.",
+            'imageUrl':'https://swc.iitg.ac.in/welfare-board/api/swb_hero.jpg',
+            'headName':'',
+            'iconUrl':'/freshers/welfare_board.png',
+            'wikiUrl':'#'});
 
 useEffect(() => {
     if (data) setFacdata(data);
@@ -67,17 +74,40 @@ if (loading)
   </p>
   </div> */}
   <div className="space-y-16 py-16 px-10">
-        {Facdata.map((event, index) => (
-          <Facilities
-            key={index}
-            name={event.name}
-            description={event.description}
-            imageUrl={event.imageUrl}
-            headName={event.headName}
-            iconUrl={event.iconUrl}
-          />
-        ))}
-      </div>
+  <Facilities
+    name={board.name}
+    description={board.description}
+    imageUrl={board.imageUrl}
+    headName={board.headName}
+    iconUrl={board.iconUrl}
+    wikiUrl={board.wikiUrl}
+  />
+</div>
+
+{/* Simple Clubs Heading */}
+<div className="py-16 px-6 sm:px-8 md:px-12 bg-gray-50">
+  <div className="max-w-4xl mx-auto text-center">
+    <h2 className="text-5xl sm:text-6xl md:text-7xl font-bold text-orange-500 mb-4">
+      Clubs
+    </h2>
+    <div className="w-24 h-1 bg-orange-500 mx-auto rounded-full"></div>
+  </div>
+</div>
+
+<div className="space-y-16 py-16 px-10">
+  {Facdata.map((event, index) => (
+    <Facilities
+      key={index}
+      name={event.name}
+      description={event.description}
+      imageUrl={event.imageUrl}
+      headName={event.headName}
+      iconUrl={event.iconUrl}
+      wikiUrl={event.wikiUrl}
+    />
+  ))}
+</div>
+
         <Footer/>
 
     </div>

@@ -30,7 +30,7 @@ const OneStopHighlight = () => {
     {
       icon: <Shield className="w-6 h-6" />,
       title: "GateLog",
-      description: "Secure entry and exit tracking system for campus access management. Monitor your campus movements and maintain security protocols effortlessly.",
+      description: "Secure and hassle-free campus access system. Gatelog ensures smooth entry and exit through campus gates while maintaining top-notch security — all with a student-first approach.",
       color: "bg-emerald-50 text-emerald-600",
       highlighted: true
     },
@@ -79,10 +79,10 @@ const OneStopHighlight = () => {
   ];
 
   const quickAccess = [
-    { name: "Academic SSO", icon: <BookOpen className="w-5 h-5" /> },
-    { name: "Placement Stats", icon: <Trophy className="w-5 h-5" /> },
-    { name: "SWC Website", icon: <Users className="w-5 h-5" /> },
-    { name: "Academic Calendar", icon: <Calendar className="w-5 h-5" /> }
+    { name: "Academic SSO", icon: <BookOpen className="w-5 h-5" /> , link:"https://academic.iitg.ac.in/sso/"},
+    { name: "Placement Stats", icon: <Trophy className="w-5 h-5" />, link:"https://swc.iitg.ac.in/placement-stats/"},
+    { name: "SWC Website", icon: <Users className="w-5 h-5" />, link:"https://swc.iitg.ac.in/swc" },
+    { name: "Academic Calendar", icon: <Calendar className="w-5 h-5" />, link:"https://academic.iitg.ac.in/acad/calanders/Acad_Calendar_2025.pdf" }
   ];
 
   const handleScroll = (e) => {
@@ -137,10 +137,12 @@ const OneStopHighlight = () => {
         </h2>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
           {quickAccess.map((item, index) => (
+            <a href={item.link} target="_blank" rel="noopener noreferrer" className="no-underline" key={index}>
             <div key={index} className="flex items-center p-3 bg-gray-50 rounded-lg hover:bg-blue-50 transition-colors cursor-pointer">
               <div className="text-blue-600 mr-3">{item.icon}</div>
               <span className="text-sm font-medium text-gray-700">{item.name}</span>
             </div>
+            </a>
           ))}
         </div>
       </div>
@@ -215,9 +217,9 @@ const OneStopHighlight = () => {
       {/* Call to Action */}
       <div className="text-center mt-8">
         <p className="text-gray-600 mb-4">Ready to simplify your campus life?</p>
-        <button className="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-8 py-3 rounded-lg transition-colors duration-300 shadow-lg">
+        <a href='https://play.google.com/store/apps/details?id=com.swciitg.onestop2'><button className="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-8 py-3 rounded-lg transition-colors duration-300 shadow-lg">
           Download OneStop Now
-        </button>
+        </button></a>
       </div>
     </div>
   );
