@@ -11,6 +11,14 @@ const Main = () => {
 );
 const [Facdata, setFacdata] = useState([]);
 
+const [board, setBoard] = useState({
+            'name':'Sports Board',
+            'description':"Calling all sports enthusiasts! The Sports Board at IIT Guwahati is your go-to for all things athletic We're committed to fosteringa vibrant and healthy campus community. starting with keeping you active! Unleash your inner athlete with our year-round facilities and exciting events like Spirit, our annual Sports Fest, and Spardha, the Inter-Hostel competition. Compete, make friends, and ignite your passion for sports Freshers, we have special orientation programs and tournaments to help you discover your talents. guided by our dedicated coaches. Whether you're a seasoned athlete or a beginner. there's a place for you. Strive for the iconic Inter-IIT tracksuit - a symbol of campus pride! Want to represent IIT Guwahati nationally? Impress our scouts at the freshers' tournaments and attend training sessions regularly Your dedication could earn you the coveted tracksuit Welcome to IIT Guwahati! Join us in contributing to our legacy of excellence at the Inter-IIT Meets Let's hear you roar-Go Guwahatil",
+            'imageUrl':'https://swc.iitg.ac.in/welfare-board/api/sports_room.png',
+            'headName':'',
+            'iconUrl':'https://swc.iitg.ac.in/welfare-board/api/sports_board_logo.jpg',
+            'wikiUrl':'#'});
+
 useEffect(() => {
     if (data) setFacdata(data);
     if (data) console.log("sports",data);
@@ -118,20 +126,41 @@ if (loading)
   IITG offers excellent facilities for both indoor and outdoor sports to ensure your overall development. Outdoor activities include cricket, football, basketball, athletics, swimming, and more, while indoor options like table tennis, chess, and squash are available year-round. The Sports Board, with 11 clubs, organizes these activities, and recent additions include Kho-Kho, Kabaddi, Chess, and Carrom. The SAC grounds are open until 9 P.M., and equipment can be borrowed with your I-Card. Don’t worry if you’re new to sports—a dedicated team of coaches is here to help. Make time for fitness to stay sharp and balanced!
   </p>
   </div> */}
-  <div className="space-y-16 py-16 px-10">
-        {Facdata.map((event, index) => (
-          <Facilities
-            key={index}
-            name={event.name}
-            description={event.description}
-            imageUrl={event.imageUrl}
-            headName={event.headName}
-            iconUrl={event.iconUrl}
-            wikiUrl={event.wikiUrl}
-            
-          />
-        ))}
-      </div>
+<div className="space-y-16 py-16 px-10">
+  <Facilities
+    name={board.name}
+    description={board.description}
+    imageUrl={board.imageUrl}
+    headName={board.headName}
+    iconUrl={board.iconUrl}
+    wikiUrl={board.wikiUrl}
+  />
+</div>
+
+{/* Simple Clubs Heading */}
+<div className="py-16 px-6 sm:px-8 md:px-12 bg-gray-50">
+  <div className="max-w-4xl mx-auto text-center">
+    <h2 className="text-5xl sm:text-6xl md:text-7xl font-bold text-orange-500 mb-4">
+      Clubs
+    </h2>
+    <div className="w-24 h-1 bg-orange-500 mx-auto rounded-full"></div>
+  </div>
+</div>
+
+<div className="space-y-16 py-16 px-10">
+  {Facdata.map((event, index) => (
+    <Facilities
+      key={index}
+      name={event.name}
+      description={event.description}
+      imageUrl={event.imageUrl}
+      headName={event.headName}
+      iconUrl={event.iconUrl}
+      wikiUrl={event.wikiUrl}
+    />
+  ))}
+</div>
+
         <Footer/>
 
     </div>
