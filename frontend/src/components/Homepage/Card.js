@@ -24,32 +24,37 @@ Driven by a spirit of discovery and excellence, the faculty and students at IIT 
       </div>
 
       {/* List Section: Four Key Points */}
-      <ul className="mt-10 space-y-6">
-        <li className="flex items-center border-b border-gray-300 pb-2">
-          <span className="text-orange-500 font-semibold text-xl mr-4">01</span>
-          <span className="text-lg text-gray-700">
-            Brahmaputra riverfront location
-          </span>
-        </li>
-        <li className="flex items-center border-b border-gray-300 pb-2">
-          <span className="text-orange-500 font-semibold text-xl mr-4">02</span>
-          <span className="text-lg text-gray-700">
-            Scenic hills and open spaces
-          </span>
-        </li>
-        <li className="flex items-center border-b border-gray-300 pb-2">
-          <span className="text-orange-500 font-semibold text-xl mr-4">03</span>
-          <span className="text-lg text-gray-700">
-            State-of-the-art research facilities
-          </span>
-        </li>
-        <li className="flex items-center border-b border-gray-300 pb-2">
-          <span className="text-orange-500 font-semibold text-xl mr-4">04</span>
-          <span className="text-lg text-gray-700">
-            Emphasis on industry exposure
-          </span>
-        </li>
-      </ul>
+      <div className="mt-10 text-center">
+        <h2 className="text-5xl font-semibold text-gray-800 mb-4">Welcome Onboard</h2>
+        <p className="text-base text-gray-600 mb-8">
+          We're excited to have you with us! Please go through the resources below to get started on your journey.
+        </p>
+
+        <div className="flex justify-center gap-6">
+          <a
+            href="https://drive.google.com/file/d/16trZQUclFIA6aXcqpY0yJE1KIgS2Zdcj/view"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="no-underline"
+          >
+            <div className="flex items-center p-4 bg-gray-100 rounded-lg hover:bg-blue-100 transition-colors cursor-pointer">
+              <div className="text-blue-600 mr-2">📘</div>
+              <span className="text-sm font-medium text-gray-800">Phase 1</span>
+            </div>
+          </a>
+          <a
+            href="/path/to/team_handbook.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="no-underline"
+          >
+            <div className="flex items-center p-4 bg-gray-100 rounded-lg hover:bg-blue-100 transition-colors cursor-pointer">
+              <div className="text-blue-600 mr-2">📘</div>
+              <span className="text-sm font-medium text-gray-800">Phase 2</span>
+            </div>
+          </a>
+        </div>
+      </div>
     </div>
   );
 };

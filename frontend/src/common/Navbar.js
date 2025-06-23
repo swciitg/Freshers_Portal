@@ -135,10 +135,10 @@ const Navbar = () => {
             onMouseLeave={() => setActiveDropdown(null)}
           >
             <Link to="/sgc" className="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-100 transition-colors duration-150">
-              Students Gymkhana Council
+              Students' Gymkhana Council
             </Link>
             <Link to="/swb" className="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-100 transition-colors duration-150">
-              Students Welfare Board
+              Students' Welfare Board
             </Link>
             <Link to="/cult" className="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-100 transition-colors duration-150">
               Cultural Board
@@ -148,6 +148,12 @@ const Navbar = () => {
             </Link>
             <Link to="/sports" className="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-100 transition-colors duration-150">
               Sports Board
+            </Link>
+            <Link to="https://swc.iitg.ac.in/swc" className="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-100 transition-colors duration-150">
+              Students' Web Committee 
+            </Link>
+            <Link to="https://www.iitg.ac.in/sail/" className="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-100 transition-colors duration-150">
+              SAIL 
             </Link>
             <Link to="/hab" className="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-100 transition-colors duration-150">
               Hostel Affairs Board

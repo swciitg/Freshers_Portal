@@ -1,4 +1,6 @@
 import React from 'react';
+import { useState } from 'react';
+import { Search, Phone, MapPin, Users } from 'lucide-react';
 
 const BRDirectory = () => {
   // BR data with years incremented by 1
@@ -18,6 +20,58 @@ const BRDirectory = () => {
     { department: "ENERGY", year: 3, name_and_no: "PRANAVSREE 8121572002" }
   ];
 
+
+  const regionData = [
+  { region: "Telangana & Andhra Pradesh", name_and_no: "MITHIL 7207185274" },
+  { region: "Telangana & Andhra Pradesh", name_and_no: "MANIDEEP 6303865227" },
+  { region: "Telangana & Andhra Pradesh", name_and_no: "DHEEKSHA 8125355709" },
+  { region: "Telangana & Andhra Pradesh", name_and_no: "ESHANTH 6302406300" },
+  { region: "Telangana & Andhra Pradesh", name_and_no: "LIKITH 7675011374" },
+  { region: "Telangana & Andhra Pradesh", name_and_no: "MAHITHA 8309521983" },
+  { region: "Tamil Nadu", name_and_no: "SANJAY 7358487350" },
+  { region: "Tamil Nadu", name_and_no: "AMRITHA 9345652212" },
+  { region: "Tamil Nadu", name_and_no: "ARAVIND 9025171770" },
+  { region: "Tamil Nadu", name_and_no: "PRAGADEESH 9566265920" },
+  { region: "Tamil Nadu", name_and_no: "SANJANA 9897152375" },
+  { region: "Kerala", name_and_no: "JOFFIN 7736929440" },
+  { region: "Kerala", name_and_no: "DEVANANDIKA 9074542344" },
+  { region: "Kerala", name_and_no: "NIRANJANA 8113034892" },
+  { region: "Kerala", name_and_no: "JADEN 9510132218" },
+  { region: "Karnataka", name_and_no: "VAIBHAV 7022926590" },
+  { region: "Karnataka", name_and_no: "TANMAY 6003476812" },
+  { region: "Maharashtra", name_and_no: "ASHISH 8956336360" },
+  { region: "Maharashtra", name_and_no: "ATHARV 8956336360" },
+  { region: "Maharashtra", name_and_no: "PARNIKA 8459281263" },
+  { region: "Maharashtra", name_and_no: "PARTH 9527409158" },
+  { region: "Madhya Pradesh", name_and_no: "TAHA 7869810898" },
+  { region: "Madhya Pradesh", name_and_no: "SHREYAS GUPTA 9009187737" },
+  { region: "Madhya Pradesh", name_and_no: "SHRUT JAIN 9407137656" },
+  { region: "Madhya Pradesh", name_and_no: "VAGISHA 7477093970" },
+  { region: "Odisha", name_and_no: "ADYASA 9831783405" },
+  { region: "Odisha", name_and_no: "SITANSHU 8260707944" },
+  { region: "Gujarat", name_and_no: "SURBHIT 8200537139" },
+  { region: "Gujarat", name_and_no: "PRANJAL SONI 9512015500" },
+  { region: "Gujarat", name_and_no: "NAMAN 9377780309" },
+  { region: "Rajasthan", name_and_no: "DEVAL 9588886533" },
+  { region: "Rajasthan", name_and_no: "SHOURYA 9950500951" },
+  { region: "Rajasthan", name_and_no: "KANIKA 7878539166" },
+  { region: "UP", name_and_no: "VAISHNAVI 8953762399" },
+  { region: "Bihar", name_and_no: "ABHYUDAY 7903263868" },
+  { region: "Bihar", name_and_no: "SARVAGYA 8291314066" },
+  { region: "Bihar", name_and_no: "APOORVA 9031327189" },
+  { region: "Jharkhand", name_and_no: "SRISTI VATS 8690327784" },
+  { region: "Jharkhand", name_and_no: "AYUSH AGARWAL 9798408926" },
+  { region: "Delhi", name_and_no: "MISHIKA 9967826000" },
+  { region: "Delhi", name_and_no: "ABHISHEK DAS 7217680436" },
+  { region: "Haryana", name_and_no: "SOURABH SAINI 9588303662" },
+  { region: "Haryana", name_and_no: "VIBHOR 9509236500" },
+  { region: "Punjab", name_and_no: "HARSHIT GOEL 9877355569" },
+  { region: "Punjab", name_and_no: "DAIVIK 9592196491" },
+  { region: "West Bengal", name_and_no: "SOURAJJAL 9330886984" },
+  { region: "West Bengal", name_and_no: "SRIJAN 8653553039" },
+  { region: "Assam", name_and_no: "HARDIK 6002949018" },
+  { region: "Assam", name_and_no: "VAIBHAV 7002303858" }
+];
   // Third year BRs data
   const thirdYearBRs = [
     { department: "CSE", name_and_no: "ARYAN 8602527847" },
@@ -34,6 +88,37 @@ const BRDirectory = () => {
     { department: "BDES", name_and_no: "ANIRUD 9080424001 & NISHA 9871499561" },
     { department: "ENERGY", name_and_no: "ABHINAV 7669189417" }
   ];
+  const [searchTerm, setSearchTerm] = useState('');
+  const [selectedRegion, setSelectedRegion] = useState('');
+  const regions = [...new Set(regionData.map(item => item.region))].sort();
+
+  // Filter data based on search and region
+  const filteredData = regionData.filter(item => {
+    const matchesSearch = item.name_and_no.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                         item.region.toLowerCase().includes(searchTerm.toLowerCase());
+    const matchesRegion = selectedRegion === '' || item.region === selectedRegion;
+    return matchesSearch && matchesRegion;
+  });
+
+  // Group data by region
+  const groupedData = filteredData.reduce((acc, item) => {
+    if (!acc[item.region]) {
+      acc[item.region] = [];
+    }
+    acc[item.region].push(item);
+    return acc;
+  }, {});
+
+  const formatPhoneNumber = (nameAndNo) => {
+    const parts = nameAndNo.split(' ');
+    const number = parts[parts.length - 1];
+    const name = parts.slice(0, -1).join(' ');
+    return { name, number };
+  };
+
+  const handleCall = (number) => {
+    window.open(`tel:+91${number}`, '_self');
+  };
 
   return (
     <div className="max-w-7xl mx-auto py-8 px-4 sm:px-6 lg:px-8">
@@ -77,6 +162,53 @@ const BRDirectory = () => {
           ))}
         </div>
       </div>
+
+      {/* Regional Mentors Section */}
+      <div className="space-y-6">
+        <h2 className="text-2xl font-bold text-center text-gray-800 mb-8">
+          Region Wise Mentors
+        </h2>
+          {Object.entries(groupedData).map(([region, mentors]) => (
+            <div key={region} className="bg-white rounded-xl shadow-lg overflow-hidden">
+              <div className="bg-gradient-to-r from-indigo-600 to-purple-600 px-6 py-4">
+                <h2 className="text-xl font-semibold text-white flex items-center gap-2">
+                  <MapPin className="w-5 h-5" />
+                  {region}
+                  <span className="bg-white bg-opacity-20 px-2 py-1 rounded-full text-sm ml-auto">
+                    {mentors.length} mentor{mentors.length !== 1 ? 's' : ''}
+                  </span>
+                </h2>
+              </div>
+              <div className="p-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                  {mentors.map((mentor, index) => {
+                    const { name, number } = formatPhoneNumber(mentor.name_and_no);
+                    return (
+                      <div key={index} className="bg-gray-50 rounded-lg p-4 hover:bg-gray-100 transition-colors">
+                        <div className="flex items-center justify-between">
+                          <div className="flex-1">
+                            <h3 className="font-semibold text-gray-800 text-lg">{name}</h3>
+                            <p className="text-gray-600 flex items-center gap-1 mt-1">
+                              <Phone className="w-4 h-4" />
+                              +91 {number}
+                            </p>
+                          </div>
+                          <button
+                            onClick={() => handleCall(number)}
+                            className="bg-green-500 hover:bg-green-600 text-white p-2 rounded-full transition-colors"
+                            title="Call mentor"
+                          >
+                            <Phone className="w-4 h-4" />
+                          </button>
+                        </div>
+                      </div>
+                    );
+                  })}
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
 
       {/* 4th Year BRs Section */}
       <div>
