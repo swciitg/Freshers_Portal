@@ -2,7 +2,7 @@ import React from 'react';
 
 const Facilities = (props) => {
   return (
-   <div className="bg-white min-h-screen px-6 sm:px-8 md:px-12 py-16">
+   <div className="bg-white min-h-screen px-6 sm:px-8 md:px-12 py-14">
   <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
     {/* Left Section: Title, Button, and Description */}
     <div className="space-y-8">

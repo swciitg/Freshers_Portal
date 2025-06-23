@@ -22,55 +22,53 @@ const BRDirectory = () => {
 
 
   const regionData = [
-  { region: "Telangana & Andhra Pradesh", name_and_no: "MITHIL 7207185274" },
-  { region: "Telangana & Andhra Pradesh", name_and_no: "MANIDEEP 6303865227" },
-  { region: "Telangana & Andhra Pradesh", name_and_no: "DHEEKSHA 8125355709" },
-  { region: "Telangana & Andhra Pradesh", name_and_no: "ESHANTH 6302406300" },
-  { region: "Telangana & Andhra Pradesh", name_and_no: "LIKITH 7675011374" },
-  { region: "Telangana & Andhra Pradesh", name_and_no: "MAHITHA 8309521983" },
-  { region: "Tamil Nadu", name_and_no: "SANJAY 7358487350" },
-  { region: "Tamil Nadu", name_and_no: "AMRITHA 9345652212" },
-  { region: "Tamil Nadu", name_and_no: "ARAVIND 9025171770" },
-  { region: "Tamil Nadu", name_and_no: "PRAGADEESH 9566265920" },
-  { region: "Tamil Nadu", name_and_no: "SANJANA 9897152375" },
-  { region: "Kerala", name_and_no: "JOFFIN 7736929440" },
-  { region: "Kerala", name_and_no: "DEVANANDIKA 9074542344" },
-  { region: "Kerala", name_and_no: "NIRANJANA 8113034892" },
-  { region: "Kerala", name_and_no: "JADEN 9510132218" },
-  { region: "Karnataka", name_and_no: "VAIBHAV 7022926590" },
-  { region: "Karnataka", name_and_no: "TANMAY 6003476812" },
-  { region: "Maharashtra", name_and_no: "ASHISH 8956336360" },
-  { region: "Maharashtra", name_and_no: "ATHARV 8956336360" },
-  { region: "Maharashtra", name_and_no: "PARNIKA 8459281263" },
-  { region: "Maharashtra", name_and_no: "PARTH 9527409158" },
-  { region: "Madhya Pradesh", name_and_no: "TAHA 7869810898" },
-  { region: "Madhya Pradesh", name_and_no: "SHREYAS GUPTA 9009187737" },
-  { region: "Madhya Pradesh", name_and_no: "SHRUT JAIN 9407137656" },
-  { region: "Madhya Pradesh", name_and_no: "VAGISHA 7477093970" },
-  { region: "Odisha", name_and_no: "ADYASA 9831783405" },
-  { region: "Odisha", name_and_no: "SITANSHU 8260707944" },
-  { region: "Gujarat", name_and_no: "SURBHIT 8200537139" },
-  { region: "Gujarat", name_and_no: "PRANJAL SONI 9512015500" },
-  { region: "Gujarat", name_and_no: "NAMAN 9377780309" },
-  { region: "Rajasthan", name_and_no: "DEVAL 9588886533" },
-  { region: "Rajasthan", name_and_no: "SHOURYA 9950500951" },
-  { region: "Rajasthan", name_and_no: "KANIKA 7878539166" },
-  { region: "UP", name_and_no: "VAISHNAVI 8953762399" },
-  { region: "Bihar", name_and_no: "ABHYUDAY 7903263868" },
-  { region: "Bihar", name_and_no: "SARVAGYA 8291314066" },
-  { region: "Bihar", name_and_no: "APOORVA 9031327189" },
-  { region: "Jharkhand", name_and_no: "SRISTI VATS 8690327784" },
-  { region: "Jharkhand", name_and_no: "AYUSH AGARWAL 9798408926" },
-  { region: "Delhi", name_and_no: "MISHIKA 9967826000" },
-  { region: "Delhi", name_and_no: "ABHISHEK DAS 7217680436" },
-  { region: "Haryana", name_and_no: "SOURABH SAINI 9588303662" },
-  { region: "Haryana", name_and_no: "VIBHOR 9509236500" },
-  { region: "Punjab", name_and_no: "HARSHIT GOEL 9877355569" },
-  { region: "Punjab", name_and_no: "DAIVIK 9592196491" },
-  { region: "West Bengal", name_and_no: "SOURAJJAL 9330886984" },
-  { region: "West Bengal", name_and_no: "SRIJAN 8653553039" },
-  { region: "Assam", name_and_no: "HARDIK 6002949018" },
-  { region: "Assam", name_and_no: "VAIBHAV 7002303858" }
+  { region: "Telangana & Andhra Pradesh", name_and_no: "MITHIL(B.Tech 3rd Year) 7207185274" },
+  { region: "Telangana & Andhra Pradesh", name_and_no: "MANIDEEP(B.Tech 3rd Year) 6303865227" },
+  { region: "Telangana & Andhra Pradesh", name_and_no: "DHEEKSHA(B.Tech 3rd Year) 8125355709" },
+  { region: "Telangana & Andhra Pradesh", name_and_no: "ESHANTH(B.Tech 3rd Year) 6302406300" },
+  { region: "Telangana & Andhra Pradesh", name_and_no: "LIKITH(B.Tech 3rd Year) 7675011374" },
+  { region: "Telangana & Andhra Pradesh", name_and_no: "MAHITHA(B.Tech 3rd Year) 8309521983" },
+  { region: "Tamil Nadu", name_and_no: "SANJAY(B.Tech 3rd Year) 7358487350" },
+  { region: "Tamil Nadu", name_and_no: "AMRITHA(B.Tech 3rd Year) 9345652212" },
+  { region: "Tamil Nadu", name_and_no: "ARAVIND(B.Des 3rd Year) 9025171770" },
+  { region: "Tamil Nadu", name_and_no: "PRAGADEESH(B.Tech 2nd Year) 9566265920" },
+  { region: "Tamil Nadu", name_and_no: "SANJANA(B.Tech 2nd Year) 9897152375" },
+  { region: "Kerala", name_and_no: "JOFFIN(B.Tech 3rd Year) 7736929440" },
+  { region: "Kerala", name_and_no: "DEVANANDIKA(B.Tech 3rd Year) 9074542344" },
+  { region: "Kerala", name_and_no: "NIRANJANA(B.Tech 3rd Year) 8113034892" },
+  { region: "Kerala", name_and_no: "JADEN(B.Tech 3rd Year) 9510132218" },
+  { region: "Karnataka", name_and_no: "VAIBHAV(B.Tech 2nd Year) 7022926590" },
+  { region: "Karnataka", name_and_no: "TANMAY(B.Tech 2nd Year) 6003476812" },
+  { region: "Maharashtra", name_and_no: "ASHISH(B.Tech 3rd Year) 8956336360" },
+  { region: "Maharashtra", name_and_no: "ATHARV(B.Tech 3rd Year) 8956336360" },
+  { region: "Maharashtra", name_and_no: "PARNIKA(B.Tech 3rd Year) 8459281263" },
+  { region: "Maharashtra", name_and_no: "PARTH(B.Tech 3rd Year) 9527409158" },
+  { region: "Madhya Pradesh", name_and_no: "TAHA(B.Tech 3rd Year) 7869810898" },
+  { region: "Madhya Pradesh", name_and_no: "SHREYAS GUPTA(B.Tech 3rd Year) 9009187737" },
+  { region: "Madhya Pradesh", name_and_no: "VAGISHA(B.Tech 3rd Year) 7477093970" },
+  { region: "Odisha", name_and_no: "ADYASA(B.Tech 3rd Year) 9831783405" },
+  { region: "Odisha", name_and_no: "SITANSHU(B.Tech 3rd Year) 8260707944" },
+  { region: "Gujarat", name_and_no: "SURBHIT(B.Tech 3rd Year) 8200537139" },
+  { region: "Gujarat", name_and_no: "PRANJAL SONI(B.Tech 3rd Year) 9512015500" },
+  { region: "Gujarat", name_and_no: "NAMAN(B.Tech 3rd Year) 9377780309" },
+  { region: "Rajasthan", name_and_no: "DEVAL(B.Tech 3rd Year) 9588886533" },
+  { region: "Rajasthan", name_and_no: "SHOURYA(B.Tech 3rd Year) 9950500951" },
+  { region: "Rajasthan", name_and_no: "KANIKA(B.Tech 3rd Year) 7878539166" },
+  { region: "UP", name_and_no: "VAISHNAVI(B.Tech 3rd Year) 8953762399" },
+  { region: "Bihar", name_and_no: "ABHYUDAY(B.Tech 3rd Year) 7903263868" },
+  { region: "Bihar", name_and_no: "APOORVA(B.Tech 3rd Year) 9031327189" },
+  { region: "Jharkhand", name_and_no: "SRISTI VATS(B.Tech 3rd Year) 8690327784" },
+  { region: "Jharkhand", name_and_no: "AYUSH AGARWAL(B.Tech 3rd Year) 9798408926" },
+  { region: "Delhi", name_and_no: "MISHIKA(B.Tech 3rd Year) 9967826000" },
+  { region: "Delhi", name_and_no: "ABHISHEK DAS(B.Tech 3rd Year) 7217680436" },
+  { region: "Haryana", name_and_no: "SOURABH SAINI(B.Tech 3rd Year) 9588303662" },
+  { region: "Haryana", name_and_no: "VIBHOR(B.Tech 3rd Year) 9509236500" },
+  { region: "Punjab", name_and_no: "HARSHIT GOEL(B.Tech 3rd Year) 9877355569" },
+  { region: "Punjab", name_and_no: "DAIVIK(B.Tech 3rd Year) 9592196491" },
+  { region: "West Bengal", name_and_no: "SOURAJJAL(B.Tech 3rd Year) 9330886984" },
+  { region: "West Bengal", name_and_no: "SRIJAN(B.Tech 3rd Year) 8653553039" },
+  { region: "Assam", name_and_no: "HARDIK(B.Tech 3rd Year) 6002949018" },
+  { region: "Assam", name_and_no: "VAIBHAV(B.Tech 3rd Year) 7002303858" }
 ];
   // Third year BRs data
   const thirdYearBRs = [
@@ -163,6 +161,37 @@ const BRDirectory = () => {
         </div>
       </div>
 
+      {/* 4th Year BRs Section */}
+      <div className='mb-14'>
+        <h2 className="text-2xl font-bold text-center text-gray-800 mb-8">
+          4th Year Branch Representatives
+        </h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+          {thirdYearBRs.map((br, index) => (
+            <div key={index} className="bg-white rounded-2xl p-6 shadow-lg text-center min-w-[250px] hover:shadow-xl transition-shadow duration-300">
+              <div className="mb-4">
+                <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-teal-600 rounded-full flex items-center justify-center mx-auto mb-3">
+                  <span className="text-white font-bold text-lg">
+                    {br.department.substring(0, 2)}
+                  </span>
+                </div>
+              </div>
+              <div className="text-gray-700">
+                <h3 className="text-lg font-bold mb-1 text-gray-800">
+                  {br.department}
+                </h3>
+                <p className="text-sm text-green-600 mb-3 font-medium">
+                  4th Year
+                </p>
+                <p className="text-xs text-gray-600 leading-relaxed break-words">
+                  {br.name_and_no}
+                </p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
       {/* Regional Mentors Section */}
       <div className="space-y-6">
         <h2 className="text-2xl font-bold text-center text-gray-800 mb-8">
@@ -210,36 +239,7 @@ const BRDirectory = () => {
           ))}
         </div>
 
-      {/* 4th Year BRs Section */}
-      <div>
-        <h2 className="text-2xl font-bold text-center text-gray-800 mb-8">
-          4th Year Branch Representatives
-        </h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-          {thirdYearBRs.map((br, index) => (
-            <div key={index} className="bg-white rounded-2xl p-6 shadow-lg text-center min-w-[250px] hover:shadow-xl transition-shadow duration-300">
-              <div className="mb-4">
-                <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-teal-600 rounded-full flex items-center justify-center mx-auto mb-3">
-                  <span className="text-white font-bold text-lg">
-                    {br.department.substring(0, 2)}
-                  </span>
-                </div>
-              </div>
-              <div className="text-gray-700">
-                <h3 className="text-lg font-bold mb-1 text-gray-800">
-                  {br.department}
-                </h3>
-                <p className="text-sm text-green-600 mb-3 font-medium">
-                  4th Year
-                </p>
-                <p className="text-xs text-gray-600 leading-relaxed break-words">
-                  {br.name_and_no}
-                </p>
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
+      
     </div>
   );
 };
