@@ -9,7 +9,7 @@ const MainPage = (props) => {
         <div className="space-y-6">
           {/* Icon */}
           <img
-            src="/hab.png"
+            src="/freshers/hab.png"
             alt="Icon"
             className="w-24 h-24 object-cover rounded-full"
           />
@@ -33,7 +33,7 @@ const MainPage = (props) => {
         <div className="space-y-6">
           {/* Icon */}
           <img
-            src="/hab.png"
+            src="/freshers/hab.png"
             alt="Icon"
             className="w-24 h-24 object-cover rounded-full"
           />

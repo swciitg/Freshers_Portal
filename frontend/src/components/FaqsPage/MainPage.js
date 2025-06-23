@@ -84,7 +84,7 @@ const sections = [
   {
     id: 16,
     title: "What is the internet policy at IIT Guwahati?",
-    content: "IIT Guwahati has LAN cables installed in every hostel room and WIFI routers in the Academic Area, Student Activity Centre (SAC) and your respective hostels. IIT Guwahati believes in providing high speed internet to all its students. Furthermore, the LAN is dysfunctional between 2 AM to 5 AM and 8 AM to 5 PM(class hours).",
+    content: "IIT Guwahati has LAN cables installed in every hostel room and WIFI routers in the Academic Area, Student Activity Centre (SAC) and your respective hostels. IIT Guwahati believes in providing high speed internet to all its students.",
   },
   {
     id: 17,
@@ -289,15 +289,7 @@ const MainPage = () => {
             </p>
             
             {/* Your existing tables and content remain exactly the same */}
-            <h2 className="text-2xl font-semibold mb-4">City to Campus</h2>
-            <table className="table-auto border-collapse border border-gray-300 w-full mb-8">
-              {/* All your existing table content */}
-            </table>
             
-            <h2 className="text-2xl font-semibold mb-4">Campus to City</h2>
-            <table className="table-auto border-collapse border border-gray-300 w-full">
-              {/* All your existing table content */}
-            </table>
           </div>
         )}
         {selectedSection === 2 && (
@@ -391,7 +383,7 @@ Extra load of minor courses can become a heavy burden at times, so yes, you can 
         {selectedSection === 16 && (
           <div className="mt-8 max-w-3xl mx-auto p-4">
             <p className="text-gray-600 text-base sm:text-lg leading-relaxed mb-6 ">
-            IIT Guwahati has LAN cables installed in every hostel room and WIFI routers in the Academic Area, Student Activity Centre (SAC) and your respective hostels. IIT Guwahati believes in providing high speed internet to all its students. Furthermore, the LAN is dysfunctional between 2 AM to 5 AM and 8 AM to 5 PM(class hours).</p>          </div>
+            IIT Guwahati has LAN cables installed in every hostel room and WIFI routers in the Academic Area, Student Activity Centre (SAC) and your respective hostels. IIT Guwahati believes in providing high speed internet to all its students.</p>          </div>
         )}
         {selectedSection === 17 && (
           <div className="mt-8 max-w-3xl mx-auto p-4">

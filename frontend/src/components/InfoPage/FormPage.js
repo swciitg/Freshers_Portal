@@ -664,7 +664,7 @@ const sections = [
 
     {/* Portal Button */}
     <div className="mt-4">
-      <a href='https://local.iitg.ac.in/fscc'><button className="px-6 py-2 border-2 rounded-full bg-gray-100 text-black hover:bg-gray-200 flex items-center space-x-2">
+      <a href='https://www.iitg.ac.in/iitgicc/'><button className="px-6 py-2 border-2 rounded-full bg-gray-100 text-black hover:bg-gray-200 flex items-center space-x-2">
         <span>Portal</span>
         <span>
           <svg
