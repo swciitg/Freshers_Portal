@@ -33,7 +33,7 @@ const HomePage = () => {
         <video
           ref={videoRef}
           className="w-full h-full object-cover"
-          src={`${process.env.PUBLIC_URL}/video.mp4`}
+          src={`${process.env.PUBLIC_URL}/freshers_video.mp4`}
           autoPlay
           muted={isMuted}
           loop
