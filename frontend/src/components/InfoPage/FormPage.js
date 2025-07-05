@@ -160,8 +160,89 @@ const sections = [
     
     )
   },
+  // Insert at index 1
+{
+  id: 1,
+  title: "Campus Essentials at Manas Community Hall",
+  content: "Find all your campus essentials and more at the Manas Community Hall.",
+  details: (
+    <div className="mt-8 max-w-3xl mx-auto p-4 space-y-6">
+      <div className="flex items-start space-x-3">
+        <div className="bg-orange-500 rounded-lg p-2 flex-shrink-0">
+          <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c1.38 0 2.5 1.12 2.5 2.5S13.38 13 12 13s-2.5-1.12-2.5-2.5S10.62 8 12 8zm0 10c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" />
+          </svg>
+        </div>
+        <div className="flex-1">
+          <h3 className="text-xl font-bold text-gray-900 mb-2">Welcome to the Manas Community Hall!</h3>
+          <p className="text-gray-600 text-sm leading-relaxed">
+            Kickstart your campus life with everything you need, all in one place! The Manas Community Hall (near Manas Hostel) hosts a vibrant marketplace for new students.
+          </p>
+        </div>
+      </div>
+      {/* Stalls Grid */}
+      <div className="grid md:grid-cols-3 gap-4">
+        {/* Cycles */}
+        <div className="bg-white rounded-lg p-4 border-l-4 border-cyan-400 hover:bg-cyan-50 transition-colors duration-200">
+          <div className="flex items-center space-x-2">
+            <span className="bg-cyan-100 rounded-full p-1">
+              <svg className="w-4 h-4 text-cyan-600" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M5 16a3 3 0 100-6 3 3 0 000 6zm10 0a3 3 0 100-6 3 3 0 000 6zM7 13h6l-2-5H9l-2 5z" />
+              </svg>
+            </span>
+            <h4 className="font-semibold text-gray-900 text-sm">Cycles & Accessories</h4>
+          </div>
+          <p className="text-gray-600 text-xs mt-2">Buy cycles for easy campus commute, plus locks, helmets, and more.</p>
+        </div>
+        {/* Basic Amenities */}
+        <div className="bg-white rounded-lg p-4 border-l-4 border-green-400 hover:bg-green-50 transition-colors duration-200">
+          <div className="flex items-center space-x-2">
+            <span className="bg-green-100 rounded-full p-1">
+              <svg className="w-4 h-4 text-green-600" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M10 2a2 2 0 012 2v1h2a2 2 0 012 2v9a2 2 0 01-2 2H6a2 2 0 01-2-2V7a2 2 0 012-2h2V4a2 2 0 012-2zm0 2H8v1h4V4h-2z" />
+              </svg>
+            </span>
+            <h4 className="font-semibold text-gray-900 text-sm">Basic Amenities</h4>
+          </div>
+          <ul className="text-gray-600 text-xs mt-2 list-disc pl-4 space-y-1">
+            <li>Buckets, mattresses, mosquito nets</li>
+            <li>Cushions, towels, toiletries</li>
+            <li>And much more!</li>
+          </ul>
+        </div>
+        {/* Education Loans */}
+        <div className="bg-white rounded-lg p-4 border-l-4 border-indigo-400 hover:bg-indigo-50 transition-colors duration-200">
+          <div className="flex items-center space-x-2">
+            <span className="bg-indigo-100 rounded-full p-1">
+              <svg className="w-4 h-4 text-indigo-600" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M4 4a2 2 0 012-2h8a2 2 0 012 2v12a2 2 0 01-2 2H6a2 2 0 01-2-2V4zm2 0v12h8V4H6zm2 2h4v2H8V6zm0 4h4v2H8v-2z" />
+              </svg>
+            </span>
+            <h4 className="font-semibold text-gray-900 text-sm">Education Loan Stalls</h4>
+          </div>
+          <p className="text-gray-600 text-xs mt-2">Meet representatives from various banks and explore student loan options.</p>
+        </div>
+      </div>
+      {/* Note */}
+      <div className="mt-6 bg-gradient-to-r from-orange-100 to-yellow-50 border border-orange-200 rounded-lg p-4">
+        <div className="flex items-start space-x-2">
+          <svg className="w-5 h-5 text-orange-600 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+            <path fillRule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clipRule="evenodd" />
+          </svg>
+          <div>
+            <h4 className="font-semibold text-orange-800 text-sm">Pro Tip</h4>
+            <p className="text-orange-700 text-xs mt-1">
+              Don’t worry if you forgot something at home! Most essentials are available at the Manas Community Hall. Visit early for the best selection.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  )
+},
+
   { 
-    id: 1, 
+    id: 2, 
     title: 'Provisional ID', 
     content: 'Get your provisional ID card details and download process.',
     details: (
@@ -220,7 +301,7 @@ const sections = [
     )
   },
   { 
-    id: 2, 
+    id: 3, 
     title: 'Anti-ragging Affidavit', 
     content: 'Submit your anti-ragging affidavit as required by UGC guidelines.',
     details: (
@@ -329,7 +410,7 @@ const sections = [
     )
   },
   { 
-    id: 3, 
+    id: 4, 
     title: 'Hostel Undertaking', 
     content: 'Complete hostel undertaking form for accommodation.',
     details: (
@@ -386,7 +467,7 @@ const sections = [
     )
   },
   { 
-    id: 4, 
+    id: 5, 
     title: 'Code of Conduct', 
     content: 'Read and acknowledge the institute code of conduct.',
     details: (
@@ -438,7 +519,7 @@ const sections = [
     )
   },
   { 
-    id: 5, 
+    id: 6, 
     title: 'Guidelines for Photo and Sign', 
     content: 'Photo and signature specifications for official documents.',
     details: (
@@ -493,7 +574,7 @@ const sections = [
     )
   },
   { 
-    id: 6, 
+    id: 7, 
     title: 'Portal for Personal Information', 
     content: 'Update your personal information in the student portal.',
     details: (
@@ -541,7 +622,7 @@ const sections = [
     )
   },
   { 
-    id: 7, 
+    id: 8, 
     title: 'Permanent ID Card', 
     content: 'Information about permanent ID card collection.',
     details: (
@@ -602,7 +683,7 @@ const sections = [
     )
   },
   { 
-    id: 8, 
+    id: 9, 
     title: 'Bonafide Certificate', 
     content: 'Apply for bonafide certificate for official purposes.',
     details: (
@@ -648,7 +729,7 @@ const sections = [
     )
   },
   { 
-    id: 9, 
+    id: 10, 
     title: "IITG Girl's Collective", 
     content: "Connect with IITG Girl's Collective community.",
     details: (
@@ -689,7 +770,7 @@ const sections = [
     )
   },
   { 
-    id: 10, 
+    id: 11, 
     title: 'How to reach campus', 
     content: 'Travel instructions and directions to reach IIT Guwahati.',
     details: (
@@ -857,6 +938,57 @@ const sections = [
 
     )
   },
+  // Add at the end of the array
+{
+  id: 12,
+  title: "Campus Map",
+  content: "Navigate IIT Guwahati campus with the interactive map.",
+  details: (
+    <div className="mt-8 max-w-4xl mx-auto p-4 space-y-8">
+      {/* Header */}
+      <div className="flex items-start space-x-3">
+        <div className="bg-blue-600 rounded-lg p-2 flex-shrink-0">
+          <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7" />
+          </svg>
+        </div>
+        <div className="flex-1">
+          <h3 className="text-xl font-bold text-gray-900 mb-1">Explore the Campus</h3>
+          <p className="text-gray-600 text-sm">
+            Find your way around IIT Guwahati! Click below to open the official interactive campus map.
+          </p>
+        </div>
+      </div>
+      {/* Map Card */}
+      <div className="flex justify-center">
+        <div className="w-full max-w-md bg-gray-100 rounded-2xl shadow-md border border-blue-100 flex items-center justify-center p-4">
+          <img 
+            src="/freshers/Campus_map.jpg" 
+            alt="IIT Guwahati Campus Map" 
+            className="rounded-lg object-contain w-full h-80 md:h-96"
+            style={{ background: "#fff" }}
+          />
+        </div>
+      </div>
+      {/* Button */}
+      <div className="flex justify-center">
+        <a
+          href="https://www.iitg.ac.in/campusmap/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center space-x-2 px-6 py-3 bg-blue-600 hover:bg-blue-800 text-white font-semibold rounded-full transition-all duration-200 transform hover:scale-105 shadow-lg"
+        >
+          <span>Open Campus Map</span>
+          <svg width="16" height="16" viewBox="0 0 25 24" fill="none">
+            <path d="M7.5 17L17.5 7M17.5 7H7.5M17.5 7V17" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  )
+},
+
+
 ];
 
 const FormPage = () => {
