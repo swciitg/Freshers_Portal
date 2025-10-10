@@ -46,7 +46,7 @@ function App() {
         <Route path="/sgc" element={<SGCPage/>}/>
         <Route path="/faqs" element={<FaqsPage/>}/>
         <Route path="/contact" element={<ContactPage/>}/>
-        <Route path="/saathi" element={<SaathiPage/>}/>
+        {/* <Route path="/saathi" element={<SaathiPage/>}/> */}
               </Routes>
       </BrowserRouter>
     </div>
