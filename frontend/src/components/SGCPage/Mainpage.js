@@ -38,15 +38,15 @@ It comprises of five Boards viz. Students' Welfare Board, Cultural Board, Sports
     </div>
 
     {/* Students' Senate Section */}
-    <div className="max-w-7xl mt-36 mx-auto">
+    <div className="max-w-6xl xl:max-w-7xl mt-36 mx-auto">
       {/* Section Container with proper boundaries */}
-      <div className="bg-gray-50 rounded-2xl p-8 md:p-12 lg:p-16">
+      <div className="bg-gray-50 rounded-2xl p-8 md:p-12 lg:p-16 xl:p-20">
         {/* Responsive Layout: Stack on mobile, side-by-side on larger screens */}
-        <div className="flex flex-col lg:flex-row lg:items-start lg:gap-16">
+        <div className="flex flex-col lg:flex-row lg:items-start lg:gap-12 xl:gap-16">
           {/* Left Section: Title - Hero Section */}
-          <div className="lg:w-2/5 mb-8 lg:mb-0">
+          <div className="lg:w-1/3 xl:w-2/5 mb-8 lg:mb-0">
             <div className="text-center lg:text-left">
-              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-black leading-tight font-bold">
+              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-6xl xl:text-7xl text-black leading-tight font-bold">
                 Students' <br /> 
                 <span className="text-orange-500">Senate</span>
               </h1>
@@ -56,27 +56,27 @@ It comprises of five Boards viz. Students' Welfare Board, Cultural Board, Sports
           </div>
 
           {/* Right Section: Content */}
-          <div className="lg:w-3/5 space-y-8">
+          <div className="lg:w-2/3 xl:w-3/5 space-y-8">
             {/* Introduction */}
             <div className="space-y-6">
-              <p className="text-gray-700 text-lg md:text-xl leading-relaxed">
+              <p className="text-gray-700 text-lg md:text-xl xl:text-2xl leading-relaxed">
                 At IIT Guwahati, this structure of Students' Senate was implemented for the first time in 2014-15. The whole idea behind the implementation of this system is to have a student body which would look into the issues within campus and all those pertaining directly to the student community. In other words, students' senate represent each student in the campus.
               </p>
             </div>
 
             {/* Structure Section */}
             <div className="space-y-6">
-              <h2 className="text-2xl md:text-3xl font-bold text-black border-l-4 border-orange-500 pl-4">
+              <h2 className="text-2xl md:text-3xl xl:text-4xl font-bold text-black border-l-4 border-orange-500 pl-4">
                 What is the structure of the Students' Senate?
               </h2>
-              <p className="text-gray-700 text-lg leading-relaxed">
+              <p className="text-gray-700 text-lg xl:text-xl leading-relaxed">
                 Students' Senate consists of 25 elected representatives divided into:
               </p>
 
               {/* Executive Panel */}
-              <div className="bg-white rounded-lg p-6 shadow-sm">
-                <h3 className="text-xl font-semibold text-gray-800 mb-4">Executive Panel</h3>
-                <ul className="list-disc list-inside text-gray-700 space-y-2 text-base">
+              <div className="bg-white rounded-lg p-6 xl:p-8 shadow-sm">
+                <h3 className="text-xl xl:text-2xl font-semibold text-gray-800 mb-4">Executive Panel</h3>
+                <ul className="list-disc list-inside text-gray-700 space-y-2 text-base xl:text-lg">
                   <li>Vice President, Students' Gymkhana</li>
                   <li>General Secretary, Students' Welfare Board</li>
                   <li>General Secretary, Sports Board</li>
@@ -89,9 +89,9 @@ It comprises of five Boards viz. Students' Welfare Board, Cultural Board, Sports
               </div>
 
               {/* Legislative Panel */}
-              <div className="bg-white rounded-lg p-6 shadow-sm">
-                <h3 className="text-xl font-semibold text-gray-800 mb-4">Legislative Panel</h3>
-                <ul className="list-disc list-inside text-gray-700 space-y-2 text-base">
+              <div className="bg-white rounded-lg p-6 xl:p-8 shadow-sm">
+                <h3 className="text-xl xl:text-2xl font-semibold text-gray-800 mb-4">Legislative Panel</h3>
+                <ul className="list-disc list-inside text-gray-700 space-y-2 text-base xl:text-lg">
                   <li>7 UG (Undergraduate) Senators</li>
                   <li>7 PPG (Postgraduate) Senators</li>
                   <li>3 Girl Senators</li>
@@ -101,10 +101,10 @@ It comprises of five Boards viz. Students' Welfare Board, Cultural Board, Sports
 
             {/* Function Section */}
             <div className="space-y-6">
-              <h2 className="text-2xl md:text-3xl font-bold text-black border-l-4 border-orange-500 pl-4">
+              <h2 className="text-2xl md:text-3xl xl:text-4xl font-bold text-black border-l-4 border-orange-500 pl-4">
                 How does Students' Senate function?
               </h2>
-              <p className="text-gray-700 text-lg leading-relaxed">
+              <p className="text-gray-700 text-lg xl:text-xl leading-relaxed">
                 Students' Senate acts as a bridge between the student community and the administration. Senate meets once every month where discussion are done and decisions are made upon the proposal drafted by the senators on the issues put forward by the student community through the form circulated online before the meeting.
                 Depending upon the type of the proposal, they are drafted and submitted to the concerned department or are put forward in SAC(Students Affairs Council) by the Vice President, who is the chairman of students' senate and joint secretary at the SAC meeting.
               </p>
@@ -112,10 +112,10 @@ It comprises of five Boards viz. Students' Welfare Board, Cultural Board, Sports
 
             {/* Participation Section */}
             <div className="space-y-6">
-              <h2 className="text-2xl md:text-3xl font-bold text-black border-l-4 border-orange-500 pl-4">
+              <h2 className="text-2xl md:text-3xl xl:text-4xl font-bold text-black border-l-4 border-orange-500 pl-4">
                 How easy it is to put forward your point in the agenda for the meeting?
               </h2>
-              <p className="text-gray-700 text-lg leading-relaxed">
+              <p className="text-gray-700 text-lg xl:text-xl leading-relaxed">
                 You can put agenda in the google form that is circulated each month. To give a detailed information of your proposal, you can call up a senator, sit with him so that he can put forward your point in the meeting which goes into action on approval by the Studnets' Senate. Senators will be happy to help you always. Just give them a call in case of help.
               </p>
             </div>
