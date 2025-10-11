@@ -282,7 +282,6 @@ const BRDirectory = () => {
                   <p className="text-sm text-blue-600 mb-3 font-medium">
                     {br.year}rd Year
                   </p>
-                  {/* i have to work here */}
                   <div className="contact-details grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                     {resarr.map((item, index) => {
                       return (
@@ -343,7 +342,6 @@ const BRDirectory = () => {
                   <p className="text-sm text-green-600 mb-3 font-medium">
                     4th Year
                   </p>
-                  {/* i have to work here */}
                   <div className="contact-details grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                     {resarr2.map((item, index) => {
                       return (
