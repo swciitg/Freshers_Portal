@@ -15,7 +15,12 @@ const BRDirectory = () => {
     {
       department: "ECE",
       year: 3,
-      name_and_no: "HARSHIT GOEL 9877355569 & ANUSHKA 7694988744",
+      name_and_no: "HARSHIT GOEL 9877355569",
+    },
+    {
+      department: "ECE",
+      year: 3,
+      name_and_no: "ANUSHKA 7694988744",
     },
     { department: "EEE", year: 3, name_and_no: "KRRISH 8229027032" },
     { department: "EP", year: 3, name_and_no: "JASVINDAR SINGH 7417294042" },
@@ -23,23 +28,43 @@ const BRDirectory = () => {
     {
       department: "CHEM",
       year: 3,
-      name_and_no: "ANWESHA 8235564333 & TAHA 7869810898",
+      name_and_no: "ANWESHA 8235564333",
+    },
+    {
+      department: "CHEM",
+      year: 3,
+      name_and_no: "TAHA 7869810898",
     },
     { department: "CST", year: 3, name_and_no: "ARPIT RANJAN 8409285656" },
     {
       department: "MECH",
       year: 3,
-      name_and_no: "MITHIL 7207185274 & KHUSHAL 9257282136",
+      name_and_no: "MITHIL 7207185274",
+    },
+    {
+      department: "MECH",
+      year: 3,
+      name_and_no: "KHUSHAL 9257282136",
     },
     {
       department: "BSBE",
       year: 3,
-      name_and_no: "HARSHITA 7805869315 & SRAYASH 9244237258",
+      name_and_no: "HARSHITA 7805869315",
+    },
+    {
+      department: "BSBE",
+      year: 3,
+      name_and_no: "SRAYASH 9244237258",
     },
     {
       department: "BDES",
       year: 3,
-      name_and_no: "ARVIND 9025171770 & KETAKI 8308310264",
+      name_and_no: "ARVIND 9025171770",
+    },
+    {
+      department: "BDES",
+      year: 3,
+      name_and_no: "KETAKI 8308310264",
     },
     { department: "ENERGY", year: 3, name_and_no: "PRANAVSREE 8121572002" },
   ];
@@ -172,25 +197,44 @@ const BRDirectory = () => {
     { department: "DSAI", name_and_no: "SHIVANSH 8447282050" },
     {
       department: "ECE",
-      name_and_no: "AKSHAYA 8007461538 & DEVARSH 7874195692",
+      name_and_no: "AKSHAYA 8007461538",
+    },
+    {
+      department: "ECE",
+      name_and_no: "DEVARSH 7874195692",
     },
     {
       department: "EEE",
-      name_and_no: "CHIRAG 7014962887 & JASMINE 7814650875",
+      name_and_no: "CHIRAG 7014962887",
+    },
+    {
+      department: "EEE",
+      name_and_no: "JASMINE 7814650875",
     },
     { department: "EP", name_and_no: "SRIVATSAN 9380282071" },
     { department: "CIVIL", name_and_no: "SITESH 9660925875" },
     {
       department: "CHEM",
-      name_and_no: "FAHEEM 8299575017 & MONALI 9340255495",
+      name_and_no: "FAHEEM 8299575017",
     },
-    { department: "CST", name_and_no: "DHRUV 9990041164 & ISHIKA 7649894094" },
-    { department: "MECH", name_and_no: "ADITYA 7390909418 & ROHAN 9485987481" },
+    {
+      department: "CHEM",
+      name_and_no: "MONALI 9340255495",
+    },
+    { department: "CST", name_and_no: "DHRUV 9990041164" },
+    { department: "CST", name_and_no: "ISHIKA 7649894094" },
+    { department: "MECH", name_and_no: "ADITYA 7390909418" },
+    { department: "MECH", name_and_no: "ROHAN 9485987481" },
     {
       department: "BSBE",
-      name_and_no: "ABHIKANSH 9855607807 & ELIKA 7903053492",
+      name_and_no: "ABHIKANSH 9855607807",
     },
-    { department: "BDES", name_and_no: "ANIRUD 9080424001 & NISHA 9871499561" },
+    {
+      department: "BSBE",
+      name_and_no: "ELIKA 7903053492",
+    },
+    { department: "BDES", name_and_no: "ANIRUD 9080424001" },
+    { department: "BDES", name_and_no: "NISHA 9871499561" },
     { department: "ENERGY", name_and_no: "ABHINAV 7669189417" },
   ];
   const [searchTerm, setSearchTerm] = useState("");
@@ -257,48 +301,53 @@ const BRDirectory = () => {
           Connect with your department representatives
         </p>
       </div>
-
-      {/* 3rd Year BRs Section */}
+      
       <div className="mb-16">
-        <h2 className="text-2xl font-bold text-center text-gray-800 mb-8">
+        <h2 className="text-3xl font-bold text-center text-gray-800 mb-12">
           3rd Year Branch Representatives
         </h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
           {brData.map((br, index) => {
             const resarr = brname_no(br.name_and_no);
+            const colors = [
+              "from-teal-400 to-teal-600",
+              "from-green-400 to-green-600",
+              "from-blue-400 to-blue-600",
+            ];
+            const bgColor = colors[index % colors.length];
             return (
-              <div
-                key={index}
-                className="bg-white rounded-2xl p-6 shadow-lg text-center min-w-[250px] hover:shadow-xl transition-shadow duration-300"
-              >
-                <div className="mb-4">
-                  <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-3">
-                    <span className="text-white font-bold text-lg">
-                      {br.department.substring(0, 2)}
-                    </span>
+              <div key={index} className="relative w-full h-full">
+                {/* Layered background effect */}
+                <div
+                  className={`absolute inset-0 bg-gradient-to-br ${bgColor} rounded-3xl transform rotate-6 opacity-80`}
+                ></div>
+                <div
+                  className={`absolute inset-0 bg-gradient-to-br ${bgColor} rounded-3xl transform -rotate-3 opacity-60`}
+                ></div>
+
+                {/* Main card */}
+                <div className="relative bg-white rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1">
+                  <div className="mb-6">
+                    <div className="w-20 h-20 bg-gradient-to-br from-gray-200 to-gray-300 rounded-full flex items-center justify-center mx-auto mb-4 overflow-hidden">
+                      <span className="text-gray-600 font-bold text-xl">
+                        {br.department.substring(0, 2)}
+                      </span>
+                    </div>
                   </div>
-                </div>
-                <div className="text-gray-700">
-                  <p className="text-sm text-blue-600 mb-3 font-medium">
-                    {br.year}rd Year
-                  </p>
-                  <div className="contact-details grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                    {resarr.map((item, index) => {
-                      return (
-                        <div
-                          key={index}
-                          className="contact-details mb-3 bg-gray-50 rounded-lg p-4 hover:bg-gray-100 transition-colors"
-                        >
-                          <div className="flex items-center justify-between">
-                            <div className="flex-1">
-                              <h3 className="font-semibold text-gray-800 text-lg">
-                                {item.name}
-                              </h3>
-                              <p className="text-gray-600 flex items-center gap-1 mt-1">
-                                <Phone className="w-4 h-4" />
-                                +91 {item.number}
-                              </p>
-                            </div>
+                  <div className="text-gray-700">
+                    <div className="contact-details space-y-4">
+                      {resarr.map((item, index) => {
+                        return (
+                          <div key={index} className="text-center">
+                            <h3 className="font-bold text-gray-900 text-lg mb-1">
+                              {item.name}
+                            </h3>
+                            <p className="text-xs text-gray-500 italic mb-2">
+                              {br.year}rd Year,{br.department}
+                            </p>
+                            <p className="text-sm text-gray-600">
+                              +91 {item.number}
+                            </p>
                             <button
                               onClick={() => handleCall(item.number)}
                               className="bg-green-500 hover:bg-green-600 text-white p-2 rounded-full transition-colors"
@@ -306,10 +355,13 @@ const BRDirectory = () => {
                             >
                               <Phone className="w-4 h-4" />
                             </button>
+                            {index < resarr.length - 1 && (
+                              <div className="mt-4 border-b border-gray-200"></div>
+                            )}
                           </div>
-                        </div>
-                      );
-                    })}
+                        );
+                      })}
+                    </div>
                   </div>
                 </div>
               </div>
@@ -320,45 +372,51 @@ const BRDirectory = () => {
 
       {/* 4th Year BRs Section */}
       <div className="mb-14">
-        <h2 className="text-2xl font-bold text-center text-gray-800 mb-8">
+        <h2 className="text-3xl font-bold text-center text-gray-800 mb-12">
           4th Year Branch Representatives
         </h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
           {thirdYearBRs.map((br, index) => {
             const resarr2 = brname_no(br.name_and_no);
+            const colors = [
+              "from-purple-400 to-purple-600",
+              "from-pink-400 to-pink-600",
+              "from-indigo-400 to-indigo-600",
+            ];
+            const bgColor = colors[index % colors.length];
             return (
-              <div
-                key={index}
-                className="bg-white rounded-2xl p-6 shadow-lg text-center min-w-[250px] hover:shadow-xl transition-shadow duration-300"
-              >
-                <div className="mb-4">
-                  <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-teal-600 rounded-full flex items-center justify-center mx-auto mb-3">
-                    <span className="text-white font-bold text-lg">
-                      {br.department.substring(0, 2)}
-                    </span>
+              <div key={index} className="relative w-full h-full">
+                {/* Layered background effect */}
+                <div
+                  className={`absolute inset-0 bg-gradient-to-br ${bgColor} rounded-3xl transform rotate-6 opacity-80`}
+                ></div>
+                <div
+                  className={`absolute inset-0 bg-gradient-to-br ${bgColor} rounded-3xl transform -rotate-3 opacity-60`}
+                ></div>
+
+                {/* Main card */}
+                <div className="relative bg-white rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1">
+                  <div className="mb-6">
+                    <div className="w-20 h-20 bg-gradient-to-br from-gray-200 to-gray-300 rounded-full flex items-center justify-center mx-auto mb-4 overflow-hidden">
+                      <span className="text-gray-600 font-bold text-xl">
+                        {br.department.substring(0, 2)}
+                      </span>
+                    </div>
                   </div>
-                </div>
-                <div className="text-gray-700">
-                  <p className="text-sm text-green-600 mb-3 font-medium">
-                    4th Year
-                  </p>
-                  <div className="contact-details grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                    {resarr2.map((item, index) => {
-                      return (
-                        <div
-                          key={index}
-                          className="contact-details mb-3 bg-gray-50 rounded-lg p-4 hover:bg-gray-100 transition-colors"
-                        >
-                          <div className="flex items-center justify-between">
-                            <div className="flex-1">
-                              <h3 className="font-semibold text-gray-800 text-lg">
-                                {item.name}
-                              </h3>
-                              <p className="text-gray-600 flex items-center gap-1 mt-1">
-                                <Phone className="w-4 h-4" />
-                                +91 {item.number}
-                              </p>
-                            </div>
+                  <div className="text-gray-700">
+                    <div className="contact-details space-y-4">
+                      {resarr2.map((item, index) => {
+                        return (
+                          <div key={index} className="text-center">
+                            <h3 className="font-bold text-gray-900 text-lg mb-1">
+                              {item.name}
+                            </h3>
+                            <p className="text-xs text-gray-500 italic mb-2">
+                              4th Year,{br.department}
+                            </p>
+                            <p className="text-sm text-gray-600">
+                              +91 {item.number}
+                            </p>
                             <button
                               onClick={() => handleCall(item.number)}
                               className="bg-green-500 hover:bg-green-600 text-white p-2 rounded-full transition-colors"
@@ -366,10 +424,13 @@ const BRDirectory = () => {
                             >
                               <Phone className="w-4 h-4" />
                             </button>
+                            {index < resarr2.length - 1 && (
+                              <div className="mt-4 border-b border-gray-200"></div>
+                            )}
                           </div>
-                        </div>
-                      );
-                    })}
+                        );
+                      })}
+                    </div>
                   </div>
                 </div>
               </div>
