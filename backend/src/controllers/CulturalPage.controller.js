@@ -1,15 +1,16 @@
 import Club from "../models/Clubs.model.js";
 import Cult from "../models/Cultural.js";
+import CulturalBoardInfo from "../models/CulturalBoardInfo.model.js";
 
 export const handleGetAllClubs = async (req, res) => {
     try {
-        const allClubs = await Cult.find({});
+        const clubs = await Cult.find({});
+        const boardInfo = await CulturalBoardInfo.findOne();
 
-        if (allClubs.length === 0) {
-            return res.status(404).json({ msg: "No clubs found" });
-        }
-
-        return res.status(200).json(allClubs);
+        return res.status(200).json({
+            boardInfo: boardInfo,
+            clubs: clubs
+        });
     } catch (error) {
         console.error("Error retrieving all clubs:", error);
         return res
