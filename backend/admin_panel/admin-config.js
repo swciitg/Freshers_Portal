@@ -13,6 +13,10 @@ import Facility from "../src/models/Facilities.model.js";
 import Cult from "../src/models/Cultural.js";
 import Department from "../src/models/Departments.model.js";
 import Fest from "../src/models/Fest.model.js";
+import TechBoardInfo from "../src/models/TechBoardInfo.model.js";
+import CulturalBoardInfo from "../src/models/CulturalBoardInfo.model.js";
+import SportsBoardInfo from "../src/models/SportsBoardInfo.model.js";
+import WelfareBoardInfo from "../src/models/WelfareBoardInfo.model.js";
 
 const ADMINPANELROOT = process.env.ADMINPANELROOTPATH || "/admin";
 
@@ -36,6 +40,10 @@ const authenticate = async (email, password) => {
 
 const adminOptions = {
   resources: [
+    TechBoardInfo,
+    CulturalBoardInfo,
+    SportsBoardInfo,
+    WelfareBoardInfo,
     HostelFac,
     HostelList,
     InterHostel,

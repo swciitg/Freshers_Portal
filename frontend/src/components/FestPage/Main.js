@@ -13,9 +13,11 @@ const Main = () => {
     const [Facdata, setFacdata] = useState([]);
 
     useEffect(() => {
-        if (data) setFacdata(data);
-        if (data) console.log(data);
-    }, [loading]);
+        if (data) {
+            setFacdata(data);
+            console.log("Fest data:", data);
+        }
+    }, [data]);
 
     if (loading)
         return (
@@ -77,17 +79,44 @@ const Main = () => {
                 </p>
             </div> */}
             <div className="space-y-16 py-16 px-10">
-                
-                {Facdata.map((event, index) => (
-                    <Facilities
-                        key={index}
-                        name={event.name}
-                        description={event.description}
-                        imageUrl={event.imagePath}
-                        headName={event.headName}
-                        iconUrl={event.iconPath}
-                    />
-                ))}
+                {Facdata && Facdata.length > 0 ? (
+                    Facdata.map((event, index) => (
+                        <Facilities
+                            key={index}
+                            name={event.name}
+                            description={event.description}
+                            imageUrl={event.imagePath}
+                            headName={event.headName}
+                            iconUrl={event.iconPath}
+                        />
+                    ))
+                ) : (
+                    <div className="min-h-[60vh] flex flex-col items-center justify-center">
+                        <div className="text-center max-w-2xl px-4">
+                            <h2 className="text-5xl md:text-6xl font-bold text-gray-300 mb-6">
+                                No Festivals Yet
+                            </h2>
+                            <p className="text-lg md:text-xl text-gray-500 mb-8">
+                                Festivals information will be added soon. Check back later or contact the admin to add festival details.
+                            </p>
+                            <div className="inline-block p-6 bg-gray-50 rounded-lg">
+                                <svg 
+                                    className="w-24 h-24 mx-auto text-gray-400" 
+                                    fill="none" 
+                                    stroke="currentColor" 
+                                    viewBox="0 0 24 24"
+                                >
+                                    <path 
+                                        strokeLinecap="round" 
+                                        strokeLinejoin="round" 
+                                        strokeWidth={2} 
+                                        d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" 
+                                    />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                )}
             </div>
             <Footer />
         </div>

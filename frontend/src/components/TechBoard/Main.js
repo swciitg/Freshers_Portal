@@ -19,9 +19,17 @@ const [board, setBoard] = useState({
             'wikiUrl':'#'});
 
 useEffect(() => {
-    if (data) setFacdata(data);
-    if (data) console.log(data);
-}, [loading]);
+    if (data) {
+        // Handle new API response format {boardInfo, clubs}
+        if (data.clubs && Array.isArray(data.clubs)) {
+            setFacdata(data.clubs);
+            if (data.boardInfo) {
+                setBoard(data.boardInfo);
+            }
+        }
+        console.log("Tech data:", data);
+    }
+}, [data]);
 
 if (loading)
     return (
