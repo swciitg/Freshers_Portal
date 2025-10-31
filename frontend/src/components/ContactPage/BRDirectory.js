@@ -1,248 +1,43 @@
-import React from "react";
-import { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Search, Phone, MapPin, Users } from "lucide-react";
+// import * as adminFallback from "../../admin"; // fallback when backend unavailable
 
 const BRDirectory = () => {
-  // BR data with years incremented by 1
-  const brData = [
-    { department: "CSE", year: 3, name_and_no: "MANIDEEP RAM 6303865227" },
-    { department: "MNC", year: 3, name_and_no: "NAMAN KARWA 9877780309" },
-    {
-      department: "DSAI",
-      year: 3,
-      name_and_no: "VAISHNAVI AGARWAL 8953762399",
-    },
-    {
-      department: "ECE",
-      year: 3,
-      name_and_no: "HARSHIT GOEL 9877355569",
-    },
-    {
-      department: "ECE",
-      year: 3,
-      name_and_no: "ANUSHKA 7694988744",
-    },
-    { department: "EEE", year: 3, name_and_no: "KRRISH 8229027032" },
-    { department: "EP", year: 3, name_and_no: "JASVINDAR SINGH 7417294042" },
-    { department: "CIVIL", year: 3, name_and_no: "DIVYANSH RAJ 9523490713" },
-    {
-      department: "CHEM",
-      year: 3,
-      name_and_no: "ANWESHA 8235564333",
-    },
-    {
-      department: "CHEM",
-      year: 3,
-      name_and_no: "TAHA 7869810898",
-    },
-    { department: "CST", year: 3, name_and_no: "ARPIT RANJAN 8409285656" },
-    {
-      department: "MECH",
-      year: 3,
-      name_and_no: "MITHIL 7207185274",
-    },
-    {
-      department: "MECH",
-      year: 3,
-      name_and_no: "KHUSHAL 9257282136",
-    },
-    {
-      department: "BSBE",
-      year: 3,
-      name_and_no: "HARSHITA 7805869315",
-    },
-    {
-      department: "BSBE",
-      year: 3,
-      name_and_no: "SRAYASH 9244237258",
-    },
-    {
-      department: "BDES",
-      year: 3,
-      name_and_no: "ARVIND 9025171770",
-    },
-    {
-      department: "BDES",
-      year: 3,
-      name_and_no: "KETAKI 8308310264",
-    },
-    { department: "ENERGY", year: 3, name_and_no: "PRANAVSREE 8121572002" },
-  ];
-
-  const regionData = [
-    {
-      region: "Telangana & Andhra Pradesh",
-      name_and_no: "MITHIL(B.Tech 3rd Year) 7207185274",
-    },
-    {
-      region: "Telangana & Andhra Pradesh",
-      name_and_no: "MANIDEEP(B.Tech 3rd Year) 6303865227",
-    },
-    {
-      region: "Telangana & Andhra Pradesh",
-      name_and_no: "DHEEKSHA(B.Tech 3rd Year) 8125355709",
-    },
-    {
-      region: "Telangana & Andhra Pradesh",
-      name_and_no: "ESHANTH(B.Tech 3rd Year) 6302406300",
-    },
-    {
-      region: "Telangana & Andhra Pradesh",
-      name_and_no: "LIKITH(B.Tech 3rd Year) 7675011374",
-    },
-    {
-      region: "Telangana & Andhra Pradesh",
-      name_and_no: "MAHITHA(B.Tech 3rd Year) 8309521983",
-    },
-    { region: "Tamil Nadu", name_and_no: "SANJAY(B.Tech 3rd Year) 7358487350" },
-    {
-      region: "Tamil Nadu",
-      name_and_no: "AMRITHA(B.Tech 3rd Year) 9345652212",
-    },
-    { region: "Tamil Nadu", name_and_no: "ARAVIND(B.Des 3rd Year) 9025171770" },
-    {
-      region: "Tamil Nadu",
-      name_and_no: "PRAGADEESH(B.Tech 2nd Year) 9566265920",
-    },
-    {
-      region: "Tamil Nadu",
-      name_and_no: "SANJANA(B.Tech 2nd Year) 9897152375",
-    },
-    { region: "Kerala", name_and_no: "JOFFIN(B.Tech 3rd Year) 7736929440" },
-    {
-      region: "Kerala",
-      name_and_no: "DEVANANDIKA(B.Tech 3rd Year) 9074542344",
-    },
-    { region: "Kerala", name_and_no: "NIRANJANA(B.Tech 3rd Year) 8113034892" },
-    { region: "Kerala", name_and_no: "JADEN(B.Tech 3rd Year) 9510132218" },
-    { region: "Karnataka", name_and_no: "VAIBHAV(B.Tech 2nd Year) 7022926590" },
-    { region: "Karnataka", name_and_no: "TANMAY(B.Tech 2nd Year) 6003476812" },
-    {
-      region: "Maharashtra",
-      name_and_no: "ASHISH(B.Tech 3rd Year) 8956336360",
-    },
-    {
-      region: "Maharashtra",
-      name_and_no: "ATHARV(B.Tech 3rd Year) 8956336360",
-    },
-    {
-      region: "Maharashtra",
-      name_and_no: "PARNIKA(B.Tech 3rd Year) 8459281263",
-    },
-    { region: "Maharashtra", name_and_no: "PARTH(B.Tech 3rd Year) 9527409158" },
-    {
-      region: "Madhya Pradesh",
-      name_and_no: "TAHA(B.Tech 3rd Year) 7869810898",
-    },
-    {
-      region: "Madhya Pradesh",
-      name_and_no: "SHREYAS GUPTA(B.Tech 3rd Year) 9009187737",
-    },
-    {
-      region: "Madhya Pradesh",
-      name_and_no: "VAGISHA(B.Tech 3rd Year) 7477093970",
-    },
-    { region: "Odisha", name_and_no: "ADYASA(B.Tech 3rd Year) 9831783405" },
-    { region: "Odisha", name_and_no: "SITANSHU(B.Tech 3rd Year) 8260707944" },
-    { region: "Gujarat", name_and_no: "SURBHIT(B.Tech 3rd Year) 8200537139" },
-    {
-      region: "Gujarat",
-      name_and_no: "PRANJAL SONI(B.Tech 3rd Year) 9512015500",
-    },
-    { region: "Gujarat", name_and_no: "NAMAN(B.Tech 3rd Year) 9377780309" },
-    { region: "Rajasthan", name_and_no: "DEVAL(B.Tech 3rd Year) 9588886533" },
-    { region: "Rajasthan", name_and_no: "SHOURYA(B.Tech 3rd Year) 9950500951" },
-    { region: "Rajasthan", name_and_no: "KANIKA(B.Tech 3rd Year) 7878539166" },
-    { region: "UP", name_and_no: "VAISHNAVI(B.Tech 3rd Year) 8953762399" },
-    { region: "Bihar", name_and_no: "ABHYUDAY(B.Tech 3rd Year) 7903263868" },
-    { region: "Bihar", name_and_no: "APOORVA(B.Tech 3rd Year) 9031327189" },
-    {
-      region: "Jharkhand",
-      name_and_no: "SRISTI VATS(B.Tech 3rd Year) 8690327784",
-    },
-    {
-      region: "Jharkhand",
-      name_and_no: "AYUSH AGARWAL(B.Tech 3rd Year) 9798408926",
-    },
-    { region: "Delhi", name_and_no: "MISHIKA(B.Tech 3rd Year) 9967826000" },
-    {
-      region: "Delhi",
-      name_and_no: "ABHISHEK DAS(B.Tech 3rd Year) 7217680436",
-    },
-    {
-      region: "Haryana",
-      name_and_no: "SOURABH SAINI(B.Tech 3rd Year) 9588303662",
-    },
-    { region: "Haryana", name_and_no: "VIBHOR(B.Tech 3rd Year) 9509236500" },
-    {
-      region: "Punjab",
-      name_and_no: "HARSHIT GOEL(B.Tech 3rd Year) 9877355569",
-    },
-    { region: "Punjab", name_and_no: "DAIVIK(B.Tech 3rd Year) 9592196491" },
-    {
-      region: "West Bengal",
-      name_and_no: "SOURAJJAL(B.Tech 3rd Year) 9330886984",
-    },
-    {
-      region: "West Bengal",
-      name_and_no: "SRIJAN(B.Tech 3rd Year) 8653553039",
-    },
-    { region: "Assam", name_and_no: "HARDIK(B.Tech 3rd Year) 6002949018" },
-    { region: "Assam", name_and_no: "VAIBHAV(B.Tech 3rd Year) 7002303858" },
-  ];
-  // Third year BRs data
-  const thirdYearBRs = [
-    { department: "CSE", name_and_no: "ARYAN 8602527847" },
-    { department: "MNC", name_and_no: "DIYA 8849476475" },
-    { department: "DSAI", name_and_no: "SHIVANSH 8447282050" },
-    {
-      department: "ECE",
-      name_and_no: "AKSHAYA 8007461538",
-    },
-    {
-      department: "ECE",
-      name_and_no: "DEVARSH 7874195692",
-    },
-    {
-      department: "EEE",
-      name_and_no: "CHIRAG 7014962887",
-    },
-    {
-      department: "EEE",
-      name_and_no: "JASMINE 7814650875",
-    },
-    { department: "EP", name_and_no: "SRIVATSAN 9380282071" },
-    { department: "CIVIL", name_and_no: "SITESH 9660925875" },
-    {
-      department: "CHEM",
-      name_and_no: "FAHEEM 8299575017",
-    },
-    {
-      department: "CHEM",
-      name_and_no: "MONALI 9340255495",
-    },
-    { department: "CST", name_and_no: "DHRUV 9990041164" },
-    { department: "CST", name_and_no: "ISHIKA 7649894094" },
-    { department: "MECH", name_and_no: "ADITYA 7390909418" },
-    { department: "MECH", name_and_no: "ROHAN 9485987481" },
-    {
-      department: "BSBE",
-      name_and_no: "ABHIKANSH 9855607807",
-    },
-    {
-      department: "BSBE",
-      name_and_no: "ELIKA 7903053492",
-    },
-    { department: "BDES", name_and_no: "ANIRUD 9080424001" },
-    { department: "BDES", name_and_no: "NISHA 9871499561" },
-    { department: "ENERGY", name_and_no: "ABHINAV 7669189417" },
-  ];
+  // State for data; try to fetch from backend, fallback to local admin.js
+  const [brs, setBrs] = useState([]);
+  const [mentors, setMentors] = useState([]);
+  const [thirdYear, setThirdYear] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedRegion, setSelectedRegion] = useState("");
-  const regions = [...new Set(regionData.map((item) => item.region))].sort();
+
+  useEffect(() => {
+    const base = process.env.REACT_APP_BACKEND_BASE_URL || "http://localhost:5000";
+    const url = `${base.replace(/\/$/, "")}/api/admin-data`;
+    let mounted = true;
+    fetch(url)
+      .then((res) => {
+        if (!res.ok) throw new Error("Network response was not ok");
+        return res.json();
+      })
+      .then((data) => {
+        if (!mounted) return;
+        if (data.brData) setBrs(data.brData);
+        if (data.regionData) setMentors(data.regionData);
+        if (data.thirdYearBRs) setThirdYear(data.thirdYearBRs);
+      })
+      .catch((err) => {
+        // fallback already set from admin.js; just log for debugging
+        // console.warn('Failed to fetch admin data, using local fallback', err);
+      });
+    return () => {
+      mounted = false;
+    };
+  }, []);
+
+  const regions = [...new Set(mentors.map((item) => item.region))].sort();
 
   // Filter data based on search and region
-  const filteredData = regionData.filter((item) => {
+  const filteredData = mentors.filter((item) => {
     const matchesSearch =
       item.name_and_no.toLowerCase().includes(searchTerm.toLowerCase()) ||
       item.region.toLowerCase().includes(searchTerm.toLowerCase());
@@ -307,7 +102,7 @@ const BRDirectory = () => {
           3rd Year Branch Representatives
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
-          {brData.map((br, index) => {
+          {brs.map((br, index) => {
             const resarr = brname_no(br.name_and_no);
             const colors = [
               "from-teal-400 to-teal-600",
@@ -376,7 +171,7 @@ const BRDirectory = () => {
           4th Year Branch Representatives
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
-          {thirdYearBRs.map((br, index) => {
+          {thirdYear.map((br, index) => {
             const resarr2 = brname_no(br.name_and_no);
             const colors = [
               "from-purple-400 to-purple-600",

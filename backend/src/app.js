@@ -4,6 +4,7 @@ import session from "express-session";
 import { fileURLToPath } from 'url';
 import path from 'path';
 import uploadRoutes from "../routes/upload.route.js";
+import adminDataRoutes from "./routes/adminData.route.js";
 import authRoutes from "../routes/auth.routes.js";
 import {
   handleGetContactPeople,
@@ -42,6 +43,7 @@ app.use(session({
 }));
 app.use('/image', authRoutes);
 app.use('/upload', uploadRoutes);
+app.use('/api', adminDataRoutes);
 app.get("/contact", handleGetContactPeople);
 app.post("/contact-form", handleContactForm);
 app.get("/cultural", handleGetAllClubs);
