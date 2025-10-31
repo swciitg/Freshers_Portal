@@ -17,6 +17,7 @@ import TechBoardInfo from "../src/models/TechBoardInfo.model.js";
 import CulturalBoardInfo from "../src/models/CulturalBoardInfo.model.js";
 import SportsBoardInfo from "../src/models/SportsBoardInfo.model.js";
 import WelfareBoardInfo from "../src/models/WelfareBoardInfo.model.js";
+import Representative from "../src/models/Representative.model.js";
 
 const ADMINPANELROOT = process.env.ADMINPANELROOTPATH || "/admin";
 
@@ -54,6 +55,8 @@ const adminOptions = {
     Cult,
     Department,
     Fest
+    ,
+    Representative
     
   ],
   rootPath: ADMINPANELROOT,
