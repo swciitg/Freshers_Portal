@@ -83,7 +83,7 @@ const Gymkhana = () => {
         {gymkhanaMembers.map((member, index) => (
           <div
             key={index}
-            className="bg-white rounded-3xl shadow-xl overflow-hidden border border-gray-200"
+            className="bg-white rounded-2xl shadow-xl overflow-hidden border border-gray-200"
           >
             <div className="h-64 overflow-hidden">
               <img
