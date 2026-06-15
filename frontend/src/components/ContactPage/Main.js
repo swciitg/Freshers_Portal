@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import Navbar from "../../common/Navbar";
 import Footer from "../../common/Footer";
 import DeanHierarchy from "./DeanHierarchy";
+import Gymkhana from "./Gymkhana";
 import useFetchData from "../../hooks/FetchData";
 import { MoonLoader } from "react-spinners";
 import BRDirectory from "./BRDirectory";
@@ -113,6 +114,9 @@ const Main = () => {
             </div> */}
             <div className="space-y-16 py-16 px-10">
                 <DeanHierarchy/>
+            </div>
+            <div className="space-y-16 py-16 px-10">
+                <Gymkhana />
             </div>
             <div className="space-y-16 py-16 px-10">
                 <BRDirectory/>

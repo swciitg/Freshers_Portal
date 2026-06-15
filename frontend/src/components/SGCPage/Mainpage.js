@@ -6,7 +6,7 @@ const Mainpage = () => {
   {/* Hero Image Section */}
   <div className="mt-10 relative w-full h-64 sm:h-80 md:h-96 lg:h-[500px] overflow-hidden">
     <img 
-      src="/freshers/Senate.jpg" 
+      src="/freshers/Senate-latest.jpeg" 
       alt="Student Council Hero" 
       className="w-full h-full object-cover object-center"
     />

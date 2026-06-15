@@ -32,7 +32,7 @@ const boardsData = [
     description: "Where innovation meets ambition, the Technical board is the apex body overseeing the technical clubs cultivating engineering excellence and leadership through strategic research, collaboration, and mentorship—developing professionals who drive global technological advancement",
   },
   {
-    logo: '/freshers/sab_logo.png',
+    logo: '/freshers/sab-logo.webp',
     title: 'Students’ Academic Board',
     description: "Students' Academic Board (SAB), IIT Guwahati, is a student body for all academic-related issues of IIT Guwahati students. The SAB is intended as a student forum that will strive to redress the academic problems and concerns of the entire student community of IIT Guwahati.",
   },
