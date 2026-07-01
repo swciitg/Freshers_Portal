@@ -116,7 +116,7 @@ const MainPage = (props) => {
             <ul className="space-y-1 text-gray-700 text-base">
               <li className="flex items-start">
                 <span className="mr-3 text-orange-500">•</span>
-                <span>General Secretary (usually third yearites)</span>
+                <span>General Secretary</span>
               </li>
               <li className="flex items-start">
                 <span className="mr-3 text-orange-500">•</span>
@@ -145,6 +145,10 @@ const MainPage = (props) => {
               <li className="flex items-start">
                 <span className="mr-3 text-orange-500">•</span>
                 <span>Maintenance Secretary</span>
+              </li>
+              <li className="flex items-start">
+                <span className="mr-3 text-orange-500">•</span>
+                <span>Selected Joint Institute Secretaries</span>
               </li>
             </ul>
           </div>
