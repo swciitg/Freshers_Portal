@@ -32,7 +32,7 @@ Driven by a spirit of discovery and excellence, the faculty and students at IIT 
 
         <div className="flex justify-center gap-6">
           <a
-            href="https://drive.google.com/file/d/16trZQUclFIA6aXcqpY0yJE1KIgS2Zdcj/view"
+            href="https://drive.google.com/file/d/1ZCo4ZGiwvvuuAObEzYEbG76YzWYeAcE6/view?usp=sharing"
             target="_blank"
             rel="noopener noreferrer"
             className="no-underline"
@@ -43,7 +43,7 @@ Driven by a spirit of discovery and excellence, the faculty and students at IIT 
             </div>
           </a>
           <a
-            href="/path/to/team_handbook.pdf"
+            href="https://drive.google.com/file/d/1d1kGMPhNDd6nXoaPEPR2yyUPte52da8r/view?usp=sharing"
             target="_blank"
             rel="noopener noreferrer"
             className="no-underline"
