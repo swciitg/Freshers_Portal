@@ -81,10 +81,6 @@ const MainPage = (props) => {
                 <span className="mr-3 text-orange-500">•</span>
                 <span>General Secretaries of all hostels</span>
               </li>
-              <li className="flex items-start">
-                <span className="mr-3 text-orange-500">•</span>
-                <span>Institute representatives nominated by the Dean of Students' Affairs</span>
-              </li>
             </ul>
           </div>
         </div>
@@ -145,10 +141,6 @@ const MainPage = (props) => {
               <li className="flex items-start">
                 <span className="mr-3 text-orange-500">•</span>
                 <span>Maintenance Secretary</span>
-              </li>
-              <li className="flex items-start">
-                <span className="mr-3 text-orange-500">•</span>
-                <span>Selected Joint Institute Secretaries</span>
               </li>
             </ul>
           </div>
