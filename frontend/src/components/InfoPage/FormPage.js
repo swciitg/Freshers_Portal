@@ -259,7 +259,7 @@ const sections = [
       <li>
         Go to Admission Portal.
         <div className="mt-2">
-         <a href='https://online.iitg.ac.in/admission/'> <button className="mt-2 px-6 py-2 border-2 rounded-full bg-gray-100 text-black hover:bg-gray-200 flex items-center space-x-2">
+         <a href='https://online.iitg.ac.in/sso/'> <button className="mt-2 px-6 py-2 border-2 rounded-full bg-gray-100 text-black hover:bg-gray-200 flex items-center space-x-2">
             <span>Go to the Portal</span>
             <span>
               <svg
@@ -403,7 +403,18 @@ const sections = [
         </li>
   
         <li>
-        Submit the physical copy of the signed affidavit after arriving on campus during the physical verification process.
+        You are not required to submit physical copies at the time of registration. Instead, you need to upload and submit the document online through the SSO portal once your ERP login credentials are generated. The Students’ Affairs Office will notify students when the upload process is opened.
+        </li>
+        <li>
+          SSO Portal Link: {" "}
+          <a
+            href="https://online.iitg.ac.in/sso/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-blue-600 underline"
+          >
+            online.iitg.ac.in/sso
+          </a>
         </li>
       </ol>
     </div>
@@ -427,7 +438,7 @@ const sections = [
   
         {/* Download Button */}
         <div className="mt-2">
-          <a href='https://iitg.ac.in/freshers/res/downloads/UNDERTAKING_HOSTEL_RESIDENTS_2020.pdf'><button className="px-6 py-2 border-2 rounded-full bg-gray-100 text-black hover:bg-gray-200 flex items-center space-x-2">
+          <a href='https://swc.iitg.ac.in/sa_portal_backend/uploads/sa_uhr_963bb34b42_b18fc0e543.pdf'><button className="px-6 py-2 border-2 rounded-full bg-gray-100 text-black hover:bg-gray-200 flex items-center space-x-2">
             <span>Download form</span>
             <span>
               <svg
@@ -460,7 +471,18 @@ const sections = [
         Upload the scanned copy of the signed Undertakings in the online admission portal during the admission process.
         </li>
         <li>
-        Submit the hard copy of the signed Undertakings in the Students’ Affairs Office after reaching the campus.
+        You are not required to submit physical copies at the time of registration. Instead, you need to upload and submit the document online through the SSO portal once your ERP login credentials are generated.
+        </li>
+        <li>
+          SSO Portal Link: {" "}
+          <a
+            href="https://online.iitg.ac.in/sso/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-blue-600 underline"
+          >
+            online.iitg.ac.in/sso
+          </a>
         </li>
       </ol>
     </div>
@@ -485,7 +507,7 @@ const sections = [
 
       {/* Download Button */}
       <div className="mt-2">
-        <a href='https://iitg.ac.in/freshers/res/downloads/CODE_OF_CONDUCT_PLEDGE_2020.pdf'><button className="px-6 py-2 border-2 rounded-full bg-gray-100 text-black hover:bg-gray-200 flex items-center space-x-2">
+        <a href='https://swc.iitg.ac.in/sa_portal_backend/uploads/sa_coc_c4a37a58cc_17fa0378e5.pdf'><button className="px-6 py-2 border-2 rounded-full bg-gray-100 text-black hover:bg-gray-200 flex items-center space-x-2">
           <span>Download form</span>
           <span>
             <svg
@@ -513,7 +535,18 @@ const sections = [
 
       <li>The students and their parents must sign the form.</li>
       <li>Upload the scanned copy of the signed form in the online admission portal during the admission process.</li>
-      <li>Submit the hard copy of the signed form in the Students’ Affairs Office after reaching the campus.</li>
+      <li>You are not required to submit physical copies at the time of registration. Instead, you need to upload and submit the document online through the SSO portal once your ERP login credentials are generated.</li>
+      <li>
+          SSO Portal Link: {" "}
+          <a
+            href="https://online.iitg.ac.in/sso/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-blue-600 underline"
+          >
+            online.iitg.ac.in/sso
+          </a>
+        </li>
     </ol>
   </div>
     )
