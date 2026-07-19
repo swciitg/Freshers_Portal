@@ -32,6 +32,17 @@ Driven by a spirit of discovery and excellence, the faculty and students at IIT 
 
         <div className="flex justify-center gap-6">
           <a
+            href="https://drive.google.com/file/d/1Mhbvaa_Tly91eU7Iaas6VMx_bKmnFdOS/view?usp=drivesdk"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="no-underline"
+          >
+            <div className="flex items-center p-4 bg-gray-100 rounded-lg hover:bg-blue-100 transition-colors cursor-pointer">
+              <div className="text-blue-600 mr-2">📘</div>
+              <span className="text-sm font-medium text-gray-800">Induction Programme</span>
+            </div>
+          </a>
+          <a
             href="https://drive.google.com/file/d/1ZCo4ZGiwvvuuAObEzYEbG76YzWYeAcE6/view?usp=sharing"
             target="_blank"
             rel="noopener noreferrer"
