@@ -32,7 +32,7 @@ Driven by a spirit of discovery and excellence, the faculty and students at IIT 
 
         <div className="flex justify-center gap-6">
           <a
-            href="https://drive.google.com/file/d/1Mhbvaa_Tly91eU7Iaas6VMx_bKmnFdOS/view?usp=drivesdk"
+            href="https://drive.google.com/file/d/1gmp7y7cE27nNKNk58vkFyvsRM1vTM-bI/view?usp=drivesdk"
             target="_blank"
             rel="noopener noreferrer"
             className="no-underline"
