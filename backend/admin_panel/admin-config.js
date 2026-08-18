@@ -21,6 +21,10 @@ import Representative from "../src/models/Representative.model.js";
 
 const ADMINPANELROOT = process.env.ADMINPANELROOTPATH || "/admin";
 
+// Browser-facing asset URLs must carry the public sub-path the app is
+// proxied under (same convention as the redirects in the controllers).
+const BASE_PATH = process.env.BASE_PATH || "";
+
 const DEFAULT_ADMIN = {
   email: process.env.ADMIN_EMAIL ,
   password:process.env.ADMIN_PASSWORD ,
@@ -57,11 +61,15 @@ const adminOptions = {
     Fest
     ,
     Representative
-    
+
   ],
   rootPath: ADMINPANELROOT,
   loginPath: ADMINPANELROOT + "/login",
-  logoutPath: ADMINPANELROOT + "/logout"
+  logoutPath: ADMINPANELROOT + "/logout",
+  // Custom sidebar/table UI tweaks; injects its own stylesheet.
+  assets: {
+    scripts: [BASE_PATH + "/admin-assets/admin-custom.js"],
+  },
 };
 
 const admin = new AdminJS(adminOptions);
